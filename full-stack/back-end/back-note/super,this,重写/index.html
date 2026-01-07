@@ -1,0 +1,582 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="你来啦！" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="你来啦！" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="你来啦！" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="后端开发" />
+
+
+<link rel="canonical" href="http://example.com/full-stack/back-end/back-note/super,this,%E9%87%8D%E5%86%99/">
+
+
+
+  <title>
+super,this,重写 - 后端 - 全栈 |
+libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">super,this,重写
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2021-12-16 20:54:12">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2021-12-16T20:54:12+08:00">2021-12-16</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">libert-Aries's blog</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?3621"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?1929"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?238664"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?473021"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?263081"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?585073"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/full-stack/" itemprop="item" rel="index" title="分类于 全栈"><span itemprop="name">全栈</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/full-stack/back-end/" itemprop="item" rel="index" title="分类于 后端"><span itemprop="name">后端</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://example.com/full-stack/back-end/back-note/super,this,%E9%87%8D%E5%86%99/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="libert-Aries">
+    <meta itemprop="description" content="人生如逆旅 我亦是行人, 热烈 自由">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="你来啦！">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>子类父类之间的关系以及重写</p>
+<span id="more"></span>
+<h2 id="super注意点"><a class="markdownIt-Anchor" href="#super注意点">#</a> super 注意点：</h2>
+<pre><code>1.super调用父类的构造方法，必须在构造方法的第一个
+2.super必须只能出现在子类的方法或者构造方法中！
+3.super和this不能同时调用构造方法！
+</code></pre>
+<h2 id="vs-this"><a class="markdownIt-Anchor" href="#vs-this">#</a> Vs this:</h2>
+<pre><code>代表的对象不同：
+    this:   本身调用者这个对象
+    super:  代表父类对象的应用
+前提
+    this: 没有继承也可以使用
+    super: 只能在继承条件才可以使用
+构造方法
+    this();本类的构造
+    super();父类的构造
+</code></pre>
+<h3 id="重写需要有继承关系子类重写父类的方法"><a class="markdownIt-Anchor" href="#重写需要有继承关系子类重写父类的方法">#</a> 重写：需要有继承关系，子类重写父类的方法！</h3>
+<pre><code>1.方法名必须相同
+2.参数列表必须相同
+3.修饰符：范围可以扩大但不能缩小：   public &gt; protected &gt; default &gt; private
+4.抛出的异常：范围可以被缩小，但不能扩大：ClassNotFoundException --&gt; Exception(大)
+</code></pre>
+<h3 id="重写子类的方法和父类必须一致方法体不同"><a class="markdownIt-Anchor" href="#重写子类的方法和父类必须一致方法体不同">#</a> 重写，子类的方法和父类必须一致；方法体不同</h3>
+<h2 id="为什么需要重写"><a class="markdownIt-Anchor" href="#为什么需要重写">#</a> 为什么需要重写：</h2>
+<pre><code>1.父类的功能，子类不一定需要，或者不一定满足！
+Alt + Insert ; override;</code></pre>
+
+      <div class="tags">
+          <a href="/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" rel="tag"><i class="ic i-tag"></i> 后端开发</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2026-01-06 19:53:41" itemprop="dateModified" datetime="2026-01-06T19:53:41+08:00">2026-01-06</time>
+  </span>
+  <span id="full-stack/back-end/back-note/super,this,重写/" class="item leancloud_visitors" data-flag-title="super,this,重写" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="libert-Aries 微信支付">
+        <p>微信支付</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>libert-Aries <i class="ic i-at"><em>@</em></i>你来啦！
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/full-stack/back-end/back-note/super,this,%E9%87%8D%E5%86%99/" title="super,this,重写">http://example.com/full-stack/back-end/back-note/super,this,重写/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/Markdown%E4%BD%BF%E7%94%A8/Markdown/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;t.alcy.cc&#x2F;fj?523461" title="Markdown使用">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 碎碎片</span>
+  <h3>Markdown使用</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/full-stack/back-end/back-note/month1/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;t.alcy.cc&#x2F;fj?28119" title="JavaSE">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 后端</span>
+  <h3>JavaSE</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#super%E6%B3%A8%E6%84%8F%E7%82%B9"><span class="toc-number">1.</span> <span class="toc-text"> super 注意点：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vs-this"><span class="toc-number">2.</span> <span class="toc-text"> Vs this:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E5%86%99%E9%9C%80%E8%A6%81%E6%9C%89%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB%E5%AD%90%E7%B1%BB%E9%87%8D%E5%86%99%E7%88%B6%E7%B1%BB%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">2.1.</span> <span class="toc-text"> 重写：需要有继承关系，子类重写父类的方法！</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E5%86%99%E5%AD%90%E7%B1%BB%E7%9A%84%E6%96%B9%E6%B3%95%E5%92%8C%E7%88%B6%E7%B1%BB%E5%BF%85%E9%A1%BB%E4%B8%80%E8%87%B4%E6%96%B9%E6%B3%95%E4%BD%93%E4%B8%8D%E5%90%8C"><span class="toc-number">2.2.</span> <span class="toc-text"> 重写，子类的方法和父类必须一致；方法体不同</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E9%87%8D%E5%86%99"><span class="toc-number">3.</span> <span class="toc-text"> 为什么需要重写：</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/full-stack/back-end/back-note/super,this,%E9%87%8D%E5%86%99/" rel="bookmark" title="super,this,重写">super,this,重写</a></li><li><a href="/full-stack/back-end/back-note/month1/" rel="bookmark" title="JavaSE">JavaSE</a></li><li><a href="/full-stack/back-end/back-note/month2/" rel="bookmark" title="IO流">IO流</a></li><li><a href="/full-stack/back-end/back-note/month4/" rel="bookmark" title="SpringBoot">SpringBoot</a></li><li><a href="/full-stack/back-end/back-note/month5/" rel="bookmark" title="SpringBoot集成MyBatis">SpringBoot集成MyBatis</a></li><li><a href="/full-stack/back-end/back-note/%E6%8B%A6%E6%88%AA%E5%99%A8/" rel="bookmark" title="拦截器">拦截器</a></li><li><a href="/full-stack/back-end/back-note/MyBatisPlus/" rel="bookmark" title="Mybatisplus">Mybatisplus</a></li><li><a href="/full-stack/back-end/back-note/Exception/" rel="bookmark" title="异常处理">异常处理</a></li><li><a href="/full-stack/back-end/back-note/RabbitMQ/" rel="bookmark" title="RabbitMQ">RabbitMQ</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="libert-Aries"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">libert-Aries</p>
+  <div class="description" itemprop="description">热烈 自由</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">19</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">6</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">13</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xpYmVydC1Bcmllcw==" title="https:&#x2F;&#x2F;github.com&#x2F;libert-Aries"><i class="ic i-github"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjM5NTExMzExMEBxcS5jb20=" title="mailto:395113110@qq.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于我</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/Markdown%E4%BD%BF%E7%94%A8/Markdown/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/full-stack/back-end/back-note/month1/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/front-end/" title="分类于 前端">前端</a>
+</div>
+
+    <span><a href="/full-stack/front-end/front-note/%E5%89%8D%E7%AB%AF%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F/" title="前端请求方式">前端请求方式</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/front-end/" title="分类于 前端">前端</a>
+</div>
+
+    <span><a href="/full-stack/front-end/front-note/Vue3/" title="Vue3">Vue3</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
+</div>
+
+    <span><a href="/full-stack/back-end/back-note/month2/" title="IO流">IO流</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a>
+</div>
+
+    <span><a href="/theme-shoka-doc/dependents/" title="Step.1 依赖插件">Step.1 依赖插件</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a>
+</div>
+
+    <span><a href="/theme-shoka-doc/config/" title="Step.2 基本配置">Step.2 基本配置</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%A2%8E%E7%A2%8E%E7%89%87/" title="分类于 碎碎片">碎碎片</a>
+</div>
+
+    <span><a href="/Markdown%E4%BD%BF%E7%94%A8/Markdown/" title="Markdown使用">Markdown使用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
+</div>
+
+    <span><a href="/full-stack/back-end/back-note/MyBatisPlus/" title="Mybatisplus">Mybatisplus</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
+</div>
+
+    <span><a href="/full-stack/back-end/back-note/RabbitMQ/" title="RabbitMQ">RabbitMQ</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a>
+</div>
+
+    <span><a href="/theme-shoka-doc/display/" title="Step.3 界面显示">Step.3 界面显示</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
+</div>
+
+    <span><a href="/full-stack/back-end/back-note/super,this,%E9%87%8D%E5%86%99/" title="super,this,重写">super,this,重写</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">libert-Aries @ libert-Aries's blog</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">167k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:32</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'full-stack/back-end/back-note/super,this,重写/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)看这里だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: {"placeholder":"1. 提问前请先仔细阅读本文档⚡\n2. 页面显示问题💥，请提供控制台截图📸或者您的测试网址\n3. 其他任何报错💣，请提供详细描述和截图📸，祝食用愉快💪"},fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

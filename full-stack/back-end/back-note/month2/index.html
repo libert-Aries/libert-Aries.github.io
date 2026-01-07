@@ -1,0 +1,1084 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="你来啦！" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="你来啦！" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="你来啦！" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="后端开发" />
+
+
+<link rel="canonical" href="http://example.com/full-stack/back-end/back-note/month2/">
+
+
+
+  <title>
+IO流 - 后端 - 全栈 |
+libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">IO流
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-03-13 08:59:48">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-03-13T08:59:48+08:00">2022-03-13</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">libert-Aries's blog</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?598810"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?276000"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?836915"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?325805"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?350056"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?238674"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/full-stack/" itemprop="item" rel="index" title="分类于 全栈"><span itemprop="name">全栈</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/full-stack/back-end/" itemprop="item" rel="index" title="分类于 后端"><span itemprop="name">后端</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://example.com/full-stack/back-end/back-note/month2/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="libert-Aries">
+    <meta itemprop="description" content="人生如逆旅 我亦是行人, 热烈 自由">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="你来啦！">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>IO 流</p>
+<span id="more"></span>
+<h1 id="内部类"><a class="markdownIt-Anchor" href="#内部类">#</a> 内部类</h1>
+<h2 id="day22"><a class="markdownIt-Anchor" href="#day22">#</a> day22</h2>
+<h4 id="java当中内部类的分类"><a class="markdownIt-Anchor" href="#java当中内部类的分类">#</a> Java 当中内部类的分类：</h4>
+<p><code>成员内部类：	共享外部类的所有[静态+非静态]成员[属性+方法]</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">如何理解其与外部类的关系：</span><br><span class="line">  蛔虫和牛的关系</span><br><span class="line"></span><br><span class="line">如何创建其对象：</span><br><span class="line">  Outer.<span class="type">Inner</span> <span class="variable">in</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Outer</span>().<span class="keyword">new</span> <span class="title class_">Inner</span>();</span><br></pre></td></tr></table></figure>
+<p><code>静态内部类：	共享外部类的静态成员[属性+方法]</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">如何理解其与外部类的关系：</span><br><span class="line">  寄居蟹和蛤蜊壳的关系</span><br><span class="line">  房客和房东的关系</span><br><span class="line"></span><br><span class="line">如何创建其对象：</span><br><span class="line">  Outer.<span class="type">Inner</span> <span class="variable">in</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Outer</span>.Inner();</span><br><span class="line"></span><br><span class="line">*: 静态内部类只能共享外部类的静态成员</span><br><span class="line">	静态成员不是内部类也可以共享</span><br><span class="line">	那么静态内部类存在是为何呢？</span><br><span class="line">	</span><br><span class="line">	是为了描述类和类的专属关系</span><br></pre></td></tr></table></figure>
+<p><code>局部内部类：	 	定义在静态方法中：只能共享外部类静态成员 	定义在非静态方法中：能够共享外部类所有成员</code></p>
+<pre><code>另外：它们还都能共享所在的那个外部类方法中的局部变量
+	只是JDK8.0之前必须加final 8.0开始可以不加 但依然final
+
+	如何理解其与外部类的关系：
+	   老师和学生的关系
+
+	如何创建其对象：
+		Inner in = new Inner();
+		*:注意有位置限定 
+		定义完成之后 所在方法结束之前
+</code></pre>
+<p><code>匿名内部类：</code></p>
+<pre><code>*：如果生个孩子 就是为了拿去卖钱的 就不用给孩子起名字!
+
+*：某些场景下 我们自己的名字根本不重要
+	反而父母或者长辈的名字才重要!
+
+
+基本语法：
+
+  用于实现接口
+	new 要实现的接口类型()&#123;
+		完成抽象方法的具体实现~;
+	&#125;
+
+  用于继承父类
+	new 要继承的父类(给父类构造方法传参)&#123;
+		完成父类方法的覆盖;
+	&#125;
+
+
+匿名内部类能够共享外部类的哪些成员呢？
+这件事不是一概而论的 这完全取决于定义它的位置~
+	如果直接出现在类体当中 等价于成员内部类
+	如果出现在类体当中又有static 等价于静态内部类
+	如果出现在方法体当中 等价于局部内部类~
+</code></pre>
+<h1 id="异常"><a class="markdownIt-Anchor" href="#异常">#</a> 异常</h1>
+<h2 id="day23"><a class="markdownIt-Anchor" href="#day23">#</a> day23</h2>
+<h4 id="面试题error-和-exception-有什么区别"><a class="markdownIt-Anchor" href="#面试题error-和-exception-有什么区别">#</a> 面试题（Error 和 Exception 有什么区别？）</h4>
+<p>Error 通常是指由于底层硬件环境或者系统原因导致的<br>
+程序员通过编码无法解决的<br>
+相对较严重的问题</p>
+<p>Exception 就是程序运行过程当中出现的例外情况而已<br>
+相对较轻</p>
+<h4 id="面试题运行时异常和非运行时异常的区别"><a class="markdownIt-Anchor" href="#面试题运行时异常和非运行时异常的区别">#</a> 面试题（运行时异常和非运行时异常的区别？）</h4>
+<p>非运行时异常在编译的时候就要求程序员必须给出处理方案<br>
+否则编译无法通过<br>
+它们都直接继承自 Exception</p>
+<p>运行时异常在编译的时候不要求给出处理方案 可以直接编译通过<br>
+问题会在运行的时候直接体现出来～<br>
+ 它们继承自 RuntimeException</p>
+<h4 id="11种常见的异常"><a class="markdownIt-Anchor" href="#11种常见的异常">#</a> 11 种常见的异常:</h4>
+<p><strong>ArithmeticException =&gt; 算术异常</strong><br>
+ *：除以 0 了 找代码当中 / 它后面的变量可能是 0</p>
+<p><strong>NegativeArraySizeException =&gt; 负数的数组大小异常</strong><br>
+ *：初始化数组的时候 [] 当中要求指定元素个数<br>
+而如果指定的是个负数 将直接导致该异常</p>
+<p><strong>ArrayIndexOutOfBoundsException =&gt; 数组索引值超出边界异常</strong><br>
+ *：访问数组元素的时候 我们会在 [] 当中写下标索引值<br>
+可用范围是：0 - 数组元素个数 - 1<br>
+ 找 [] 当中的数值 是否在可用范围</p>
+<p><strong>NullPointerException =&gt; 空指针异常</strong><br>
+ *：Java 当中引用类型的默认值是 null<br>
+ 它代表对象根本不存在<br>
+用它访问任何属性 调用任何方法都会导致空指针</p>
+<p><strong>StringIndexOutOfBoundsException =&gt; 字符串索引值超出边界异常</strong><br>
+ *：String 类提供了多个使用下标索引值操作字符串内容的方法<br>
+例如:charAt () /substring ()<br>
+ 如果传入的下标索引值不在可用范围 将会导致该异常</p>
+<p><strong>NumberFormatException =&gt; 数字格式异常</strong><br>
+ *：大多数包装类类型都提供了从字符串到对应基本数据类型转换的方法<br>
+例如 Integer.parseInt () / Double.parseDouble () …<br>
+ 如果传入的字符串有非法内容 则导致该异常</p>
+<p><strong>ClassCastException =&gt; 类型造型异常</strong><br>
+ *：强制类型转换的时候 要转换的对象跟目标类型不是一个分支<br>
+则导致该异常</p>
+<p><strong>IllegalArgumentException =&gt; 非法参数异常</strong><br>
+ *：初始化 ArrayList 的时候 构造方法的参数<br>
+可以指定底层 Object 数组的原始大小<br>
+如果指定的是负数 将直接导致该异常</p>
+<p><strong>IndexOutOfBoundsException =&gt; 索引值超出边界异常 (集合)</strong><br>
+*：List 作为有序集合 是可以通过下标直接操作的<br>
+例如：get (int) /remove (int)<br>
+ 如果传入的下标值非法 将导致该异常</p>
+<p><strong>IllegalStateException =&gt; 非法状态异常 (迭代器)</strong><br>
+*：当迭代器光标没有指向元素的时候<br>
+就直接调用了 car.remove ()<br>
+ 将导致该异常～</p>
+<p><strong>ConcurrentModificationException =&gt; 并发修改异常～</strong><br>
+*：此处省略一堆字</p>
+<h4 id="如何处理异常"><a class="markdownIt-Anchor" href="#如何处理异常">#</a> 如何处理异常</h4>
+<p>1. 抛还上级	throws<br>
+ 足以解决 A 但无力解决 B</p>
+<p>2. 自行处理	try catch finally<br>
+try{<br>
+可能出现异常的语句<br>
+通常只有一句<br>
+除非需求决定<br>
+前者出现异常 后者需要跳过…<br>
+} catch (要捕获的异常类型 异常代号){<br>
+对捕获到的异常进行处理：<br>
+0. 隐瞒不报<br>
+ 1. 简要的审  System.out.println (e.getMessage ());<br>
+2. 详细的审  e.printStackTrace ();<br>
+}finally{<br>
+无论是否出现异常 最终都要执行的操作<br>
+通常 会是释放和关闭资源的操作～<br>
+}</p>
+<ul>
+<li>
+<p><strong>一个 try 后面可以跟上多个 catch 分支<br>
+但是多个 catch 必须按照从小到大或者并列的顺序<br>
+总之不能前者包含后者</strong></p>
+</li>
+<li>
+<p><strong>JDK7.0 之前如果捕获多种不同异常也要进行相同处理<br>
+也必须将 catch 分支写多个<br>
+从 JDK7.0 开始 可以使用多重 catch<br>
+ 多种异常的类型之间 用 | 隔开</strong></p>
+</li>
+<li>
+<p><strong>finally 当中永远不该出现 return 语句<br>
+否则 try catch 当中的 return 就不可能执行了</strong></p>
+</li>
+<li>
+<p><strong>finally 当中的语句一定会执行吗？如何不让它执行呢？<br>
+ 不一定！			System.exit (0);</strong></p>
+</li>
+</ul>
+<h1 id="线程"><a class="markdownIt-Anchor" href="#线程">#</a> 线程</h1>
+<h2 id="day24"><a class="markdownIt-Anchor" href="#day24">#</a> day24</h2>
+<h4 id="为什么要使用多线程"><a class="markdownIt-Anchor" href="#为什么要使用多线程">#</a> 为什么要使用多线程？</h4>
+<p>我们不否认 某些场景下 使用多线程确实可以提高效率</p>
+<p>但是使用多线程的根本目的 是为了让程序学会同一时间做多件事情</p>
+<p>同一时间应对多个请求…</p>
+<h4 id="如何控制线程"><a class="markdownIt-Anchor" href="#如何控制线程">#</a> 如何控制线程？</h4>
+<p>0.setPriority (int) : 设置线程的优先级别<br>
+可选范围 1-10 默认优先级为 5<br>
+ 优先级高 只代表抢到时间片的概率高而已</p>
+<p>1.static sleep (long) : 让当前线程休眠指定的毫秒数<br>
+ 2.static yield () : 让当前线程放弃已经持有的时间片 直接返回就绪<br>
+ 3.join () : 让当前线程邀请调用方法的那个线程优先执行<br>
+在被邀请的线程执行结束之前<br>
+主动邀请别人的那个线程 一直处于阻塞 不再执行</p>
+<p>*: 线程章节当中所有的静态方法<br>
+不要关注谁调用方法 而要关注调用出现在谁的线程体<br>
+写在谁的线程体 就是操作对应的那个线程～</p>
+<p>*: 线程章节所有涉及主动进入阻塞的状态的方法<br>
+都必须进行异常处理<br>
+因为它们都有 throws InterruptedException 的声明<br>
+而这个异常是非运行时异常 必须处理 否则编译报错</p>
+<h4 id="线程类其他常用方法"><a class="markdownIt-Anchor" href="#线程类其他常用方法">#</a> 线程类其他常用方法</h4>
+<p>setName () + getName () : 设置和得到线程的名字～</p>
+<p>static activeCount () : 得到程序当中所有活跃线程的总数～<br>
+ 活跃线程 = 就绪 + 运行 + 阻塞<br>
+ *：这个方法永远不可能返回 0 因为当前线程必然活跃</p>
+<p>setDaemon (true) : 设置线程成为守护线程～<br>
+ 守护线程 = 守护线程是为了给其它线程提供服务的<br>
+当程序当中只剩守护线程的时候<br>
+守护线程会自行消亡…</p>
+<p>​		*: 守护线程应当无限循环 以防止其过早消亡<br>
+​		*: 设置线程成为守护线程 必须早于其自身的 start ()<br>
+​		*: 守护线程应当具有最低的优先级 以防止其与核心业务抢时间片～</p>
+<p>interrupt () : 中断 打断线程的阻塞状态～</p>
+<p>static currentThread () : 得到当前正在运行的线程对象～<br>
+1. 主方法当中用于获得主线程对象…<br>
+2. 在 run () 调用的其它方法中 用于得到当前线程是谁～<br>
+X. 绝对不该直接出现在 run () 得到的必然是 this</p>
+<p>CountDownLatch		倒计时插销<br>
+ java.util.concurrent.*;		JUC<br>
+ 并发包当中提供的多线程高并发场景下 常用工具之一</p>
+<p>构造方法：要 int 参数 描述 门上装几个插销</p>
+<p>await () : 等待开门 (所有插销都被拔掉才能开门)<br>
+ countDown () : 拔掉一个插销</p>
+<h2 id="day25"><a class="markdownIt-Anchor" href="#day25">#</a> day25</h2>
+<h4 id="并发错误出现的原因"><a class="markdownIt-Anchor" href="#并发错误出现的原因">#</a> 并发错误出现的原因</h4>
+<p>** 根本原因：** 多个线程共享操作同一份数据～</p>
+<p>** 直接原因：** 线程体当中连续的多行操作 未必能够连续执行<br>
+很可能操作只完成了一部分 时间片就耗尽了<br>
+而另一个线程抢到了时间片<br>
+直接访问或者操作了 不完整的数据</p>
+<p>** 导火线：** 时间片突然耗尽</p>
+<h4 id="如何解决并发错误"><a class="markdownIt-Anchor" href="#如何解决并发错误">#</a> 如何解决并发错误</h4>
+<p>​			加锁～</p>
+<p>​		1st. synchronized  同步的～</p>
+<p>​		互斥锁 = 互斥锁标记 = 锁旗标 = 锁标记 = 监视器 = Monitor</p>
+<p>​		锁池：存放那些想要获得对象的锁标记 但是还没能成功的线程</p>
+<p>​					*：多个线程共享操作的那个对象 = 临界资源</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">修饰代码块：</span><br><span class="line">		<span class="keyword">synchronized</span>(临界资源)&#123;</span><br><span class="line">			需要连续执行的操作<span class="number">1</span>;</span><br><span class="line">			需要连续执行的操作<span class="number">2</span>;</span><br><span class="line">			...</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">修饰整个方法：</span><br><span class="line">			<span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title function_">add</span><span class="params">(Object obj)</span>&#123;</span><br><span class="line">				需要连续执行的操作<span class="number">1</span>;</span><br><span class="line">				需要连续执行的操作<span class="number">2</span>;</span><br><span class="line">				...</span><br><span class="line">			&#125;</span><br><span class="line">			*:即便<span class="keyword">synchronized</span>写在方法上 </span><br><span class="line">					也是对对象加锁 只有对象才有锁标记~</span><br></pre></td></tr></table></figure>
+<p>​					*：Vector  Hashtable  StringBuffer</p>
+<p>​								它们之所以线程安全 是因为底层大量的方法</p>
+<p>​								都是用了 synchronized 修饰…</p>
+<p>​					*：单例模式的懒汉式 需要 synchronized 修饰那个 getter</p>
+<p>​	2nd. java.util.concurrent.locks.ReentrantLock</p>
+<p>​					Java 包的工具包的并发包的锁包的 可重入锁</p>
+<p>​																			since JDK5.0</p>
+<p>​											lock()						unlock()<br>
+​											加锁							释放锁<br>
+​																			*: finally 当中哦～</p>
+<p>​					*: 注意 这个 OO 思想的加锁形式 有更强的可扩展性</p>
+<p>​					*: 它的构造方法可以传参 指定 公平锁 或者 非公平锁</p>
+<p>​									new ReentrantLock(true)</p>
+<h4 id="如果有人问你java当中如何解决并发错误-你该如何应对"><a class="markdownIt-Anchor" href="#如果有人问你java当中如何解决并发错误-你该如何应对">#</a> 如果有人问你 Java 当中如何解决并发错误 你该如何应对？</h4>
+<p>加锁！</p>
+<p>1st. synchronized 互斥锁</p>
+<p>2nd. 可重入锁</p>
+<h4 id="什么是锁标记"><a class="markdownIt-Anchor" href="#什么是锁标记">#</a> 什么是锁标记？</h4>
+<p>为了解决操作不完整性问题 Java 当中每个对象都配有一个锁标记<br>
+目的是让线程拿到这个锁标记才能进行完整的一组操作<br>
+而线程由于未拿到锁标记 则不能进入 {} 当中执行操作<br>
+同时进入对象的锁池当中产生阻塞 直到可以获得锁标记为止</p>
+<h4 id="什么是锁池"><a class="markdownIt-Anchor" href="#什么是锁池">#</a> 什么是锁池？</h4>
+<p>Java 当中每个对象都有一份的空间 用于存放线程的<br>
+用于存放那些想要申请对象的锁标记 但是还没有拿到的线程对象的空间</p>
+<h4 id="什么是时间片"><a class="markdownIt-Anchor" href="#什么是时间片">#</a> 什么是时间片？</h4>
+<p>CPU 允许线程任务执行一次的时间单位 被形象成称之为 &quot;时间片&quot;</p>
+<h4 id="什么是死锁"><a class="markdownIt-Anchor" href="#什么是死锁">#</a> 什么是死锁？</h4>
+<p>互斥锁标记使用过多或者使用不当</p>
+<p>​		就会造成多个线程相互持有对方想要申请的资源<br>
+​		不释放的情况下 又去申请对方已经持有的资源<br>
+​		从而双双进入对方已经持有的资源的锁池当中<br>
+​		产生了永久的阻塞…</p>
+<p>​																			死锁（DeadLock）</p>
+<h4 id="如何解决死锁"><a class="markdownIt-Anchor" href="#如何解决死锁">#</a> 如何解决死锁？</h4>
+<p>涉及到一块空间 和 三个方法</p>
+<p>一块空间： 对象的 等待池</p>
+<p>三个方法： wait () /notify () /notifyAll ()</p>
+<p>​					wait () : 告诉当前线程 放弃已经持有的锁标记<br>
+​		  						并且进入调用方法的那个对象的等待池当中</p>
+<p>​					notify () : 从调用方法的那个对象的等待池当中</p>
+<p>​									随机的唤醒一个线程</p>
+<p>​					notifyAll () : 从调用方法的那个对象的等待池当中</p>
+<p>​					唤醒所有阻塞中的线程～</p>
+<p>​					*： 注意 这三个方法不是 Thread 类的方法<br>
+​									而是 Object 类的方法<br>
+​									因为每个对象都有等待池<br>
+​									每个对象都需要操作等待池</p>
+<p>​					*： 注意 这三个方法都必须在已经持有</p>
+<p>​									对方锁标记的前提下才能使用</p>
+<p>​									否则不但操作失败 还会触发运行时异常</p>
+<p>​									IllegalMonitorStateException</p>
+<p>​									在没有持有锁标记的情况下 直接操作对象的等待池！</p>
+<h4 id="锁池和等待池的区别"><a class="markdownIt-Anchor" href="#锁池和等待池的区别">#</a> 锁池和等待池的区别</h4>
+<p>1：进入的时候是否需要释放资源<br>
+锁池不需要<br>
+等待池需要先释放</p>
+<p>2：离开的时候是否需要调用方法<br>
+锁池不需要<br>
+等待池必须调用 notify ()/notifyAll ()</p>
+<p>3：离开之后去往什么状态<br>
+离开锁池 前往就绪<br>
+离开等待池 直奔锁池！</p>
+<h4 id="synchronized修饰方法该如何理解"><a class="markdownIt-Anchor" href="#synchronized修饰方法该如何理解">#</a> synchronized 修饰方法该如何理解</h4>
+<p>已知：<br>
+Vector 类的 add () 和 remove () 都是 synchronized 修饰的<br>
+我们有一个 Vector 对象 名叫 v<br>
+ 有两个线程对象 名叫 t1 和 t2</p>
+<p>当 t1 线程调用 v 对象的 add () 方法已经开始执行了<br>
+但是还没执行结束呢 此时时间片突然耗尽<br>
+而 t2 线程抢到了时间片</p>
+<p>问：	<br>
+t2 能不能调用 v 对象的 add ()?		false<br>
+t2 能不能调用 v 对象的 remove ()?		false</p>
+<p>已知：<br>
+Vector 类的 add () 和 remove () 都是 synchronized 修饰的<br>
+我们有两个 Vector 对象 名叫 v1 和 v2<br>
+ 有两个线程对象 名叫 t1 和 t2</p>
+<p>当 t1 线程调用 v1 对象的 add () 方法已经开始执行了<br>
+但是还没执行结束呢 此时时间片突然耗尽<br>
+而 t2 线程抢到了时间片</p>
+<p>问：<br>
+t2 能不能调用 v1 对象的 add ()?		false<br>
+t2 能不能调用 v1 对象的 remove ()?		false<br>
+t2 能不能调用 v2 对象的 add ()?		true<br>
+t2 能不能调用 v2 对象的 remove ()?		true</p>
+<p>综上所述 你要明白 即便 synchronized 修饰符是加在方法上的<br>
+但依然是 对调用方法的对象进行加锁<br>
+ Java 当中没有对方法加锁的概念 只有对对象加锁！！！</p>
+<h2 id="day26"><a class="markdownIt-Anchor" href="#day26">#</a> day26</h2>
+<h4 id="什么是线程池"><a class="markdownIt-Anchor" href="#什么是线程池">#</a> 什么是线程池</h4>
+<p>线程池是一种标准的资源池模式</p>
+<h4 id="什么是资源池"><a class="markdownIt-Anchor" href="#什么是资源池">#</a> 什么是资源池</h4>
+<p>所谓资源池 是指在用户出现之前 提前预留活跃资源<br>
+从而在用户出现的第一时间 直接满足用户对资源的需求<br>
+并且将资源的创建和销毁都委托给资源池完成<br>
+从而优化用户体验～</p>
+<h4 id="核心类库当中由官方提供的常用的线程池种类有哪些"><a class="markdownIt-Anchor" href="#核心类库当中由官方提供的常用的线程池种类有哪些">#</a> 核心类库当中由官方提供的常用的线程池种类有哪些？</h4>
+<p>1&gt; 修复后可重用的 (预留多少活跃线程)<br>
+newFixedThreadPool(int)<br>
+ 2&gt; 缓存机制的<br>
+ newCachedThreadPool ()<br>
+ 3&gt; 单一实例的<br>
+ newSingleThreadExecutor ()</p>
+<p>阿里不允许直接使用官方提供的线程池实现</p>
+<p>要求程序员自己创建线程池执行器<br>
+那么自己创建线程池执行器 需要五个重要参数 它们是？<br>
+1&gt; 线程池当中核心线程数量<br>
+ 2&gt; 线程池最大线程数量<br>
+ 3&gt; 保持活着的时间 KeepAliveTime<br>
+4&gt; 时间单位 TimeUnit<br>
+5&gt; 一个集合 一个队列 用于存放排队的线程任务</p>
+<h4 id="shutdown-和-shutdonwnnow-的区别"><a class="markdownIt-Anchor" href="#shutdown-和-shutdonwnnow-的区别">#</a> shutdown () 和 shutdonwnNow () 的区别</h4>
+<p>首先 shutdown 和 shutdownNow () 都能禁止新任务再度提交<br>
+调用它们之后 就不能再次 submit 新任务了<br>
+但是它们都不能中断已经在执行中的线程…<br>
+ 它们的区别在于</p>
+<p>shutdown () 会将已经提交的所有任务执行结束之后<br>
+才结束执行器</p>
+<p>shutdownNow () 会将在执行过程中的执行完<br>
+而正在等待排队的直接退回<br>
+而不再执行～</p>
+<h1 id="file"><a class="markdownIt-Anchor" href="#file">#</a> File</h1>
+<h2 id="day28"><a class="markdownIt-Anchor" href="#day28">#</a> day28</h2>
+<p>java.io.File</p>
+<p>构造方法：</p>
+<p>​				new File (String 路径)</p>
+<p>​				new File (String 父目录，String 文件名)</p>
+<p>​				new File (File 父级目录，String 文件名)</p>
+<p>​				*：路径 = 相对路径 / 绝对路径</p>
+<p>​								相对路径：从 [程序认定的主目录] 出发定位我们要的文件</p>
+<p>​								绝对路径：从 [盘符或者根目录] 出发定位我们要的文件</p>
+<p>​				*：路径分界符	File.separator</p>
+<p>​								StringBuffer 的 append () 绝对优于 +</p>
+<p>一等优先级方法（12 个）：</p>
+<p>​				<strong>exists()</strong> ：判断 File 对象代表的文件或者目录是否已经存在</p>
+<p>​							*：File 对象既可以代表已经存在的文件或者目录</p>
+<p>​												又可以代表当前尚不存在的文件或者目录</p>
+<p>​				<strong>isFile()</strong> ：判断 File 对象代表的是不是一个文件</p>
+<p>​				<strong>isDirectory()</strong> ：判断 File 对象代表的是不是一个目录</p>
+<p>​							*：File 对象既可以是代表一个文件 又可以是一个目录</p>
+<p>​											所以必须有方法进行判断～</p>
+<p>​				<strong>length()</strong> ：得到文件的字节个数～</p>
+<p>​							length			length()			size()			length()</p>
+<p>​							数组				字符串				集合			文件</p>
+<p>​							int					int						int			long</p>
+<p>​							*：这个方法只能对文件进行调用 不能对目录使用</p>
+<p>​												否则将得到非预期结果…</p>
+<p>========================= 注意 高危方法 ===========================</p>
+<p>​				<strong>delete()</strong> : 删除 File 对象代表的文件或者目录	<br>
+​							*: 注意！！！该方法不经过回收站 直接删除！<br>
+​							*: 注意 如果删除的是个目录 则必须保证目录为空<br>
+​										否则删除失败…</p>
+<p>​				<strong>mkdirs()</strong> : make directories =&gt; mkdirs</p>
+<p>​							创建多层不存在的目录结构 = 建目录<br>
+​							*: File 类还有个名叫 mkdir () 没有 s<br>
+​										只能创建一层不存在的目录结构<br>
+​										你所有的 IDE (集成开发环境)<br>
+​										在按下 s 之前 首选项都是坑你的 mkdir ()</p>
+<p>​				**renameTo () **: 重命名文件或者目录</p>
+<p>​								*: 源文件.renameTo (目标文件)</p>
+<p>​												源文件必须已经 exists ()<br>
+​												目标文件必须！exists ()</p>
+<p>​								*: src 和 tar 可以是不同的目录结构</p>
+<p>​												从而实现文件剪切移动</p>
+<p>===============================================================</p>
+<p>​				<strong>getName()</strong> : 得到文件或者目录的名字</p>
+<p>​				**getParent () **: 得到文件或者目录的父目录</p>
+<p>​				<strong>getAbsolutePath()</strong> : 得到文件或者目录的绝对路径…</p>
+<p>===============================================================</p>
+<p>​				**setLastModified () **: 设置文件最后一次修改时间</p>
+<p>​				<strong>lastModified()</strong> : 得到文件最后一次修改时间</p>
+<p>​				得到 long 类型时间戳之后</p>
+<p>​				必然要解析时间戳 解析成人类能看懂的日期</p>
+<p>​				1st way : java.util.Date<br>
+​								getYear() + 1900  getMonth() + 1  getDate()<br>
+​								getHours()    getMinutes()   getSeconds()</p>
+<p>​				2nd way : java.util.Calendar<br>
+​								得到实例: newInstance ();<br>
+​								设置时间: setTimeInMillis (时间戳);<br>
+​								得到数据: get (x)    1 2+1 5 11 12 13   7</p>
+<p>​				3rd way : java.text.SimpleDateFormat<br>
+​								long -&gt; String   <code>format() : 传入时间戳 返回字符串</code> <br>
+​								String -&gt; long   <code>parse() : 传入字符串 返回Date对象</code> <br>
+​																之后 getTime () 得到时间戳</p>
+<h2 id="day29"><a class="markdownIt-Anchor" href="#day29">#</a> day29</h2>
+<p>static listRoots () : 列出当前计算机的所有的根目录…<br>
+*: 由于它只跟当前计算机有关 跟任何一个目录没有关系<br>
+所以它被设计为静态方法 直接类名调用…</p>
+<p>String [] list () : 列出一个目录当中所有的文件名字…</p>
+<p>File [] listFiles () : 列出一个目录当中所有的文件对象…</p>
+<h1 id="io流"><a class="markdownIt-Anchor" href="#io流">#</a> io 流</h1>
+<h2 id="day30"><a class="markdownIt-Anchor" href="#day30">#</a> day30</h2>
+<p>什么是流：数据从源点传输到汇点的 &quot;管道&quot; 而已</p>
+<p>流的分类：<br>
+按照方向分：	输入流	输出流		*：参照物 = 当前程序<br>
+按照单位分：	字节流	字符流<br>
+按照功能分：	节点流	过滤流（包装流、处理流）</p>
+<p><code>InputStream</code> 	所有字节输入流统一的父类 抽象类<br>
+ int read ()<br>
+int read(byte[] data)				!!!<br>
+int read(byte[] data,int off,int len)</p>
+<p><code>OutputStream</code> 	所有字节输出流统一的父类 抽象类<br>
+ write (int data)<br>
+write(byte[] data)<br>
+write(byte[] data,int off,int len)		!!!</p>
+<p><code>FileInputStream</code> 		输入流 字节流 节点流<br>
+ <code>FileOutputStream</code> 	输出流 字节流 节点流<br>
+ *<strong>: 它们都是节点流 构造方法允许传入 File 对象 / String 路径</strong>	<br>
+*<strong>: 它们都是节点流 但是只能连接文件 不能连接目录</strong><br>
+否则直接触发 FileNotFoundException [文件未找到]<br>
+*: FileInputStream 最常用的 是 read (byte [])<br>
+*: FileOutputStream 最常用的 却是 write (byte [],int,int)<br>
+*: FileInputStream 以 - 1 作为读取结束的标识<br>
+ *: FileOutputStream 是节点输出流<br>
+它创建对象的时候 如果连接的文件不存在<br>
+也会在创建流的那一刻 被自动创建出来<br>
+不需要程序员手动创建<br>
+其实 File 类有个方法名叫 createNewFile ()  没讲<br>
+但是 如果连接的目录结构都不存在 不但不建 还报异常<br>
+所以 File 类有个方法名叫 mkdirs ()   一等优先级<br>
+ *: FileOutputStream 是节点输出流<br>
+节点输出流是有极强的杀伤性的…<br>
+ 它创建对象的那一刻 如果连接的文件已经存在<br>
+也会被新的空白文件直接替换…[!!!]<br>
+ 如果我们的需求是想要在原本内容之后追加新内容<br>
+可以构造方法传参 指定追加模式开启<br>
+ new FileOutputStream (“focus.txt”,true);<br>
+*: 学会使用 TWR 语法 完成异常处理 (标准 try-catch 也得会)</p>
+<p><code>BufferedInputStream</code> 	字节流 输入流 过滤流<br>
+ <code>BufferedOutputStream</code> 	字节流 输出流 过滤流<br>
+ *<strong>: 它们都是过滤流 是为了给原本的节点流添加缓冲空间</strong><br>
+<strong>从而提高每次读写的吞吐量 进而提高效率的</strong><br>
+ *: 它们都是过滤流 不能直接连接文件 只能连接其它的流<br>
+ *: 它们的构造方法第二个参数 都允许指定缓冲空间的大小<br>
+默认只有 8192 个字节 8k …<br>
+*: BufferedInputStream 最常用的 read ()<br>
+*: BufferedOutputStream 最常用的 write (int data)<br>
+*: BufferedInputStream 同样以 - 1 作为读取结束的标识<br>
+ *: BufferedOutputStream 是带缓冲区的输出流<br>
+使用带缓冲的输出流 务必注意 及时清空缓冲<br>
+以防止数据滞留缓冲空间 导致丢失<br>
+<strong>缓冲区什么条件下会清空：</strong><br>
+<strong>1. 满了自动清空 无需操作</strong><br>
+<strong> 2. 关闭流的操作会触发清空缓冲</strong><br>
+<strong> 3. 主动清空缓冲 flush ();</strong></p>
+<p><code>DataInputStream</code> 		输入流 字节流 过滤流<br>
+ <code>DataOutputStream</code> 	输出流 字节流 过滤流<br>
+ *<strong>: 它们给原本的节点流添加读写基本数据类型的功能</strong><br>
+ *<strong>: 它们都是过滤流 不能直接连接文件 只能连接其它的流</strong></p>
+<p>​	boolean char byte short int long float double</p>
+<p>​	*: DataInputStream 提供的核心方法 readXxxx ()	有返回值</p>
+<p>​	*: DataOutputStream 提供的核心方法 writeXxxx ()	要参数</p>
+<p>​	*: DataInputStream 不能再以 - 1 作为读取结束的标识了</p>
+<p>​					如果一旦到达文件结尾 还继续尝试读取</p>
+<p>​					将直接抛出 EOFException =&gt; End Of File</p>
+<p>​</p>
+<h2 id="day31"><a class="markdownIt-Anchor" href="#day31">#</a> day31</h2>
+<p><code>ObjectInputStream</code> 	输入流 字节流 过滤流<br>
+ <code>ObjectOutputStream</code> 	输出流 字节流 过滤流<br>
+ *<strong>: 它们都是过滤流 是为了给原本的流添加持久化对象的功能的</strong><br>
+ *: 它们都是过滤流 不能直接连接文件 只能连接其它的流<br>
+ *: ObjectInputStream 提供的核心方法 名叫 readObject ()<br>
+*: ObjectOutputStream 提供的核心方法 名叫 writeObject ()<br>
+*: ObjectInputStream 同样不能以 - 1 作为读取结束的标识<br>
+如果已经读到文件结尾还继续读取<br>
+同样触发 EOFException =&gt; End Of File</p>
+<p>​	*: 想要持久化 首先需要序列化</p>
+<p>​					想要被持久化到磁盘上的对象的类 必须实现序列化接口</p>
+<p>​									implements Serializable</p>
+<p>​					如果这个类当中有其它类型的属性 就连属性的这些类型<br>
+​					也要实现序列化接口<br>
+​					如果某些属性无关紧要 没必要参与持久化存储<br>
+​					那么可以使用 transient 修饰</p>
+<p>​									transient =&gt; 短暂的 不参与持久化的</p>
+<p>​	*: 如果要持久化的是一个集合对象</p>
+<p>​					则必须保证集合当中的元素类型也要实现序列化接口<br>
+​					如果要持久化的是一个使用了比较器的 TreeSet/TreeMap<br>
+​					就连比较器的类型也要实现序列化接口<br>
+​					因为比较器是 TreeSet/TreeMap 的一个属性…</p>
+<p><code>Reader</code> 		所有字符输入流统一的父类 抽象类<br>
+ int read ()<br>
+int read(char[] data)<br>
+int read(char[] data,int off,int len)</p>
+<p><code>Writer</code> 		所有字符输出流统一的父类 抽象类<br>
+ write (int data)<br>
+write(char[] data)<br>
+write(char[] data,int off,int len)</p>
+<p><code>FileReader</code> 	输入流 字符流 节点流<br>
+ <code>FileWriter</code> 	输出流 字符流 节点流<br>
+ *<strong>: 它们都是节点流 它们构造方法允许传入 File 对象 / String 路径</strong><br>
+ *<strong>: 它们都是节点流 但是只能连接文件 不能连接目录</strong><br>
+否则直接出现 FileNotFoundException<br>
+*: FileReader 最常用的是 read (char [])<br>
+*: FileWriter 最常用的却是 write (char [],int,int)<br>
+*: FileReader 以 - 1 作为读取结束的标识<br>
+ *: FileWriter 是节点输出流 它创建对象的时候<br>
+即便连接的文件不存在 也会在创建流的第一时间自动创建<br>
+不需要程序员手动创建 createNewFile () 没有必要<br>
+但是如果连接的目录结构都不存在 则直接抛出异常<br>
+ *: FileWriter 是节点输出流 它是有极强的杀伤性的<br>
+创建对象的时候 如果连接的文件已经存在<br>
+也会在创建流的那一刻 直接用空白文件替换<br>
+如果需求是在原有内容最后追加新内容<br>
+则构造方法第二个参数传参指定追加模式开启<br>
+ new FileWriter (“focus.txt”,true)<br>
+*: 必须学会使用 TWR 语法 进行异常处理～</p>
+<p><code>BufferedReader</code> 		输入流	字符流	过滤流<br>
+ <code>BufferedWriter</code> 		输出流	字符流	过滤流<br>
+ *<strong>: 作为过滤流的它们 是为了给原本的节点流添加缓冲空间</strong><br>
+<strong>从而实现以行 (hang) 为单位的读写</strong><br>
+ *: 它们都是过滤流 不能直接连接文件 只能连接其它的流<br>
+ *: BufferedReader 提供的核心方法是 String readLine ()<br>
+*: BufferedWriter 提供的核心方法是 write (String) + newLine ()<br>
+*: BufferedReader 以 null 作为读取结束的标识</p>
+<p>今后我们以行为单位的读取文本文件 必然要用 BufferedReader<br>
+ 但是以行为单位的写出文本文件并不会用 BufferedWriter<br>
+ 而会用 PrintWriter~</p>
+<p>​	PrintWriter 比 BufferedWriter 强大在哪？</p>
+<p>​	1&gt; 它既能当做节点流 又能当做过滤流<br>
+​					构造方法允许传入 流 或者 文件 或者 路径<br>
+​	2&gt; 它既能连接字节流 又能连接字符流<br>
+​					构造方法允许传入 OutputStream / Writer<br>
+​	3&gt; 当做节点流使用的时候 构造方法第二个参数<br>
+​					允许指定字符编码<br>
+​					 new PrintWriter (“a.txt”,“utf-8”);<br>
+​	4&gt; 当做过滤流使用的时候 构造方法第二个参数<br>
+​					允许指定自动清空缓冲<br>
+​	 				new PrintWriter (new FileWriter (“a.txt”,true),true);<br>
+​	5&gt; println () = write () + newLine () 代码简练<br>
+​	6&gt; 我们对于它的孪生兄弟 相当熟悉<br>
+​					PrintStream    System.out</p>
+<p>​	综上所述 我们必然选择 PrintWriter  而不是 BufferedWriter</p>
+
+      <div class="tags">
+          <a href="/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" rel="tag"><i class="ic i-tag"></i> 后端开发</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2026-01-06 19:51:37" itemprop="dateModified" datetime="2026-01-06T19:51:37+08:00">2026-01-06</time>
+  </span>
+  <span id="full-stack/back-end/back-note/month2/" class="item leancloud_visitors" data-flag-title="IO流" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="libert-Aries 微信支付">
+        <p>微信支付</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>libert-Aries <i class="ic i-at"><em>@</em></i>你来啦！
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/full-stack/back-end/back-note/month2/" title="IO流">http://example.com/full-stack/back-end/back-note/month2/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/full-stack/back-end/back-note/month1/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;t.alcy.cc&#x2F;fj?826764" title="JavaSE">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 后端</span>
+  <h3>JavaSE</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/full-stack/front-end/front-note/month3/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;t.alcy.cc&#x2F;fj?195557" title="前端与数据库">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 前端</span>
+  <h3>前端与数据库</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text"> 内部类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#day22"><span class="toc-number">1.1.</span> <span class="toc-text"> day22</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#java%E5%BD%93%E4%B8%AD%E5%86%85%E9%83%A8%E7%B1%BB%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">1.1.0.1.</span> <span class="toc-text"> Java 当中内部类的分类：</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8"><span class="toc-number">2.</span> <span class="toc-text"> 异常</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#day23"><span class="toc-number">2.1.</span> <span class="toc-text"> day23</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98error-%E5%92%8C-exception-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="toc-number">2.1.0.1.</span> <span class="toc-text"> 面试题（Error 和 Exception 有什么区别？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98%E8%BF%90%E8%A1%8C%E6%97%B6%E5%BC%82%E5%B8%B8%E5%92%8C%E9%9D%9E%E8%BF%90%E8%A1%8C%E6%97%B6%E5%BC%82%E5%B8%B8%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">2.1.0.2.</span> <span class="toc-text"> 面试题（运行时异常和非运行时异常的区别？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11%E7%A7%8D%E5%B8%B8%E8%A7%81%E7%9A%84%E5%BC%82%E5%B8%B8"><span class="toc-number">2.1.0.3.</span> <span class="toc-text"> 11 种常见的异常:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E5%BC%82%E5%B8%B8"><span class="toc-number">2.1.0.4.</span> <span class="toc-text"> 如何处理异常</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text"> 线程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#day24"><span class="toc-number">3.1.</span> <span class="toc-text"> day24</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="toc-number">3.1.0.1.</span> <span class="toc-text"> 为什么要使用多线程？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E6%8E%A7%E5%88%B6%E7%BA%BF%E7%A8%8B"><span class="toc-number">3.1.0.2.</span> <span class="toc-text"> 如何控制线程？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%B1%BB%E5%85%B6%E4%BB%96%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">3.1.0.3.</span> <span class="toc-text"> 线程类其他常用方法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#day25"><span class="toc-number">3.2.</span> <span class="toc-text"> day25</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%B6%E5%8F%91%E9%94%99%E8%AF%AF%E5%87%BA%E7%8E%B0%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-number">3.2.0.1.</span> <span class="toc-text"> 并发错误出现的原因</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E5%B9%B6%E5%8F%91%E9%94%99%E8%AF%AF"><span class="toc-number">3.2.0.2.</span> <span class="toc-text"> 如何解决并发错误</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E6%9C%89%E4%BA%BA%E9%97%AE%E4%BD%A0java%E5%BD%93%E4%B8%AD%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E5%B9%B6%E5%8F%91%E9%94%99%E8%AF%AF-%E4%BD%A0%E8%AF%A5%E5%A6%82%E4%BD%95%E5%BA%94%E5%AF%B9"><span class="toc-number">3.2.0.3.</span> <span class="toc-text"> 如果有人问你 Java 当中如何解决并发错误 你该如何应对？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E9%94%81%E6%A0%87%E8%AE%B0"><span class="toc-number">3.2.0.4.</span> <span class="toc-text"> 什么是锁标记？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E9%94%81%E6%B1%A0"><span class="toc-number">3.2.0.5.</span> <span class="toc-text"> 什么是锁池？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%97%B6%E9%97%B4%E7%89%87"><span class="toc-number">3.2.0.6.</span> <span class="toc-text"> 什么是时间片？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%AD%BB%E9%94%81"><span class="toc-number">3.2.0.7.</span> <span class="toc-text"> 什么是死锁？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E6%AD%BB%E9%94%81"><span class="toc-number">3.2.0.8.</span> <span class="toc-text"> 如何解决死锁？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%94%81%E6%B1%A0%E5%92%8C%E7%AD%89%E5%BE%85%E6%B1%A0%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">3.2.0.9.</span> <span class="toc-text"> 锁池和等待池的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#synchronized%E4%BF%AE%E9%A5%B0%E6%96%B9%E6%B3%95%E8%AF%A5%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3"><span class="toc-number">3.2.0.10.</span> <span class="toc-text"> synchronized 修饰方法该如何理解</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#day26"><span class="toc-number">3.3.</span> <span class="toc-text"> day26</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%BA%BF%E7%A8%8B%E6%B1%A0"><span class="toc-number">3.3.0.1.</span> <span class="toc-text"> 什么是线程池</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%B5%84%E6%BA%90%E6%B1%A0"><span class="toc-number">3.3.0.2.</span> <span class="toc-text"> 什么是资源池</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E7%B1%BB%E5%BA%93%E5%BD%93%E4%B8%AD%E7%94%B1%E5%AE%98%E6%96%B9%E6%8F%90%E4%BE%9B%E7%9A%84%E5%B8%B8%E7%94%A8%E7%9A%84%E7%BA%BF%E7%A8%8B%E6%B1%A0%E7%A7%8D%E7%B1%BB%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="toc-number">3.3.0.3.</span> <span class="toc-text"> 核心类库当中由官方提供的常用的线程池种类有哪些？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#shutdown-%E5%92%8C-shutdonwnnow-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">3.3.0.4.</span> <span class="toc-text"> shutdown () 和 shutdonwnNow () 的区别</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#file"><span class="toc-number">4.</span> <span class="toc-text"> File</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#day28"><span class="toc-number">4.1.</span> <span class="toc-text"> day28</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#day29"><span class="toc-number">4.2.</span> <span class="toc-text"> day29</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#io%E6%B5%81"><span class="toc-number">5.</span> <span class="toc-text"> io 流</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#day30"><span class="toc-number">5.1.</span> <span class="toc-text"> day30</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#day31"><span class="toc-number">5.2.</span> <span class="toc-text"> day31</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/full-stack/back-end/back-note/super,this,%E9%87%8D%E5%86%99/" rel="bookmark" title="super,this,重写">super,this,重写</a></li><li><a href="/full-stack/back-end/back-note/month1/" rel="bookmark" title="JavaSE">JavaSE</a></li><li class="active"><a href="/full-stack/back-end/back-note/month2/" rel="bookmark" title="IO流">IO流</a></li><li><a href="/full-stack/back-end/back-note/month4/" rel="bookmark" title="SpringBoot">SpringBoot</a></li><li><a href="/full-stack/back-end/back-note/month5/" rel="bookmark" title="SpringBoot集成MyBatis">SpringBoot集成MyBatis</a></li><li><a href="/full-stack/back-end/back-note/%E6%8B%A6%E6%88%AA%E5%99%A8/" rel="bookmark" title="拦截器">拦截器</a></li><li><a href="/full-stack/back-end/back-note/MyBatisPlus/" rel="bookmark" title="Mybatisplus">Mybatisplus</a></li><li><a href="/full-stack/back-end/back-note/Exception/" rel="bookmark" title="异常处理">异常处理</a></li><li><a href="/full-stack/back-end/back-note/RabbitMQ/" rel="bookmark" title="RabbitMQ">RabbitMQ</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="libert-Aries"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">libert-Aries</p>
+  <div class="description" itemprop="description">热烈 自由</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">19</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">6</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">13</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xpYmVydC1Bcmllcw==" title="https:&#x2F;&#x2F;github.com&#x2F;libert-Aries"><i class="ic i-github"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjM5NTExMzExMEBxcS5jb20=" title="mailto:395113110@qq.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于我</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/full-stack/back-end/back-note/month1/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/full-stack/front-end/front-note/month3/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
+</div>
+
+    <span><a href="/full-stack/back-end/back-note/month1/" title="JavaSE">JavaSE</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a>
+</div>
+
+    <span><a href="/theme-shoka-doc/dependents/" title="Step.1 依赖插件">Step.1 依赖插件</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
+</div>
+
+    <span><a href="/full-stack/back-end/back-note/super,this,%E9%87%8D%E5%86%99/" title="super,this,重写">super,this,重写</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a>
+</div>
+
+    <span><a href="/theme-shoka-doc/config/" title="Step.2 基本配置">Step.2 基本配置</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a>
+</div>
+
+    <span><a href="/theme-shoka-doc/special/" title="Step.4 主题特殊功能">Step.4 主题特殊功能</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/front-end/" title="分类于 前端">前端</a>
+</div>
+
+    <span><a href="/full-stack/front-end/front-note/Vue3/" title="Vue3">Vue3</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
+</div>
+
+    <span><a href="/full-stack/back-end/back-note/%E6%8B%A6%E6%88%AA%E5%99%A8/" title="拦截器">拦截器</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a>
+</div>
+
+    <span><a href="/theme-shoka-doc/display/" title="Step.3 界面显示">Step.3 界面显示</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6Java%E8%AF%AD%E8%A8%80-%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%AD%A6-%E7%BF%81%E6%81%BA/" title="分类于 零基础学Java语言-浙江大学-翁恺">零基础学Java语言-浙江大学-翁恺</a>
+</div>
+
+    <span><a href="/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6java/week-2/" title="第2周 判断">第2周 判断</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%A2%8E%E7%A2%8E%E7%89%87/" title="分类于 碎碎片">碎碎片</a>
+</div>
+
+    <span><a href="/Markdown%E4%BD%BF%E7%94%A8/Markdown/" title="Markdown使用">Markdown使用</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">libert-Aries @ libert-Aries's blog</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">167k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:32</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'full-stack/back-end/back-note/month2/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)看这里だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: {"placeholder":"1. 提问前请先仔细阅读本文档⚡\n2. 页面显示问题💥，请提供控制台截图📸或者您的测试网址\n3. 其他任何报错💣，请提供详细描述和截图📸，祝食用愉快💪"},fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

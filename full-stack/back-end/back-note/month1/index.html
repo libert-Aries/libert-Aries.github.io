@@ -1,0 +1,1192 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="你来啦！" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="你来啦！" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="你来啦！" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="后端开发" />
+
+
+<link rel="canonical" href="http://example.com/full-stack/back-end/back-note/month1/">
+
+
+
+  <title>
+JavaSE - 后端 - 全栈 |
+libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">JavaSE
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-02-14 13:59:48">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-02-14T13:59:48+08:00">2022-02-14</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">libert-Aries's blog</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?196748"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?575555"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?998352"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?153103"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?268903"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?580306"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/full-stack/" itemprop="item" rel="index" title="分类于 全栈"><span itemprop="name">全栈</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/full-stack/back-end/" itemprop="item" rel="index" title="分类于 后端"><span itemprop="name">后端</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://example.com/full-stack/back-end/back-note/month1/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="libert-Aries">
+    <meta itemprop="description" content="人生如逆旅 我亦是行人, 热烈 自由">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="你来啦！">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>JavaSE</p>
+<span id="more"></span>
+<h1 id="面试题"><a class="markdownIt-Anchor" href="#面试题">#</a> 面试题</h1>
+<h2 id="day1"><a class="markdownIt-Anchor" href="#day1">#</a> day1</h2>
+<h4 id="面试题jdk和jre之间的区别"><a class="markdownIt-Anchor" href="#面试题jdk和jre之间的区别">#</a> 面试题（jdk 和 jre 之间的区别？）：</h4>
+<p>jdk 表示 java 软件开发工具包 如果一台电脑上面安装 jdk</p>
+<p>既可以编写代码 又可以运行代码</p>
+<p>jre 表示 java 运行环境 如果一台电脑上面安装 jre</p>
+<p>只能运行代码</p>
+<h2 id="day2"><a class="markdownIt-Anchor" href="#day2">#</a> day2</h2>
+<h4 id="面试题以下哪些是合法的标识符a-b"><a class="markdownIt-Anchor" href="#面试题以下哪些是合法的标识符a-b">#</a> 面试题（以下哪些是合法的标识符？A B ）</h4>
+<p>A:String [类名]										B:Int	<br>
+C:const [保留字] 									D:Hello World</p>
+<h4 id="类的个数"><a class="markdownIt-Anchor" href="#类的个数">#</a> 类的个数</h4>
+<ul>
+<li>
+<p>一个文件里面 最多可以出现 __1__公共的类</p>
+</li>
+<li>
+<p>一个文件里面 最少可以出现 __0__公共的类</p>
+</li>
+<li>
+<p>一个文件里面 最多可以出现 __无数个__普通的类</p>
+</li>
+</ul>
+<h2 id="day3"><a class="markdownIt-Anchor" href="#day3">#</a> day3</h2>
+<h4 id="面试题java中的数据类型分为几种"><a class="markdownIt-Anchor" href="#面试题java中的数据类型分为几种">#</a> 面试题（java 中的数据类型分为几种？）</h4>
+<p>2 种 / 无数种</p>
+<p>基本数据类型（简单数据类型）：程序里面自带的数据类型</p>
+<p>引用数据类型  (自定义数据类型)：程序员自己开发的数据类型</p>
+<h4 id="面试题基本数据类型分为几种"><a class="markdownIt-Anchor" href="#面试题基本数据类型分为几种">#</a> 面试题（基本数据类型分为几种？）</h4>
+<p><strong>布尔类型：boolean</strong></p>
+<p>​			*: 只能使用 true [真]/false [假] 进行赋值</p>
+<p>​			*: 不能使用数字进行赋值</p>
+<p><strong>字符类型：char  底层基于 Unicode 编码实现的 不区分中英文 统一的都是 2 个字节 16 个位</strong></p>
+<p><strong>整数类型 	符号位 [1] + 数值位 [n-1]</strong></p>
+<p>取值范围：-2^(n-1) 到 2^(n-1)-1</p>
+<p>​					byte		short		 <code>int</code> 		long[L/l]</p>
+<p>​	   位		  8			  16			 32		        64</p>
+<p>​		*: 整数类型默认是 int 类型</p>
+<p>​		*:long 类型的结尾需要加上 L/l 尽量 L</p>
+<p>​		*: 当数值超出 int 类型最大边界的时候 注意使用 long 类型</p>
+<p>​		整数类型的赋值方式：</p>
+<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">十进制和二进制之间的转换：非重点</span><br><span class="line">正数：</span><br><span class="line">byte x = 35;</span><br><span class="line">	1<span class="number"> 2 </span>4<span class="number"> 8 </span>16<span class="number"> 32 </span>64<span class="number"> 128 </span>256<span class="number"> 512 </span>1024....2^(n)</span><br><span class="line">35 =<span class="number"> 32 </span>+<span class="number"> 2 </span>+<span class="number"> 1 </span>= 00100011</span><br><span class="line">	</span><br><span class="line">byte x = 103;</span><br><span class="line">	103 =<span class="number"> 64 </span>+<span class="number"> 32 </span>+<span class="number"> 4 </span>+<span class="number"> 2 </span>+<span class="number"> 1 </span>= 01100111</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">负数：正数的二进制取反+1</span><br><span class="line"></span><br><span class="line">	0 +<span class="number"> 0 </span>= 0</span><br><span class="line">	1 +<span class="number"> 0 </span>= 1</span><br><span class="line">	0 +<span class="number"> 1 </span>= 1</span><br><span class="line">	1 +<span class="number"> 1 </span>= 0上1</span><br><span class="line">	</span><br><span class="line">	byte x = -103;</span><br><span class="line">	103 = 01100111</span><br><span class="line">	取反  10011000</span><br><span class="line">	+						1</span><br><span class="line">  		 10011001</span><br></pre></td></tr></table></figure>
+<p><strong>浮点类型</strong></p>
+<h4 id="常见的错误"><a class="markdownIt-Anchor" href="#常见的错误">#</a> 常见的错误</h4>
+<ul>
+<li>找不到符号 -&gt; 单词写错</li>
+<li>需要 class interface enum -&gt; 多大括号</li>
+<li>解析时已经到达文件结尾 -&gt; 少大括号</li>
+<li>类 XXX 是公共的 应该在 XXX.java 中声明 -&gt; 类名和文件名不一致</li>
+<li>在类里面找不到 main 方法 … -&gt; main 方法写错了</li>
+</ul>
+<h2 id="day4"><a class="markdownIt-Anchor" href="#day4">#</a> day4</h2>
+<h4 id="面试题string类属于基本数据类型还是引用数据类型"><a class="markdownIt-Anchor" href="#面试题string类属于基本数据类型还是引用数据类型">#</a> 面试题（String 类属于基本数据类型还是引用数据类型？）</h4>
+<ul>
+<li>引用数据类型</li>
+<li>String 类 Sun 公司开发好的类 自动会导入每篇代码里面
+<ul>
+<li>随机的三位数：int num = (Math.random () * 900 + 100)</li>
+<li>随机的 A-Z:  char x = (char)(Math.random () * 26 + 65);</li>
+<li>随机的 a-z:  char y = (char)(Math.random () * 26 + 97);</li>
+</ul>
+</li>
+</ul>
+<h4 id="面试题-2"><a class="markdownIt-Anchor" href="#面试题-2">#</a> 面试题</h4>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">short</span> <span class="variable">x</span> <span class="operator">=</span> <span class="number">1</span>;<span class="comment">//-32768  32767</span></span><br><span class="line">x = x + <span class="number">1</span>;<span class="comment">//short = int</span></span><br><span class="line">System.out.println(x);<span class="comment">//报错  可能损失精度</span></span><br><span class="line"></span><br><span class="line"><span class="type">short</span> <span class="variable">y</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">y += <span class="number">1</span>;y = (<span class="type">short</span>)(y + <span class="number">1</span>);</span><br><span class="line">System.out.println(y);<span class="comment">//2</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p><strong>++ --[自增自减运算符]</strong></p>
+<p>x++: 先取值	再运算</p>
+<p>++x: 先运算   在取值</p>
+</li>
+<li>
+<p><strong>[&gt;  &lt;  &gt;=  &lt;=  !  =  !=  ==]</strong></p>
+<ul>
+<li>
+<p>[&gt;  &lt;&gt;=  &lt;=] 判断运算符 最终的结果都是 boolean -&gt; true/false</p>
+</li>
+<li>
+<p>! : 非！boolean -&gt; !true =&gt; false   !false =&gt; true</p>
+</li>
+<li>
+<p>!=: 判断左右两边的值是否不相等</p>
+</li>
+<li>
+<p>= 和 == 之间的区别？</p>
+<ul>
+<li>=: 赋值运算符 将右侧的值交给左边的变量保管</li>
+<li>==: 判断左右两边的值是否相等</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="面试题20-11结果是多少"><a class="markdownIt-Anchor" href="#面试题20-11结果是多少">#</a> 面试题（2.0 - 1.1 结果是多少？）</h4>
+<ul>
+<li>反正不是 0.9</li>
+</ul>
+<p><strong>为什么会得到一个错误的结果？</strong></p>
+<p>java 中任何一个整数类型都可以用二进制<br>
+精确的表达出来 但是不代表任何一个小数<br>
+也可以在有限的位数里面 表达出来<br>
+ 1.1 在计算机底层存储的时候 出现了数值位的截取<br>
+导致数字不正确 所以结果也不正确</p>
+<h2 id="day5"><a class="markdownIt-Anchor" href="#day5">#</a> day5</h2>
+<h4 id="面试题和之间的区别"><a class="markdownIt-Anchor" href="#面试题和之间的区别">#</a> 面试题（&amp;&amp; 和 &amp; 之间的区别？）</h4>
+<p>相同点：&amp;&amp; 和 &amp; 都叫做逻辑的与 相当于汉文中并且的意思</p>
+<p>需要前后两个条件都成立才能执行</p>
+<p>不同点：&amp;&amp; 叫做逻辑的短路与 有短路特性</p>
+<p>短路特性：如果通过前面的条件可以得出最终结果的话 后面的条件直接舍弃 不在判断</p>
+<p><strong>|| 和 | 之间的区别？</strong></p>
+<p>相同点：|| 和 | 都是逻辑的或 相当于汉文中或者的意思</p>
+<p>需要前后一个条件成立就能执行</p>
+<p>不同点：|| 叫做逻辑的短路或 有短路特性</p>
+<p>如果通过前面的条件可以得出最终结果的话 后面的条件直接舍弃 不在判断</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&amp;:按位的与 要求上下二进制都是<span class="number">1</span>的时候 才能写<span class="number">1</span></span><br><span class="line">  System.out.println(<span class="number">9</span> &amp; <span class="number">5</span>);</span><br><span class="line">	<span class="number">9</span>:<span class="number">8</span> + <span class="number">1</span> = <span class="number">000.</span><span class="number">.001001</span></span><br><span class="line">  <span class="number">5</span>:<span class="number">4</span> + <span class="number">1</span> = <span class="number">000.</span><span class="number">.000101</span>  &amp;</span><br><span class="line">    			  <span class="number">000.</span><span class="number">.000001</span> : <span class="number">1</span></span><br><span class="line">              </span><br><span class="line">|:按位的或 要求上下二进制只要有<span class="number">1</span>就写<span class="number">1</span></span><br><span class="line">  System.out.println(<span class="number">9</span> | <span class="number">5</span>);</span><br><span class="line">	<span class="number">9</span>:<span class="number">8</span> + <span class="number">1</span> = <span class="number">000.</span><span class="number">.001001</span></span><br><span class="line">  <span class="number">5</span>:<span class="number">4</span> + <span class="number">1</span> = <span class="number">000.</span><span class="number">.000101</span>  |</span><br><span class="line">    			  <span class="number">000.</span><span class="number">.001101</span> : <span class="number">8</span>+<span class="number">4</span>+<span class="number">1</span>=<span class="number">13</span></span><br><span class="line">              </span><br><span class="line">^:按位的异或 要求上下二进制不一样的时候写<span class="number">1</span></span><br><span class="line">  System.out.println(<span class="number">9</span> ^ <span class="number">5</span>);</span><br><span class="line">  <span class="number">9</span>:<span class="number">8</span> + <span class="number">1</span> = <span class="number">000.</span><span class="number">.001001</span></span><br><span class="line">  <span class="number">5</span>:<span class="number">4</span> + <span class="number">1</span> = <span class="number">000.</span><span class="number">.000101</span>  ^</span><br><span class="line">    				<span class="number">000.</span><span class="number">.001100</span> : <span class="number">8</span> + <span class="number">4</span> = <span class="number">12</span></span><br><span class="line">              </span><br><span class="line">~:按位的取反 <span class="number">0</span>-》<span class="number">1</span>	<span class="number">1</span>-》<span class="number">0</span></span><br><span class="line">  <span class="number">11101001</span>  </span><br><span class="line">  <span class="number">00010110</span> ：<span class="number">16</span> + <span class="number">4</span> + <span class="number">2</span> = <span class="number">22</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>重点</strong></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&amp;:在某些情况下取代%</span><br><span class="line">  当我们拿着一个正数%上<span class="number">2</span>的n次方数的时候 结果等价于</span><br><span class="line">  我们拿着这个正数&amp;上<span class="number">2</span>的n次方数-<span class="number">1</span>的结果</span><br><span class="line">  x % <span class="number">2</span>(n) 等价于 x &amp; <span class="number">2</span>(n)-<span class="number">1</span></span><br><span class="line">  </span><br><span class="line"><span class="number">27</span>	%<span class="number">2</span>	%<span class="number">4</span>	%<span class="number">8</span>	%<span class="number">16.</span>....%<span class="number">2</span>^(n)</span><br><span class="line">  	<span class="number">1</span>		<span class="number">3</span>		<span class="number">3</span>		<span class="number">11</span></span><br><span class="line"><span class="number">27</span>	&amp;<span class="number">1</span>	&amp;<span class="number">3</span>	&amp;<span class="number">7</span>	&amp;<span class="number">15.</span>....&amp;<span class="number">2</span>^(n)-<span class="number">1</span></span><br><span class="line">  	<span class="number">1</span> 	<span class="number">3</span>		<span class="number">3</span>		<span class="number">11</span></span><br><span class="line"></span><br><span class="line">^:可以不借助第三块空间的方式交换两个变量的值</span><br><span class="line">  	<span class="type">int</span> <span class="variable">x</span> <span class="operator">=</span> <span class="number">100</span>;</span><br><span class="line">		<span class="type">int</span> <span class="variable">y</span> <span class="operator">=</span> <span class="number">66</span>;</span><br><span class="line">		<span class="type">int</span> <span class="variable">z</span> <span class="operator">=</span> x;</span><br><span class="line">		x = y;</span><br><span class="line">		y = z;</span><br><span class="line"></span><br><span class="line">		x = x ^ y;</span><br><span class="line">		y = x ^ y;</span><br><span class="line">		x = x ^ y;</span><br><span class="line">  </span><br><span class="line">	可以使用^交换的数据类型：</span><br><span class="line">    <span class="type">boolean</span> <span class="type">char</span> <span class="type">byte</span> <span class="type">short</span> <span class="type">int</span> <span class="type">long</span></span><br><span class="line">    </span><br><span class="line">  第三方交换方法是通用版本：</span><br></pre></td></tr></table></figure>
+<h4 id="面试题java中的变量分为几种"><a class="markdownIt-Anchor" href="#面试题java中的变量分为几种">#</a> 面试题（java 中的变量分为几种？）</h4>
+<ul>
+<li>成员变量 实例变量 属性：定义在类体里面变量</li>
+<li>局部变量 自动变量：定义在方法体里面的变量</li>
+<li>*：java 中没有全局变量的概念</li>
+</ul>
+<h4 id="面试题成员变量和局部变量之间的区别"><a class="markdownIt-Anchor" href="#面试题成员变量和局部变量之间的区别">#</a> 面试题（成员变量和局部变量之间的区别？）</h4>
+<ul>
+<li>
+<p>定义的位置不同</p>
+<ul>
+<li>成员变量：定义在类体里面</li>
+<li>局部变量：定义在方法体里面</li>
+</ul>
+</li>
+<li>
+<p>作用范围不同</p>
+<ul>
+<li>成员变量：也叫属性 表示对象有什么 依赖于对象存在当我们创建对象 [new] 的时候 属性伴随着也会创建 当消亡对象的时候 属性伴随着也会消亡</li>
+<li>局部变量：从定义的那一行开始 一直到所在的方法体执行结束之前可以访问 一旦所在的方法体执行结束 局部变量立即消亡 依赖于方法存在</li>
+</ul>
+</li>
+<li>
+<p>默认值不同</p>
+<ul>
+<li>成员变量：即使不赋值也有默认值</li>
+<li>局部变量：没有默认值 要求在使用之前必须先赋值</li>
+</ul>
+<p><strong>成员变量和局部变量可以重名</strong></p>
+<p>当成员变量和局部变量重名的时候 直接访问这个变量默认是局部</p>
+<p>如果想要访问成员变量 需要在变量前面加上 this.</p>
+</li>
+</ul>
+<h2 id="day10"><a class="markdownIt-Anchor" href="#day10">#</a> day10</h2>
+<h4 id="面试题方法重载需要哪些条件"><a class="markdownIt-Anchor" href="#面试题方法重载需要哪些条件">#</a> 面试题（方法重载需要哪些条件？）</h4>
+<ul>
+<li>
+<p>需要发生在同一个类体中</p>
+</li>
+<li>
+<p>方法名需要一模一样</p>
+</li>
+<li>
+<p>方法的参数需要不同</p>
+<ul>
+<li>类型不同</li>
+<li>个数不同</li>
+<li>顺序不同</li>
+</ul>
+</li>
+<li>
+<p>方法重载对修饰符 和 返回类型没有要求</p>
+</li>
+<li>
+<p><strong>方法重载的作用？</strong></p>
+<p><strong>同时满足用户的不同需求</strong></p>
+</li>
+</ul>
+<h4 id="面试题方法覆盖的条件"><a class="markdownIt-Anchor" href="#面试题方法覆盖的条件">#</a> 面试题（方法覆盖的条件？）</h4>
+<p>需要发生在有继承关系的两个类中 而且是在子类里面发生的 【子类在继承得到父类的某些方法之后 觉得父类的实现不好 于是在子类里面重新实现一下】</p>
+<h4 id="面试题override和overload之间的区别"><a class="markdownIt-Anchor" href="#面试题override和overload之间的区别">#</a> 面试题（Override 和 Overload 之间的区别？）</h4>
+<ul>
+<li>含义不同
+<ul>
+<li>Override: 方法覆盖</li>
+<li>Overload: 方法重载</li>
+</ul>
+</li>
+<li>发生的位置不同
+<ul>
+<li>Override: 需要发生在有继承关系的两个类中</li>
+<li>Overload: 需要在同一个类体中</li>
+</ul>
+</li>
+<li>对返回类型的要求不同
+<ul>
+<li>Override: 分版本
+<ul>
+<li>jdk5.0 之前	一模一样</li>
+<li>jdk5.0 开始  协变返回类型</li>
+</ul>
+</li>
+<li>Overload: 对返回类型没有要求</li>
+</ul>
+</li>
+<li>对参数的要求不同
+<ul>
+<li>Override: 参数必须相同</li>
+<li>Overload: 参数必须不同 [类型 个数 顺序]</li>
+</ul>
+</li>
+<li>作用不同
+<ul>
+<li>Override: 让一个方法变得更加优秀</li>
+<li>Overload: 同时满足用户的不同需求</li>
+</ul>
+</li>
+</ul>
+<h4 id="面试题构造方法能不能方法重载"><a class="markdownIt-Anchor" href="#面试题构造方法能不能方法重载">#</a> 面试题（构造方法能不能方法重载？）</h4>
+<ul>
+<li>可以</li>
+</ul>
+<h4 id="面试题构造方法能不能方法覆盖"><a class="markdownIt-Anchor" href="#面试题构造方法能不能方法覆盖">#</a> 面试题（构造方法能不能方法覆盖？）</h4>
+<ul>
+<li>不能方法覆盖</li>
+<li>方法覆盖的前提是需要前继承得到</li>
+</ul>
+<h4 id="super和this的区别"><a class="markdownIt-Anchor" href="#super和this的区别">#</a> super () 和 this () 的区别</h4>
+<p>默认：super (): 表示要执行本构造方法之前 先去执行父类的构造方法</p>
+<ul>
+<li>默认找父类的无参构造方法</li>
+<li>假如父类没有无参构造方法
+<ul>
+<li>提供父类的无参构造方法</li>
+<li>在 super () 里面传参数 指定他找父类的哪一个构造方法</li>
+</ul>
+</li>
+</ul>
+<p>this (): 要执行本构造方法之前 先去执行本类的其他的构造方法</p>
+<ul>
+<li>具体执行本类的哪一个构造方法 看参数类型</li>
+</ul>
+<h2 id="day12"><a class="markdownIt-Anchor" href="#day12">#</a> day12</h2>
+<h4 id="string类常见的面试题"><a class="markdownIt-Anchor" href="#string类常见的面试题">#</a> String 类常见的面试题</h4>
+<ul>
+<li>
+<p><strong>new 和不 new 之间的区别？/String 类创建对象的方式有几种？他们之间的区别？</strong></p>
+<p>String x = “OK”;</p>
+<p>String y = new String(“OK”);</p>
+<p>不 new 的方式涉及到<strong>常量池</strong>查找机制</p>
+</li>
+<li>
+<p><strong>String 和 StringBuffer / StringBuilder 之间的区别？</strong></p>
+<p>String str = new String(“OK”);//[]:2</p>
+<p>StringBuffer buffer = new StringBuffer(“OK”);//[]:2 + 16</p>
+<p>StringBuffer 和 StringBuilder 在第一次创建对象的时候 底层会多预留 16 块缓冲区</p>
+<p>缓冲区可以让追加连接效率高</p>
+<p>String 类每次追加连接 底层都需要换一个新的数组对象</p>
+</li>
+<li>
+<p><strong>StringBuffer 和 StringBuilder 之间的区别？</strong></p>
+<p>StringBuffer 同一时间允许一个线程进行访问 效率较低 但是不会出现并发错误</p>
+<p>StringBuilder 同一时间允许多个线程进行访问 效率较高 但是可能会出现并发错误</p>
+</li>
+</ul>
+<h2 id="day13"><a class="markdownIt-Anchor" href="#day13">#</a> day13</h2>
+<h4 id="访问权限修饰符各自可以修饰什么"><a class="markdownIt-Anchor" href="#访问权限修饰符各自可以修饰什么">#</a> <strong>访问权限修饰符各自可以修饰什么？</strong></h4>
+<ul>
+<li>public		类	成员 [属性 / 方法]</li>
+<li>protected        成员 [属性 / 方法]</li>
+<li>default      类   成员 [属性 / 方法]</li>
+<li>private            成员 [属性 / 方法]</li>
+</ul>
+<h4 id="static修饰符"><a class="markdownIt-Anchor" href="#static修饰符">#</a> <strong>static 修饰符</strong></h4>
+<ul>
+<li>
+<p><strong>static 可以修饰什么</strong></p>
+<ul>
+<li>
+<p><strong>属性</strong>：静态属性 表示整个类型共享一份的属性 不是每个对象都有一份的属性 需要拿着类名去调用</p>
+</li>
+<li>
+<p><strong>方法</strong>：静态方法 需要拿着类名对象去调用 静态方法里面只能直接的访问静态的成员 如果想要在静态方法里面访问非静态成员 需要创建对象 拿着对象调用</p>
+</li>
+</ul>
+<p>普通方法需要拿着对象去调用</p>
+<ul>
+<li>
+<h5 id="面试题普通方法和静态方法谁调用简单"><a class="markdownIt-Anchor" href="#面试题普通方法和静态方法谁调用简单">#</a> 面试题：普通方法和静态方法谁调用简单？</h5>
+<p>静态方法 直接拿着类名去调用</p>
+</li>
+<li>
+<p>既然静态方法调用简单 开发的时候为什么不把一个类所有的方法都写成静态的？</p>
+<p>静态方法里面只能直接的访问静态成员 如果想要在静态方法里面调用非静态的成员 需要创建对象 拿着对象去调用</p>
+</li>
+</ul>
+</li>
+<li>
+<p>代码块：初始化一个普通属性的</p>
+<p>当我们想要初始化一个静态属性的话 需要使用静态代码块 -》 static {}</p>
+<p><strong>普通代码块给普通属性赋值的 执行时间：当创建对象的时候执行 创建几个对象执行几次</strong></p>
+<p><strong>静态代码块给静态属性赋值的 执行时间：当类第一次被加载的时候执行 从头到尾只执行一次</strong></p>
+</li>
+</ul>
+<h2 id="day14"><a class="markdownIt-Anchor" href="#day14">#</a> day14</h2>
+<h4 id="面试题java中变量大还是属性大"><a class="markdownIt-Anchor" href="#面试题java中变量大还是属性大">#</a> 面试题（java 中变量大还是属性大？）</h4>
+<p>变量</p>
+<h4 id="面试题static为什么不能修饰局部变量"><a class="markdownIt-Anchor" href="#面试题static为什么不能修饰局部变量">#</a> 面试题（static 为什么不能修饰局部变量？）</h4>
+<p>static 修饰的变量要求类一加载就要在内存里面找到他 但是局部变量只有当方法调用 代码执行到那一行的时候才能创建</p>
+<p>一般类的加载在前面 方法调用在后面 这两个时间点赶不上一起 所以 static 不能修饰局部变量</p>
+<h4 id="面试题成员变量和静态变量之间的区别"><a class="markdownIt-Anchor" href="#面试题成员变量和静态变量之间的区别">#</a> 面试题（成员变量和静态变量之间的区别？）</h4>
+<p>成员变量也叫属性 表示每个对象有什么 依赖于对象存在</p>
+<p>静态变量也叫静态属性 表示整个类型共享一份的属性 依赖于类存在</p>
+<p>** 单例模式：控制一个类 <code>有且只有</code> 一个对象  **</p>
+<h4 id="面试题string和math类都是用final修饰的-为什么"><a class="markdownIt-Anchor" href="#面试题string和math类都是用final修饰的-为什么">#</a> 面试题（String 和 Math 类都是用 final 修饰的 为什么？）</h4>
+<ul>
+<li>String 类叫做字符串类 是 java 中比较基础 比较核心的类</li>
+<li>越是基础 越是核心的类 所有的程序员越应该保持一致</li>
+<li>Math 类叫做数学类 里面定义的都是数学里面的公理 定理 不能随意的修改
+<ul>
+<li>方法：最终方法 只能被继承 不能被覆盖</li>
+<li>变量 [属性 + 局部变量]：最终变量 常量 一旦赋值之后 就不能修改值</li>
+</ul>
+</li>
+</ul>
+<h4 id="面试题抽象类是类吗"><a class="markdownIt-Anchor" href="#面试题抽象类是类吗">#</a> 面试题（抽象类是类吗？）</h4>
+<p>是</p>
+<h4 id="面试题抽象类有构造方法吗"><a class="markdownIt-Anchor" href="#面试题抽象类有构造方法吗">#</a> 面试题（抽象类有构造方法吗？）</h4>
+<p>有 java 中只要是个类就一定有构造方法</p>
+<h4 id="面试题抽象类是类-有构造方法-但是不能创建对象-抽象类里面的构造方法作用"><a class="markdownIt-Anchor" href="#面试题抽象类是类-有构造方法-但是不能创建对象-抽象类里面的构造方法作用">#</a> 面试题（抽象类是类 有构造方法 但是不能创建对象 抽象类里面的构造方法作用？）</h4>
+<p>给子类构造方法首行的 super () 调用的</p>
+<h4 id="面试题final和abstract能不能同时修饰一个方法"><a class="markdownIt-Anchor" href="#面试题final和abstract能不能同时修饰一个方法">#</a> 面试题（final 和 abstract 能不能同时修饰一个方法？）</h4>
+<p>不能</p>
+<ul>
+<li>
+<p>final 修饰的方法叫最终方法 不能被覆盖</p>
+</li>
+<li>
+<p>abstract 修饰的方法叫抽象方法 需要子类去覆盖</p>
+</li>
+</ul>
+<p>矛盾</p>
+<h4 id="面试题抽象类和接口之间的区别"><a class="markdownIt-Anchor" href="#面试题抽象类和接口之间的区别">#</a> 面试题（抽象类和接口之间的区别？）</h4>
+<ul>
+<li>java 中的两大类型：
+<ul>
+<li>抽象类：class</li>
+<li>接口：interface</li>
+</ul>
+</li>
+<li>实现不同
+<ul>
+<li>抽象类：extends     单根继承</li>
+<li>接口：implements  多重实现</li>
+</ul>
+</li>
+<li>里面定义的属性不同
+<ul>
+<li>抽象类：默认都是普通属性</li>
+<li>接口：默认都是静态的最终变量 -》 public static final</li>
+</ul>
+</li>
+<li>里面定义的方法不同：
+<ul>
+<li>抽象类：既可以定义抽象方法也可以定义普通方法</li>
+<li>接口：只能写抽象方法 但是从 jdk8.0 开始 接口里面允许出现普通方法了 但是必须加上 static</li>
+</ul>
+</li>
+</ul>
+<h2 id="day15"><a class="markdownIt-Anchor" href="#day15">#</a> day15</h2>
+<h4 id="面试题和equals之间的区别"><a class="markdownIt-Anchor" href="#面试题和equals之间的区别">#</a> 面试题（== 和 equals 之间的区别？）</h4>
+<p>== 是一个运算符 判断左右两边的值是否相等</p>
+<ul>
+<li>基本数据类型 比较数值</li>
+<li>引用数据类型 比较地址</li>
+</ul>
+<p>equals () 判断两个对象能不能视为相等对象 程序员可以按照自己的意愿将两个对象视为相等对象  比如：String 类 Sun 公司通过覆盖 equals () 只要两个字符串的内容一样视为相等对象</p>
+<h2 id="day16"><a class="markdownIt-Anchor" href="#day16">#</a> day16</h2>
+<h4 id="面试题collection和collections之间的区别"><a class="markdownIt-Anchor" href="#面试题collection和collections之间的区别">#</a> 面试题 (Collection 和 Collections 之间的区别？)</h4>
+<p>Collection 是所有单值集合统一的父接口 ： interface</p>
+<p>Collections 是集合的工具类：class</p>
+<ul>
+<li>
+<p>如何得到集合大小：list.size ()</p>
+<p>得到数组大小：data.length</p>
+<p>得到字符串大小：str.length ()</p>
+</li>
+<li>
+<p>如何得到集合某个元素：list.get (下标)</p>
+<p>得到数组某个元素：data [下标]</p>
+<p>得到字符串某个元素：str.charAt (下标)</p>
+</li>
+<li>
+<p>如何判断集合里面是否存在某个元素：list.contains (元素)</p>
+<p>数组里面是否存在：for + if</p>
+<p>字符串是否存在：str.contains (字符串)</p>
+</li>
+<li>
+<p>如何遍历集合：</p>
+<p>for + 下标</p>
+<p>foreach</p>
+<p>迭代器</p>
+</li>
+<li>
+<p>ArrayList2: 如何删除元素 -》 list.remove (int 下标)</p>
+</li>
+<li>
+<p>ArrayList3: 如何删除元素 -》list.remove (Object 元素)</p>
+</li>
+<li>
+<p>ArrayList4:ArrayList 类里面指定元素删除的方法 底层尊重 equals () 比较机制</p>
+<p>ArrayList 类里面 contains (元素) 底层尊重 equals () 比较机制</p>
+</li>
+<li>
+<p>ArrayList5: 要被删除的对象会主动调用他自己的 equals 方法和集合里面的元素作比较</p>
+</li>
+<li>
+<p>ArrayList6: 当我们使用迭代器遍历集合的时候 不允许对集合的整体进行添加 / 删除</p>
+<p>否则触发 CME 异常 如果在遍历的时候 想要删除的话：car.remove ()</p>
+</li>
+<li>
+<p>ArrayList7:ArrayList 类里有两个常见的构造方法</p>
+<p>ArrayList list = new ArrayList (int 数组容量);</p>
+<p>​	容量 &lt; 0 抛出异常</p>
+<p>​	容量 &gt;= 0 写几开辟几块空间</p>
+<p>ArrayList list = new ArrayList ();// 默认开辟 10 块空间</p>
+<p>集合无论底层开辟多大空间 都可以装无数个元素 集合会自动扩容</p>
+<p>list.ensureCapacity (int 容量)：扩容</p>
+<p>list.trimToSize (): 缩容</p>
+</li>
+</ul>
+<h2 id="day17"><a class="markdownIt-Anchor" href="#day17">#</a> day17</h2>
+<h4 id="面试题arraylist和vector之间的区别"><a class="markdownIt-Anchor" href="#面试题arraylist和vector之间的区别">#</a> 面试题（ArrayList 和 Vector 之间的区别？）</h4>
+<ul>
+<li>同步特性不同
+<ul>
+<li>Vector 同一时间允许一个线程进行访问 效率较低 但是不会出现并发错误</li>
+<li>ArrayList 同一时间允许多个线程进行访问 效率较高 但是可能会出现并发错误</li>
+<li>从 jdk5.0 开始 集合的工具类里面提供一个方法 将线程不安全的 ArrayList 变成线程安全的 List 集合 于是 Vector 渐渐被淘汰了</li>
+<li>List 对象 = Collections.synchronizedList (ArrayList 对象)</li>
+</ul>
+</li>
+<li>扩容机制不同
+<ul>
+<li>Vector 分构造方法
+<ul>
+<li>Vector (int 大小)-》2 倍扩容	Vector (8) -&gt; 8 16 32…</li>
+<li>Vector (int 大小，int 步长)-》定长扩容 -》 Vector (10,3) -&gt; 10 13 16…</li>
+</ul>
+</li>
+<li>ArrayList 分版本
+<ul>
+<li>jdk6.0 及之前	x * 3 / 2 + 1</li>
+<li>jdk7.0 及之后   x + (x&gt;&gt; 1)</li>
+</ul>
+</li>
+<li>出现的版本不同
+<ul>
+<li>Vector since jdk1.0</li>
+<li>ArrayList since jdk1.2</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="面试题arraylist和linkedlist之间的区别"><a class="markdownIt-Anchor" href="#面试题arraylist和linkedlist之间的区别">#</a> 面试题（ArrayList 和 LinkedList 之间的区别？）</h4>
+<ul>
+<li>ArrayList 和 LinkedList 底层数据结构不同 导致他们的优劣势不同</li>
+<li>ArrayList 底层基于数组实现的
+<ul>
+<li>优点：遍历查找 随机访问效率高</li>
+<li>缺点：添加 / 删除元素效率低</li>
+</ul>
+</li>
+<li>LinkedList 底层基于链表实现的
+<ul>
+<li>
+<p>优点：添加、删除元素效率高</p>
+</li>
+<li>
+<p>缺点：遍历查找 随机访问效率低 永远从下标 0 开始找起</p>
+</li>
+<li>
+<p>在项目开发的时候 尽量避免使用 LinkedList 的 get (下标) 方法</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="day21"><a class="markdownIt-Anchor" href="#day21">#</a> day21</h2>
+<h4 id="面试题hashmap和hashtable之间的区别"><a class="markdownIt-Anchor" href="#面试题hashmap和hashtable之间的区别">#</a> 面试题（HashMap 和 Hashtable 之间的区别？）</h4>
+<p>同步特性不同</p>
+<p>​				Hashtable 同一时间允许一个线程进行访问 效率较低 但是不会出现并发错误</p>
+<p>​				HashMap 同一时间允许多个线程进行访问 效率较高 但是可能会出现并发错误</p>
+<p>​				jdk5.0 开始 集合的工具类里面提供一个方法 将线程不安全的 HashMap 变成线程安全				Map 集合 所以 Hashtable 渐渐被淘汰了</p>
+<p>​				Map<xxx> map = Collections.synchronizedMap (HashMap 对象);</p>
+<p>​		对 null 的处理不同</p>
+<p>​				Hashtable 无论是主键还是值对象 都不能传 null 否则触发空指针异常</p>
+<p>​				HashMap 无论是主键还是值对象都可以传 null 但是由于主键是唯一的 所以主键只能</p>
+<p>​				传一个 null 但是值对象可以传多个 null</p>
+<p>​	分组组数不同</p>
+<p>​				Hashtable 默认分 11 个小组 程序员可以随意的指定</p>
+<p>​				HashMap 默认分 16 个小组 程序员可以随意的指定 但是最终一定会变成 2 的 n 次方数</p>
+<p>​	出现的版本不同</p>
+<p>​				Hashtable since jdk1.0</p>
+<p>​				HashMap since jdk1.2</p>
+<h4 id="面试题hashmap-hashtable-concurrenthashmap之间的区别"><a class="markdownIt-Anchor" href="#面试题hashmap-hashtable-concurrenthashmap之间的区别">#</a> 面试题（HashMap Hashtable ConcurrentHashMap 之间的区别？）</h4>
+<p>Hashtable 为了追求安全性 当某个线程进入哈希表某个小组处理元素的时候 会将整个哈</p>
+<p>​     希表加锁 所以同一个时间最多只能一个线程操作哈希表</p>
+<p>​     HashMap 为了追求高效性 将不再加锁 可能会出现的问题是一个线程在处理某个小组的</p>
+<p>​	 时候又来一个线程同时处理该小组 可能会引发并发问题</p>
+<p>​     ConcurrentHashMap 安全性和高效性都介于 Hashtable 和 HashMap 之间</p>
+<p>​     采用了锁分离的机制 当某个线程处理某个小组的时候 只是将该小组加锁 如果又来一个</p>
+<p>​	 线程想要处理该小组 需要等待 如果想要处理其他的小组 可以直接处理</p>
+<h4 id="面试题hashmap在jdk70之前和jdk70之后的变化"><a class="markdownIt-Anchor" href="#面试题hashmap在jdk70之前和jdk70之后的变化">#</a> 面试题（HashMap 在 jdk7.0 之前和 jdk7.0 之后的变化）</h4>
+<p>jdk7.0 之前 哈希表底层基于数组 + 链表组成的</p>
+<p>​	 数组：用来装表头信息 为了方便元素更加快速的找到应该去到哪一个小组</p>
+<p>​    组内采用是链表数据结构进行添加 / 删除元素</p>
+<p>​    7.0 之前 采用头插法</p>
+<p>​	jdk7.0 开始 哈希表底层数组 + 链表 + 二叉树实现的</p>
+<p>组内采用的是链表和二叉树实现</p>
+<p>​	如果组内元素 &lt;= 7 采用链表实现</p>
+<p>如果组内元素 &gt; 7 个元素 将链表改成二叉树 [为了效率高]</p>
+<p>jdk7.0 开始 采用尾插法</p>
+<h4 id="面试题collection和collections之间的区别-2"><a class="markdownIt-Anchor" href="#面试题collection和collections之间的区别-2">#</a> 面试题（Collection 和 Collections 之间的区别？）</h4>
+<p>Collection 是所有单值集合统一的父接口 ： interface</p>
+<p>Collections 是集合的工具类：class</p>
+<ul>
+<li>
+<p>如何得到集合大小：list.size ()</p>
+<p>得到数组大小：data.length</p>
+<p>得到字符串大小：str.length ()</p>
+</li>
+<li>
+<p>如何得到集合某个元素：list.get (下标)</p>
+<p>得到数组某个元素：data [下标]</p>
+<p>得到字符串某个元素：str.charAt (下标)</p>
+</li>
+<li>
+<p>如何判断集合里面是否存在某个元素：list.contains (元素)</p>
+<p>数组里面是否存在：for + if</p>
+<p>字符串是否存在：str.contains (字符串)</p>
+</li>
+<li>
+<p>如何遍历集合：</p>
+<p>for + 下标</p>
+<p>foreach</p>
+<p>迭代器</p>
+</li>
+<li>
+<p>ArrayList2: 如何删除元素 -》 list.remove (int 下标)</p>
+</li>
+<li>
+<p>ArrayList3: 如何删除元素 -》list.remove (Object 元素)</p>
+</li>
+<li>
+<p>ArrayList4:ArrayList 类里面指定元素删除的方法 底层尊重 equals () 比较机制</p>
+<p>ArrayList 类里面 contains (元素) 底层尊重 equals () 比较机制</p>
+</li>
+<li>
+<p>ArrayList5: 要被删除的对象会主动调用他自己的 equals 方法和集合里面的元素作比较</p>
+</li>
+<li>
+<p>ArrayList6: 当我们使用迭代器遍历集合的时候 不允许对集合的整体进行添加 / 删除</p>
+<p>否则触发 CME 异常 如果在遍历的时候 想要删除的话：car.remove ()</p>
+</li>
+<li>
+<p>ArrayList7:ArrayList 类里有两个常见的构造方法</p>
+<p>ArrayList list = new ArrayList (int 数组容量);</p>
+<p>​	容量 &lt; 0 抛出异常</p>
+<p>​	容量 &gt;= 0 写几开辟几块空间</p>
+<p>ArrayList list = new ArrayList ();// 默认开辟 10 块空间</p>
+<p>集合无论底层开辟多大空间 都可以装无数个元素 集合会自动扩容</p>
+<p>list.ensureCapacity (int 容量)：扩容</p>
+<p>list.trimToSize (): 缩容</p>
+</li>
+</ul>
+<h4 id="面试题arraylist和vector之间的区别-2"><a class="markdownIt-Anchor" href="#面试题arraylist和vector之间的区别-2">#</a> 面试题（ArrayList 和 Vector 之间的区别？）</h4>
+<ul>
+<li>同步特性不同
+<ul>
+<li>Vector 同一时间允许一个线程进行访问 效率较低 但是不会出现并发错误</li>
+<li>ArrayList 同一时间允许多个线程进行访问 效率较高 但是可能会出现并发错误</li>
+<li>从 jdk5.0 开始 集合的工具类里面提供一个方法 将线程不安全的 ArrayList 变成线程安全的 List 集合 于是 Vector 渐渐被淘汰了</li>
+<li>List 对象 = Collections.synchronizedList (ArrayList 对象)</li>
+</ul>
+</li>
+<li>扩容机制不同
+<ul>
+<li>Vector 分构造方法
+<ul>
+<li>Vector (int 大小)-》2 倍扩容	Vector (8) -&gt; 8 16 32…</li>
+<li>Vector (int 大小，int 步长)-》定长扩容 -》 Vector (10,3) -&gt; 10 13 16…</li>
+</ul>
+</li>
+<li>ArrayList 分版本
+<ul>
+<li>jdk6.0 及之前	x * 3 / 2 + 1</li>
+<li>jdk7.0 及之后   x + (x&gt;&gt; 1)</li>
+</ul>
+</li>
+<li>出现的版本不同
+<ul>
+<li>Vector since jdk1.0</li>
+<li>ArrayList since jdk1.2</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="面试题arraylist和linkedlist之间的区别-2"><a class="markdownIt-Anchor" href="#面试题arraylist和linkedlist之间的区别-2">#</a> 面试题（ArrayList 和 LinkedList 之间的区别？）</h4>
+<ul>
+<li>ArrayList 和 LinkedList 底层数据结构不同 导致他们的优劣势不同</li>
+<li>ArrayList 底层基于数组实现的
+<ul>
+<li>优点：遍历查找 随机访问效率高</li>
+<li>缺点：添加 / 删除元素效率低</li>
+</ul>
+</li>
+<li>LinkedList 底层基于链表实现的
+<ul>
+<li>优点：添加、删除元素效率高</li>
+<li>缺点：遍历查找 随机访问效率低 永远从下标 0 开始找起</li>
+<li>在项目开发的时候 尽量避免使用 LinkedList 的 get (下标) 方法</li>
+</ul>
+</li>
+</ul>
+<h4 id="面试题collectionsaddall底层实现原理-代码"><a class="markdownIt-Anchor" href="#面试题collectionsaddall底层实现原理-代码">#</a> 面试题（Collections.addAll () 底层实现原理   -》 代码）</h4>
+<p>可变参：参数个数可以是 0 - 无数个底层基于数组实现的</p>
+<p>注意：一个方法里面最多只能一个可变参</p>
+<p>​      可变参只能放在参数的最后 **</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//一次添加多个元素的方法：Collections.addAll(集合,元素,元素,元素...)</span></span><br><span class="line"><span class="comment">//Collections.addAll(list,45,66,82,10);</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">addAll</span><span class="params">(ArrayList&lt;Integer&gt; jihe,Integer ... data)</span>&#123;</span><br><span class="line">    <span class="comment">//遍历数组 将每个元素放进集合里面</span></span><br><span class="line">    <span class="keyword">for</span>(Integer num : data)&#123;</span><br><span class="line">        jihe.add(num);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="面试题cme检测原理"><a class="markdownIt-Anchor" href="#面试题cme检测原理">#</a> 面试题（CME 检测原理？）</h4>
+<p>计数器 modCount</p>
+<p>modCount: 记录对集合的处理 [添加 / 删除…] 次数</p>
+<h4 id="面试题arraylist-linkedlist-vector-stack-hashset-treeset底层数据结构"><a class="markdownIt-Anchor" href="#面试题arraylist-linkedlist-vector-stack-hashset-treeset底层数据结构">#</a> 面试题（ArrayList LinkedList Vector Stack HashSet  TreeSet 底层数据结构）</h4>
+<p>数组 双向循环链表 数组 栈 哈希表 二叉树</p>
+<h4 id="面试题arraylist和hashset在存取特性上有什么不同"><a class="markdownIt-Anchor" href="#面试题arraylist和hashset在存取特性上有什么不同">#</a> 面试题（ArrayList 和 HashSet 在存取特性上有什么不同）</h4>
+<p>ArrayList: 有序       不唯一     遍历 for + 下标   foreach     迭代器</p>
+<p>HashSet: 无序    唯一       遍历 foreach     迭代器</p>
+
+      <div class="tags">
+          <a href="/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" rel="tag"><i class="ic i-tag"></i> 后端开发</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2026-01-06 19:51:24" itemprop="dateModified" datetime="2026-01-06T19:51:24+08:00">2026-01-06</time>
+  </span>
+  <span id="full-stack/back-end/back-note/month1/" class="item leancloud_visitors" data-flag-title="JavaSE" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="libert-Aries 微信支付">
+        <p>微信支付</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>libert-Aries <i class="ic i-at"><em>@</em></i>你来啦！
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/full-stack/back-end/back-note/month1/" title="JavaSE">http://example.com/full-stack/back-end/back-note/month1/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/full-stack/back-end/back-note/super,this,%E9%87%8D%E5%86%99/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;t.alcy.cc&#x2F;fj?181530" title="super,this,重写">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 后端</span>
+  <h3>super,this,重写</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/full-stack/back-end/back-note/month2/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;t.alcy.cc&#x2F;fj?52399" title="IO流">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 后端</span>
+  <h3>IO流</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text"> 面试题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#day1"><span class="toc-number">1.1.</span> <span class="toc-text"> day1</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98jdk%E5%92%8Cjre%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.1.0.1.</span> <span class="toc-text"> 面试题（jdk 和 jre 之间的区别？）：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#day2"><span class="toc-number">1.2.</span> <span class="toc-text"> day2</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98%E4%BB%A5%E4%B8%8B%E5%93%AA%E4%BA%9B%E6%98%AF%E5%90%88%E6%B3%95%E7%9A%84%E6%A0%87%E8%AF%86%E7%AC%A6a-b"><span class="toc-number">1.2.0.1.</span> <span class="toc-text"> 面试题（以下哪些是合法的标识符？A B ）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E4%B8%AA%E6%95%B0"><span class="toc-number">1.2.0.2.</span> <span class="toc-text"> 类的个数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#day3"><span class="toc-number">1.3.</span> <span class="toc-text"> day3</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98java%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%88%86%E4%B8%BA%E5%87%A0%E7%A7%8D"><span class="toc-number">1.3.0.1.</span> <span class="toc-text"> 面试题（java 中的数据类型分为几种？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%88%86%E4%B8%BA%E5%87%A0%E7%A7%8D"><span class="toc-number">1.3.0.2.</span> <span class="toc-text"> 面试题（基本数据类型分为几种？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E9%94%99%E8%AF%AF"><span class="toc-number">1.3.0.3.</span> <span class="toc-text"> 常见的错误</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#day4"><span class="toc-number">1.4.</span> <span class="toc-text"> day4</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98string%E7%B1%BB%E5%B1%9E%E4%BA%8E%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BF%98%E6%98%AF%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.4.0.1.</span> <span class="toc-text"> 面试题（String 类属于基本数据类型还是引用数据类型？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98-2"><span class="toc-number">1.4.0.2.</span> <span class="toc-text"> 面试题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%9820-11%E7%BB%93%E6%9E%9C%E6%98%AF%E5%A4%9A%E5%B0%91"><span class="toc-number">1.4.0.3.</span> <span class="toc-text"> 面试题（2.0 - 1.1 结果是多少？）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#day5"><span class="toc-number">1.5.</span> <span class="toc-text"> day5</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98%E5%92%8C%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.5.0.1.</span> <span class="toc-text"> 面试题（&amp;&amp; 和 &amp; 之间的区别？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98java%E4%B8%AD%E7%9A%84%E5%8F%98%E9%87%8F%E5%88%86%E4%B8%BA%E5%87%A0%E7%A7%8D"><span class="toc-number">1.5.0.2.</span> <span class="toc-text"> 面试题（java 中的变量分为几种？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E5%92%8C%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.5.0.3.</span> <span class="toc-text"> 面试题（成员变量和局部变量之间的区别？）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#day10"><span class="toc-number">1.6.</span> <span class="toc-text"> day10</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD%E9%9C%80%E8%A6%81%E5%93%AA%E4%BA%9B%E6%9D%A1%E4%BB%B6"><span class="toc-number">1.6.0.1.</span> <span class="toc-text"> 面试题（方法重载需要哪些条件？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98%E6%96%B9%E6%B3%95%E8%A6%86%E7%9B%96%E7%9A%84%E6%9D%A1%E4%BB%B6"><span class="toc-number">1.6.0.2.</span> <span class="toc-text"> 面试题（方法覆盖的条件？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98override%E5%92%8Coverload%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.6.0.3.</span> <span class="toc-text"> 面试题（Override 和 Overload 之间的区别？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E8%83%BD%E4%B8%8D%E8%83%BD%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD"><span class="toc-number">1.6.0.4.</span> <span class="toc-text"> 面试题（构造方法能不能方法重载？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E8%83%BD%E4%B8%8D%E8%83%BD%E6%96%B9%E6%B3%95%E8%A6%86%E7%9B%96"><span class="toc-number">1.6.0.5.</span> <span class="toc-text"> 面试题（构造方法能不能方法覆盖？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#super%E5%92%8Cthis%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.6.0.6.</span> <span class="toc-text"> super () 和 this () 的区别</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#day12"><span class="toc-number">1.7.</span> <span class="toc-text"> day12</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#string%E7%B1%BB%E5%B8%B8%E8%A7%81%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="toc-number">1.7.0.1.</span> <span class="toc-text"> String 类常见的面试题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#day13"><span class="toc-number">1.8.</span> <span class="toc-text"> day13</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%E4%BF%AE%E9%A5%B0%E7%AC%A6%E5%90%84%E8%87%AA%E5%8F%AF%E4%BB%A5%E4%BF%AE%E9%A5%B0%E4%BB%80%E4%B9%88"><span class="toc-number">1.8.0.1.</span> <span class="toc-text"> 访问权限修饰符各自可以修饰什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#static%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-number">1.8.0.2.</span> <span class="toc-text"> static 修饰符</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98%E6%99%AE%E9%80%9A%E6%96%B9%E6%B3%95%E5%92%8C%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E8%B0%81%E8%B0%83%E7%94%A8%E7%AE%80%E5%8D%95"><span class="toc-number">1.8.0.2.1.</span> <span class="toc-text"> 面试题：普通方法和静态方法谁调用简单？</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#day14"><span class="toc-number">1.9.</span> <span class="toc-text"> day14</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98java%E4%B8%AD%E5%8F%98%E9%87%8F%E5%A4%A7%E8%BF%98%E6%98%AF%E5%B1%9E%E6%80%A7%E5%A4%A7"><span class="toc-number">1.9.0.1.</span> <span class="toc-text"> 面试题（java 中变量大还是属性大？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98static%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E4%BF%AE%E9%A5%B0%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="toc-number">1.9.0.2.</span> <span class="toc-text"> 面试题（static 为什么不能修饰局部变量？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E5%92%8C%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.9.0.3.</span> <span class="toc-text"> 面试题（成员变量和静态变量之间的区别？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98string%E5%92%8Cmath%E7%B1%BB%E9%83%BD%E6%98%AF%E7%94%A8final%E4%BF%AE%E9%A5%B0%E7%9A%84-%E4%B8%BA%E4%BB%80%E4%B9%88"><span class="toc-number">1.9.0.4.</span> <span class="toc-text"> 面试题（String 和 Math 类都是用 final 修饰的 为什么？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98%E6%8A%BD%E8%B1%A1%E7%B1%BB%E6%98%AF%E7%B1%BB%E5%90%97"><span class="toc-number">1.9.0.5.</span> <span class="toc-text"> 面试题（抽象类是类吗？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98%E6%8A%BD%E8%B1%A1%E7%B1%BB%E6%9C%89%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E5%90%97"><span class="toc-number">1.9.0.6.</span> <span class="toc-text"> 面试题（抽象类有构造方法吗？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98%E6%8A%BD%E8%B1%A1%E7%B1%BB%E6%98%AF%E7%B1%BB-%E6%9C%89%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95-%E4%BD%86%E6%98%AF%E4%B8%8D%E8%83%BD%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E9%87%8C%E9%9D%A2%E7%9A%84%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E4%BD%9C%E7%94%A8"><span class="toc-number">1.9.0.7.</span> <span class="toc-text"> 面试题（抽象类是类 有构造方法 但是不能创建对象 抽象类里面的构造方法作用？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98final%E5%92%8Cabstract%E8%83%BD%E4%B8%8D%E8%83%BD%E5%90%8C%E6%97%B6%E4%BF%AE%E9%A5%B0%E4%B8%80%E4%B8%AA%E6%96%B9%E6%B3%95"><span class="toc-number">1.9.0.8.</span> <span class="toc-text"> 面试题（final 和 abstract 能不能同时修饰一个方法？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.9.0.9.</span> <span class="toc-text"> 面试题（抽象类和接口之间的区别？）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#day15"><span class="toc-number">1.10.</span> <span class="toc-text"> day15</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98%E5%92%8Cequals%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.10.0.1.</span> <span class="toc-text"> 面试题（&#x3D;&#x3D; 和 equals 之间的区别？）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#day16"><span class="toc-number">1.11.</span> <span class="toc-text"> day16</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98collection%E5%92%8Ccollections%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.11.0.1.</span> <span class="toc-text"> 面试题 (Collection 和 Collections 之间的区别？)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#day17"><span class="toc-number">1.12.</span> <span class="toc-text"> day17</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98arraylist%E5%92%8Cvector%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.12.0.1.</span> <span class="toc-text"> 面试题（ArrayList 和 Vector 之间的区别？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98arraylist%E5%92%8Clinkedlist%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.12.0.2.</span> <span class="toc-text"> 面试题（ArrayList 和 LinkedList 之间的区别？）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#day21"><span class="toc-number">1.13.</span> <span class="toc-text"> day21</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98hashmap%E5%92%8Chashtable%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.13.0.1.</span> <span class="toc-text"> 面试题（HashMap 和 Hashtable 之间的区别？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98hashmap-hashtable-concurrenthashmap%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.13.0.2.</span> <span class="toc-text"> 面试题（HashMap Hashtable ConcurrentHashMap 之间的区别？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98hashmap%E5%9C%A8jdk70%E4%B9%8B%E5%89%8D%E5%92%8Cjdk70%E4%B9%8B%E5%90%8E%E7%9A%84%E5%8F%98%E5%8C%96"><span class="toc-number">1.13.0.3.</span> <span class="toc-text"> 面试题（HashMap 在 jdk7.0 之前和 jdk7.0 之后的变化）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98collection%E5%92%8Ccollections%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB-2"><span class="toc-number">1.13.0.4.</span> <span class="toc-text"> 面试题（Collection 和 Collections 之间的区别？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98arraylist%E5%92%8Cvector%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB-2"><span class="toc-number">1.13.0.5.</span> <span class="toc-text"> 面试题（ArrayList 和 Vector 之间的区别？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98arraylist%E5%92%8Clinkedlist%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB-2"><span class="toc-number">1.13.0.6.</span> <span class="toc-text"> 面试题（ArrayList 和 LinkedList 之间的区别？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98collectionsaddall%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86-%E4%BB%A3%E7%A0%81"><span class="toc-number">1.13.0.7.</span> <span class="toc-text"> 面试题（Collections.addAll () 底层实现原理   -》 代码）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98cme%E6%A3%80%E6%B5%8B%E5%8E%9F%E7%90%86"><span class="toc-number">1.13.0.8.</span> <span class="toc-text"> 面试题（CME 检测原理？）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98arraylist-linkedlist-vector-stack-hashset-treeset%E5%BA%95%E5%B1%82%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-number">1.13.0.9.</span> <span class="toc-text"> 面试题（ArrayList LinkedList Vector Stack HashSet  TreeSet 底层数据结构）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98arraylist%E5%92%8Chashset%E5%9C%A8%E5%AD%98%E5%8F%96%E7%89%B9%E6%80%A7%E4%B8%8A%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C"><span class="toc-number">1.13.0.10.</span> <span class="toc-text"> 面试题（ArrayList 和 HashSet 在存取特性上有什么不同）</span></a></li></ol></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/full-stack/back-end/back-note/super,this,%E9%87%8D%E5%86%99/" rel="bookmark" title="super,this,重写">super,this,重写</a></li><li class="active"><a href="/full-stack/back-end/back-note/month1/" rel="bookmark" title="JavaSE">JavaSE</a></li><li><a href="/full-stack/back-end/back-note/month2/" rel="bookmark" title="IO流">IO流</a></li><li><a href="/full-stack/back-end/back-note/month4/" rel="bookmark" title="SpringBoot">SpringBoot</a></li><li><a href="/full-stack/back-end/back-note/month5/" rel="bookmark" title="SpringBoot集成MyBatis">SpringBoot集成MyBatis</a></li><li><a href="/full-stack/back-end/back-note/%E6%8B%A6%E6%88%AA%E5%99%A8/" rel="bookmark" title="拦截器">拦截器</a></li><li><a href="/full-stack/back-end/back-note/MyBatisPlus/" rel="bookmark" title="Mybatisplus">Mybatisplus</a></li><li><a href="/full-stack/back-end/back-note/Exception/" rel="bookmark" title="异常处理">异常处理</a></li><li><a href="/full-stack/back-end/back-note/RabbitMQ/" rel="bookmark" title="RabbitMQ">RabbitMQ</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="libert-Aries"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">libert-Aries</p>
+  <div class="description" itemprop="description">热烈 自由</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">19</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">6</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">13</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xpYmVydC1Bcmllcw==" title="https:&#x2F;&#x2F;github.com&#x2F;libert-Aries"><i class="ic i-github"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjM5NTExMzExMEBxcS5jb20=" title="mailto:395113110@qq.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于我</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/full-stack/back-end/back-note/super,this,%E9%87%8D%E5%86%99/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/full-stack/back-end/back-note/month2/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
+</div>
+
+    <span><a href="/full-stack/back-end/back-note/month4/" title="SpringBoot">SpringBoot</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a>
+</div>
+
+    <span><a href="/theme-shoka-doc/special/" title="Step.4 主题特殊功能">Step.4 主题特殊功能</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a>
+</div>
+
+    <span><a href="/theme-shoka-doc/dependents/" title="Step.1 依赖插件">Step.1 依赖插件</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%A2%8E%E7%A2%8E%E7%89%87/" title="分类于 碎碎片">碎碎片</a>
+</div>
+
+    <span><a href="/Markdown%E4%BD%BF%E7%94%A8/Markdown/" title="Markdown使用">Markdown使用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/front-end/" title="分类于 前端">前端</a>
+</div>
+
+    <span><a href="/full-stack/front-end/front-note/%E5%89%8D%E7%AB%AF%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F/" title="前端请求方式">前端请求方式</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
+</div>
+
+    <span><a href="/full-stack/back-end/back-note/month5/" title="SpringBoot集成MyBatis">SpringBoot集成MyBatis</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
+</div>
+
+    <span><a href="/full-stack/back-end/back-note/MyBatisPlus/" title="Mybatisplus">Mybatisplus</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
+</div>
+
+    <span><a href="/full-stack/back-end/back-note/month1/" title="JavaSE">JavaSE</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6Java%E8%AF%AD%E8%A8%80-%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%AD%A6-%E7%BF%81%E6%81%BA/" title="分类于 零基础学Java语言-浙江大学-翁恺">零基础学Java语言-浙江大学-翁恺</a>
+</div>
+
+    <span><a href="/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6java/week-1/" title="第1周 计算">第1周 计算</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6Java%E8%AF%AD%E8%A8%80-%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%AD%A6-%E7%BF%81%E6%81%BA/" title="分类于 零基础学Java语言-浙江大学-翁恺">零基础学Java语言-浙江大学-翁恺</a>
+</div>
+
+    <span><a href="/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6java/week-2/" title="第2周 判断">第2周 判断</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">libert-Aries @ libert-Aries's blog</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">167k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:32</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'full-stack/back-end/back-note/month1/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)看这里だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: {"placeholder":"1. 提问前请先仔细阅读本文档⚡\n2. 页面显示问题💥，请提供控制台截图📸或者您的测试网址\n3. 其他任何报错💣，请提供详细描述和截图📸，祝食用愉快💪"},fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
