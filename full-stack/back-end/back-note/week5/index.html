@@ -1,0 +1,1046 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="你来啦！" href="http://libert-aries.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="你来啦！" href="http://libert-aries.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="你来啦！" href="http://libert-aries.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="后端开发,JavaSE" />
+
+
+<link rel="canonical" href="http://libert-aries.github.io/full-stack/back-end/back-note/week5/">
+
+
+
+  <title>
+Week5周总结 - 后端 - 全栈 |
+libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Week5周总结
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-03-21 21:39:48">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-03-21T21:39:48+08:00">2022-03-21</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">libert-Aries's blog</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?774321"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?982068"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?398229"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?45174"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?234260"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?946111"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/full-stack/" itemprop="item" rel="index" title="分类于 全栈"><span itemprop="name">全栈</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/full-stack/back-end/" itemprop="item" rel="index" title="分类于 后端"><span itemprop="name">后端</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://libert-aries.github.io/full-stack/back-end/back-note/week5/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="libert-Aries">
+    <meta itemprop="description" content="人生如逆旅 我亦是行人, 热烈 自由">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="你来啦！">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>学习 JavaSE 基础周总结与回顾</p>
+<span id="more"></span>
+<h1 id="week5"><a class="markdownIt-Anchor" href="#week5">#</a> Week5</h1>
+<p><strong>内部类</strong>：定义在一个类类体当中的类 被称作内部类～</p>
+<p>为什么要使用内部类 :</p>
+<p>内部类是共享数据最最简单的方式之一～</p>
+<p>*：内部类编译之后同样会生成.class 文件</p>
+<p>​    其命名规则是：外部类名字 $ 内部类名字.class</p>
+<p><strong>Java**** 当中内部类的分类：</strong></p>
+<p><strong>成员内部类</strong>：  共享外部类的所有 [静态 + 非静态] 成员 [属性 + 方法]</p>
+<p>​    如何理解其与外部类的关系：</p>
+<p>​     蛔虫和牛的关系</p>
+<p>​    如何创建其对象：</p>
+<p>​     Outer.Inner in = new Outer().new Inner();</p>
+<p><strong>静态内部类</strong>：  共享外部类的静态成员 [属性 + 方法]</p>
+<p>​    如何理解其与外部类的关系：</p>
+<p>​     寄居蟹和蛤蜊壳的关系</p>
+<p>​     房客和房东的关系</p>
+<p>​    如何创建其对象：</p>
+<p>​     Outer.Inner in = new Outer.Inner();</p>
+<p>​    *: 静态内部类只能共享外部类的静态成员</p>
+<p>​      静态成员不是内部类也可以共享</p>
+<p>​      那么静态内部类存在是为何呢？</p>
+<p>​</p>
+<p>​      是<strong>为了描述类和类的专属关系</strong></p>
+<p><strong>局部内部类</strong>：</p>
+<p>定义在静态方法中：只能共享外部类静态成员</p>
+<p>定义在非静态方法中：能够共享外部类所有成员</p>
+<p>另外：它们还都能共享所在的那个外部类方法中的局部变量</p>
+<p>​    只是 JDK8.0 之前必须加 final 8.0 开始可以不加 但依然 final</p>
+<p>​    如何理解其与外部类的关系：</p>
+<p>​      老师和学生的关系</p>
+<p>​    如何创建其对象：</p>
+<p>​      Inner in = new Inner();</p>
+<p>​      *: 注意有位置限定</p>
+<p>​      定义完成之后 所在方法结束之前</p>
+<p><strong>匿名内部类</strong>：</p>
+<p>*：如果生个孩子 就是为了拿去卖钱的 就不用给孩子起名字！</p>
+<p>*：某些场景下 我们自己的名字根本不重要</p>
+<p>​    反而父母或者长辈的名字才重要！</p>
+<p>​    基本语法：</p>
+<p>​     用于实现接口</p>
+<p>​      new 要实现的接口类型 (){</p>
+<p>​        完成抽象方法的具体实现～；</p>
+<p>​      };【注意这里的；】</p>
+<p>​     用于继承父类</p>
+<p>​      new 要继承的父类 (给父类构造方法传参){</p>
+<p>​        完成父类方法的覆盖；</p>
+<p>​      };【注意这里的；】</p>
+<p>​    匿名内部类能够共享外部类的哪些成员呢？</p>
+<p>​    这件事不是一概而论的 这完全取决于定义它的位置～</p>
+<p>​      如果直接出现在类体当中 等价于成员内部类</p>
+<p>​      如果出现在类体当中又有 static 等价于静态内部类</p>
+<p>​      如果出现在方法体当中 等价于局部内部类～</p>
+<p><strong>Java**** 当中如何完成数据共享～</strong></p>
+<p>**1.**<strong> 使用静态变量完成共享～</strong></p>
+<p>**2.**<strong> 使用参数传递完成共享～传参赋值不要只会依赖于构造方法 你要明白 传参赋值的首选 永远都该是 setter 方法！~</strong></p>
+<p>**3.**<strong> 使用内部类完成共享～</strong></p>
+<p><strong>异常</strong> = Exception = 例外</p>
+<p>程序运行过程当中出现的例外情况而已～</p>
+<p>Java 当中所有 “问题” 的体系结构</p>
+<p>​      Throwable</p>
+<p>​      [能够向外抛出的]</p>
+<p>​    Error      Exception</p>
+<p>​    [错误]     [异常]</p>
+<p>​            RuntimeException</p>
+<p>​            [运行时异常]</p>
+<p><strong>#: Error</strong> <strong>和 Exception 有什么区别？</strong></p>
+<p>Error 通常是指由于底层硬件环境或者系统原因导致的</p>
+<p>​    程序员通过编码无法解决的</p>
+<p>​          相对较严重的问题</p>
+<p>Exception 就是程序运行过程当中出现的例外情况而已</p>
+<p>​          相对较轻</p>
+<p><strong>#:</strong> <strong>运行时异常和非运行时异常的区别？</strong></p>
+<p>非运行时异常在编译的时候就要求程序员必须给出处理方案</p>
+<p>​    否则编译无法通过</p>
+<p>​        它们都直接继承自 Exception</p>
+<p>运行时异常在编译的时候不要求给出处理方案 可以直接编译通过</p>
+<p>​    问题会在运行的时候直接体现出来～</p>
+<p>​        它们继承自 RuntimeException</p>
+<p>时至今日 我们所见到过的<strong>运行时异常</strong>有哪些？</p>
+<p>ArithmeticException =&gt; 算术异常</p>
+<p>​    *：除以 0 了 找代码当中 / 它后面的变量可能是 0</p>
+<p>NegativeArraySizeException =&gt; 负数的数组大小异常</p>
+<p>​    *：初始化数组的时候 [] 当中要求指定元素个数</p>
+<p>​      而如果指定的是个负数 将直接导致该异常</p>
+<p>ArrayIndexOutOfBoundsException =&gt; 数组索引值超出边界异常</p>
+<p>​    *：访问数组元素的时候 我们会在 [] 当中写下标索引值</p>
+<p>​      可用范围是：0 - 数组元素个数 - 1</p>
+<p>​      找 [] 当中的数值 是否在可用范围</p>
+<p>NullPointerException =&gt; 空指针异常</p>
+<p>​    *：Java 当中引用类型的默认值是 null</p>
+<p>​      它代表对象根本不存在</p>
+<p>​      用它访问任何属性 调用任何方法都会导致空指针</p>
+<p>StringIndexOutOfBoundsException =&gt; 字符串索引值超出边界异常</p>
+<p>​    *：String 类提供了多个使用下标索引值操作字符串内容的方法</p>
+<p>​      例如:charAt () /substring ()</p>
+<p>​      如果传入的下标索引值不在可用范围 将会导致该异常</p>
+<p>NumberFormatException =&gt; 数字格式异常</p>
+<p>​    *：大多数包装类类型都提供了从字符串到对应基本数据类型转换的方法</p>
+<p>​      例如 Integer.parseInt () / Double.parseDouble () …</p>
+<p>​      如果传入的字符串有非法内容 则导致该异常</p>
+<p>ClassCastException =&gt; 类型造型异常</p>
+<p>​    *：强制类型转换的时候 要转换的对象跟目标类型不是一个分支</p>
+<p>​      则导致该异常</p>
+<p>IllegalArgumentException =&gt; 非法参数异常</p>
+<p>​    *：初始化 ArrayList 的时候 构造方法的参数</p>
+<p>​      可以指定底层 Object 数组的原始大小</p>
+<p>​      如果指定的是负数 将直接导致该异常</p>
+<p>IndexOutOfBoundsException =&gt; 索引值超出边界异常 (集合)</p>
+<p>​    *：List 作为有序集合 是可以通过下标直接操作的</p>
+<p>​      例如：get (int) /remove (int)</p>
+<p>​      如果传入的下标值非法 将导致该异常</p>
+<p>IllegalStateException =&gt; 非法状态异常 (迭代器)</p>
+<p>​    *：当迭代器光标没有指向元素的时候</p>
+<p>​      就直接调用了 car.remove ()</p>
+<p>​      将导致该异常～</p>
+<p>ConcurrentModificationException =&gt; 并发修改异常～</p>
+<p>​    *：此处省略一堆字</p>
+<p>为什么要处理异常：</p>
+<p>A. 非运行时异常 如果不做处理 编译都无法通过</p>
+<p>B. 一旦程序运行过程当中出现异常而未作处理</p>
+<p>​    虚拟机会直接中断程序的执行～</p>
+<p><strong>如何处理异常</strong>：</p>
+<p>1. 抛还上级 throws</p>
+<p>​    足以解决 A 但无力解决 B</p>
+<p>​    方法签名上有 throws 不是代表必然出异常</p>
+<p>​      它代表本方法执行过程当中可能出现指定的异常</p>
+<p>​      只是出现之后本方法不做处理 抛还给调用的上级处理</p>
+<p>【抛到虚拟机上后若出现异常就中止，但未出现虚拟机就放行】</p>
+<p>【若出现异常，虚拟机中止后，后面的代码就不会再运行了】</p>
+<p>2. 自行处理 try catch finally</p>
+<p>​    try{</p>
+<p>​      可能出现异常的语句</p>
+<p>​      通常只有一句</p>
+<p>​      除非需求决定</p>
+<p>​      前者出现异常 后者需要跳过…【虚拟机也直接叫停，但只是这一个 {} 里】</p>
+<p>​    } catch (要捕获的异常类型 异常代号){</p>
+<p>​      对捕获到的异常进行处理：</p>
+<p>​      0. 隐瞒不报</p>
+<p>​      1. 简要的审 System.out.println (e.getMessage ());</p>
+<p>​      2. 详细的审 e.printStackTrace ();</p>
+<p>​      3. 谎报</p>
+<p>​    }finally{</p>
+<p>​      无论是否出现异常 最终都要执行的操作</p>
+<p>​      通常 会是释放和关闭资源的操作～</p>
+<p>​    }</p>
+<p>​    *: 一个 try 后面可以跟上多个 catch 分支</p>
+<p>​      但是多个 catch 必须按照从小到大或者并列的顺序</p>
+<p>​      总之不能前者包含后者</p>
+<p>​    *: JDK7.0 之前如果捕获多种不同异常也要进行相同处理</p>
+<p>​      也必须将 catch 分支写多个</p>
+<p>​      从 JDK7.0 开始 可以使用多重 catch</p>
+<p>​      多种异常的类型之间 用 | 隔开</p>
+<p>​      | 前后也需要满足前者不能包含后者这一特性</p>
+<p>​    *: finally 当中永远不该出现 return 语句</p>
+<p>​      否则 try catch 当中的 return 就不可能执行了</p>
+<p>​    *: finally 当中的语句一定会执行吗？如何不让它执行呢？</p>
+<p>​        不一定！System.exit (0); 【叫停虚拟机】</p>
+<p>【若出现异常，会对异常做出相对应的反应，后续代码任会执行】</p>
+<p>如何在本没有异常的情况下 主动制造异常出现的场景:</p>
+<p>涉及到关键字 throw</p>
+<p>throw new 异常名 ();</p>
+<p>​    throws 用在方法签名 [方法名和参数] 的最后</p>
+<p>​      用于表达在本方法当中出现指定种类的异常</p>
+<p>​      本方法中不做处理 抛还给调用的上级进行处理</p>
+<p>​    throw 用在方法体当中</p>
+<p>​      用于在本没有异常的时候 主动制造异常</p>
+<p><strong>如何自定义异常类型:</strong></p>
+<p>自己开发一个类 选择继承：</p>
+<p>​    Exception    非运行时异常</p>
+<p>​    RuntimeException  运行时异常</p>
+<p>​    并且在其构造方法的首行使用 super (“指定异常描述”);</p>
+<p>Plus1:</p>
+<p>当类体中某个静态变量是调用有异常声明的方法来完成赋值的时候  [static Object x=get ();]</p>
+<p>​    我们不能在类的定义上直接使用 throws</p>
+<p>​    更不能在类体当中直接 try catch</p>
+<p>​    此时如果想要顺利的进行异常处理</p>
+<p>​    必须借助 <strong>静态初始化块</strong> 在静态初始化块当中完成异常处理～</p>
+<p>​    *: 如果是个非静态变量 那么大家可以使用</p>
+<p>​      a&gt; 非静态的初始化块  b&gt; 构造方法</p>
+<p>Plus2:</p>
+<p>当父类当中的方法没有任何异常声明的时候</p>
+<p>​    子类的方法尝试覆盖这个方法 能够向外抛出异常吗？</p>
+<p>​    可以 但是只能向外抛出运行时异常</p>
+<p>​    但是这样的行为是没有意义的</p>
+<p>​    因为 Java 当中的每个方法 默认都抛出所有的运行时异常</p>
+<p>​    所以 相当于每个方法都有 throws RuntimeException 声明～</p>
+<p>Plus3:</p>
+<p>当代码当中出现连续的多行语句 都有异常声明的时候</p>
+<p>​    我们还需要无论前者执行是否顺利</p>
+<p>​    后者都应当尝试执行的时候</p>
+<p>​    必须借助 try catch finally 的 finally 当中</p>
+<p>​    嵌套使用 try catch</p>
+<p>​    我们把这种语法 成为 连环 try!</p>
+<p>​    [学 IO 流的时候要用  学文件复制和 JDBC 的时候都要用！]</p>
+<p>Plus4:</p>
+<p>为了进行异常处理 我们使用了 try catch 语法</p>
+<p>而 try 的 {} 同样能够控制变量消亡</p>
+<p>而如果我们的需求是在下文程序当中依然要使用这个变量</p>
+<p>则不能在 try {} 当中定义变量</p>
+<p>我们应当 将其定义直接拿到 try {} 大括号前面去</p>
+<p>在 try {} 当中 只做重新赋值 不做变量定义～</p>
+<p>Plus5:</p>
+<p>在某些场景下 学会使用异常处理的机制代替传统的分支判断</p>
+<p>​    会有奇效！！！</p>
+<p>​      [下周要用！！！]</p>
+<p>​</p>
+<p><strong>线程 Thread</strong></p>
+<p>程序：保存在物理介质中的代码片段</p>
+<p>进程：正在进行当中的程序…</p>
+<p>一旦程序运行起来 就变成了操作系统当中的一个进程～</p>
+<p>线程：一个程序当中一条独立的执行线索～</p>
+<p><em><em><em>*</em>*</em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>****</p>
+<p>***                                ***</p>
+<p>*****  <strong>为什么要使用多线程！                     *</strong></p>
+<p>***                               ***</p>
+<p>*****  <strong>我们不否认 某些场景下 使用多线程确实可以提高效率         *</strong></p>
+<p>*****  <strong>但是使用多线程的根本目的 是为了让程序学会同一时间做多件事情    *</strong></p>
+<p>*****  <strong>同一时间应对多个请求…                    *</strong></p>
+<p>***                                ***</p>
+<p><em><em><em>*</em>*</em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>*<em>*</em>****</p>
+<p>*：宏观并行 而 微观串行～</p>
+<p>*：CPU 时间片～</p>
+<p>线程的五大状态 = 线程的生命周期</p>
+<p>新生    就绪      运行    消亡    阻塞 [又分 普通阻塞 锁池阻塞 等待池阻塞]</p>
+<p>Born    Runnable    Running   Dead    Blocking</p>
+<p>如何实现线程：</p>
+<ol>
+<li>extends Thread</li>
+</ol>
+<p>​    @Override</p>
+<p>​    public void run(){</p>
+<p>​      …;</p>
+<p>​    }</p>
+<p>​    直接启动</p>
+<ol start="2">
+<li>implements Runnable</li>
+</ol>
+<p>​    @Override</p>
+<p>​    public void run(){</p>
+<p>​      …;</p>
+<p>​    }</p>
+<p>​    自己造个 Thread 对象 将其传入 才能启动</p>
+<ol start="3">
+<li>implements Callable<T>{</li>
+</ol>
+<p>​    @Override</p>
+<p>​    public T call()throws Exception{</p>
+<p>​      …;</p>
+<p>​    return …;</p>
+<p>​    }</p>
+<p>​    需要 <strong>线程池</strong> 才可以使用</p>
+<p>ExecutorService es = Executors.newFixedThreadPool (int);// 修复后可重用的</p>
+<p>​           Executors.newCachedThreadPool ();// 缓存机制的</p>
+<p>​           Executors.newSingleThreadExecutor ();// 单一实例的</p>
+<p>​</p>
+<p><strong>如何控制线程：</strong></p>
+<p>0.setPriority (int) : 设置线程的优先级别</p>
+<p>​    可选范围 1-10 默认优先级为 5</p>
+<p>​    优先级高 只代表抢到时间片的概率高而已</p>
+<p>1.static sleep (long) : 让当前线程休眠指定的毫秒数</p>
+<p>2.static yield () : 让当前线程放弃已经持有的时间片 直接返回就绪</p>
+<p>​      不推荐大量使用 因为浪费时间片</p>
+<p>3.join () : 让当前线程邀请调用方法的那个线程优先执行</p>
+<p>​      在被邀请的线程执行结束之前</p>
+<p>​      主动邀请别人的那个线程 一直处于阻塞 不再执行</p>
+<p>​      【即：写谁里头，谁让，谁调用谁被让</p>
+<p>阻塞是两个线程的关系，不管其他的事，除非你死，不然我不就绪】</p>
+<p>*: 线程章节当中所有的静态方法</p>
+<p>​    不要关注谁调用方法 而要关注调用出现在谁的线程体</p>
+<p>​    写在谁的线程体 就是操作对应的那个线程～</p>
+<p>*: 线程章节所有涉及主动进入阻塞的状态的方法</p>
+<p>​    都必须进行异常处理</p>
+<p>​    因为它们都有 throws InterruptedException 的声明</p>
+<p>​    而这个异常是非运行时异常 必须处理 否则编译报错</p>
+<p>线程类其它常用方法：</p>
+<p>setName () + getName () : 设置和得到线程的名字～</p>
+<p>static activeCount () : 得到程序当中所有活跃线程的总数～</p>
+<p>​    活跃线程 = 就绪 + 运行 + 阻塞</p>
+<p>​    *：这个方法永远不可能返回 0 因为当前线程必然活跃</p>
+<p>setDaemon (true) : 设置线程成为守护线程～</p>
+<p>​    守护线程 = 守护线程是为了给其它线程提供服务的</p>
+<p>​        当程序当中只剩守护线程的时候</p>
+<p>​        守护线程会自行消亡…</p>
+<p>​    *: 守护线程应当无限循环 以防止其过早消亡</p>
+<p>​    *: 设置线程成为守护线程 必须早于其自身的 start () 否则报异常</p>
+<p>​    *: 守护线程应当具有最低的优先级 以防止其与核心业务抢时间片～</p>
+<p>interrupt () : 中断 打断线程的阻塞状态～【使其进入就绪状态】</p>
+<p>​    sleep() / join()</p>
+<p>static currentThread () : 得到当前正在运行的线程对象～</p>
+<p>​    1. 主方法当中用于获得主线程对象.</p>
+<p>​    2. 在 run () 调用的其它方法中 用于得到当前线程是谁～</p>
+<p>​    X. 绝对不该直接出现在 run () 得到的必然是 this</p>
+<p>CountDownLatch   倒计时插销</p>
+<p>java.util.concurrent.*;   JUC</p>
+<p>并发包当中提供的多线程高并发场景下 常用工具之一</p>
+<p>需要先造对象：</p>
+<p>[static] CountDownLatch latch=new CountDownLatch(int);</p>
+<p>​    构造方法：要 int 参数 描述 门上装几个插销</p>
+<p>​    [latch.] await () : 等待开门 (所有插销都被拔掉才能开门)</p>
+<p>​    [latch.] countDown () : 拔掉一个插销</p>
+<p><strong>并发错误</strong></p>
+<p>并发修改异常 CME</p>
+<p>*: 并发修改异常是为了避免出现并发错误</p>
+<p>​    而主动校验 主动抛出的</p>
+<p>​    并发修改异常只配做个小喽啰 并发错误才是大 boss</p>
+<p>并发错误出现的</p>
+<p>根本原因：多个线程共享操作同一份数据～</p>
+<p>直接原因：线程体当中连续的多行操作 未必能够连续执行</p>
+<p>​      很可能操作只完成了一部分 时间片就耗尽了</p>
+<p>​      而另一个线程抢到了时间片</p>
+<p>​      直接访问或者操作了 不完整的数据</p>
+<p>导火线：时间片突然耗尽</p>
+<p><strong>如何解决并发错误</strong>～</p>
+<p>加锁～</p>
+<p>1st. synchronized 同步的～</p>
+<p>​    不能被继承</p>
+<p>互斥锁 = 互斥锁标记 = 锁旗标 = 锁标记 = 监视器 = Monitor</p>
+<p>锁池：存放那些想要获得对象的锁标记 但是还没能成功的线程</p>
+<p>​    *：多个线程共享操作的那个对象 = 临界资源</p>
+<p>​    修饰代码块：</p>
+<p>​      synchronized (临界资源){</p>
+<p>​        需要连续执行的操作 1;</p>
+<p>​        需要连续执行的操作 2;</p>
+<p>​        …</p>
+<p>​      }</p>
+<p>​    修饰整个方法：</p>
+<p>​      public synchronized void add(Object obj){</p>
+<p>​        需要连续执行的操作 1;</p>
+<p>​        需要连续执行的操作 2;</p>
+<p>​        …</p>
+<p>​      }</p>
+<p>​      *: 即便 synchronized 写在方法上</p>
+<p>​        也是对对象加锁 只有对象才有锁标记～</p>
+<p>​        即谁调用这个方法，就是修饰谁的</p>
+<p>​    *：Vector Hashtable StringBuffer</p>
+<p>​      它们之所以线程安全 是因为底层大量的方法</p>
+<p>​      都是用了 synchronized 修饰…</p>
+<p>​    *：单例模式的懒汉式 需要 synchronized 修饰那个 getter</p>
+<p>2nd. java.util.concurrent.locks.ReentrantLock</p>
+<p>​    Java 包的工具包的并发包的锁包的 可重入锁</p>
+<p>​          since JDK5.0</p>
+<p>​            Doug Lea</p>
+<p>​      lock()   unlock()</p>
+<p>​      加锁    释放锁</p>
+<p>​            *: finally 当中哦～</p>
+<p>【以防线程报异常，不撤锁导致影响其他线程运行】</p>
+<p>​    *: 注意 这个 OO 思想的加锁形式 有更强的可扩展性</p>
+<p>​</p>
+<p>​    *: 它的构造方法可以传参 指定 公平锁 或者 非公平锁</p>
+<p>​</p>
+<p>​      new ReentrantLock (true) 公平锁【即按先来后到执行】</p>
+<p>​                  非公平锁【混抢】</p>
+<p><strong>什么是锁标记？</strong></p>
+<p>为了解决操作不完整性问题 Java 当中每个对象都配有一个锁标记</p>
+<p>目的是让 <strong>线程</strong> 拿到这个锁标记才能进行完整的一组操作</p>
+<p>而线程由于未拿到锁标记 则不能进入 {} 当中执行操作</p>
+<p>同时进入对象的锁池当中产生阻塞 直到可以获得锁标记为止</p>
+<p><strong>什么是锁池？</strong></p>
+<p>Java 当中每个对象都有一份的空间 用于存放线程的</p>
+<p>用于存放那些想要申请对象的锁标记 但是还没有拿到的线程对象的空间</p>
+<p>什么是时间片？</p>
+<p>CPU 允许线程任务执行一次的时间单位 被形象成称之为 &quot;时间片&quot;</p>
+<p>什么是<strong>死锁</strong> (DeadLock)?</p>
+<p>互斥锁标记使用过多或者使用不当</p>
+<p>就会造成多个线程相互持有对方想要申请的资源</p>
+<p>不释放的情况下 又去申请对方已经持有的资源</p>
+<p>从而双双进入对方已经持有的资源的锁池当中</p>
+<p>产生了永久的阻塞…</p>
+<p>​          死锁 (DeadLock)</p>
+<p>no1. 中美科学家联合国饿死事件</p>
+<p>no2. 泉城路奔宝事件</p>
+<p>如何解决死锁</p>
+<p>涉及到一块空间 和 三个方法</p>
+<p>一块空间： 对象的 等待池</p>
+<p>三个方法： wait () /notify () /notifyAll ()</p>
+<p>​    wait () : 告诉当前线程 放弃已经持有的锁标记</p>
+<p>​       并且进入调用方法的那个对象的等待池当中</p>
+<p>​    notify () : 从调用方法的那个对象的等待池当中</p>
+<p>​        随机的唤醒一个线程</p>
+<p>​    notifyAll () : 从调用方法的那个对象的等待池当中</p>
+<p>​        唤醒所有阻塞中的线程～</p>
+<p>​    *： 注意 这三个方法不是 Thread 类的方法</p>
+<p>​      而是 Object 类的方法</p>
+<p>​      因为每个对象都有等待池</p>
+<p>​      每个对象都需要操作等待池</p>
+<p>​    *： 注意 这三个方法都必须在已经持有</p>
+<p>​      对方锁标记的前提下才能使用</p>
+<p>​      否则不但操作失败 还会触发运行时异常</p>
+<p>​      IllegalMonitorStateException</p>
+<p>​      在没有持有锁标记的情况下 直接操作对象的等待池！</p>
+<p>两个线程 交替执行！～</p>
+<p>你知道顺丰吗？顺丰有灰机 但是有些东西不允许上飞机</p>
+<p>所以 它们只能走陆运 顺丰陆运</p>
+<p>就是大货车 它不只配备一个司机 得至少两个司机 形成交替</p>
+<p>LeftThread   RightThread</p>
+<p>张师傅     胡师傅</p>
+<p>循环 {      循环 {</p>
+<p>1. 开 4 个小时</p>
+<p>2. 主动休息</p>
+<p>​         3. 开 4 个小时</p>
+<p>​         4. 唤醒张师傅</p>
+<p>​         5. 主动休息</p>
+<p>6. 唤醒胡师傅</p>
+<p>}      }</p>
+<p>synchronized + wait() + notify();</p>
+<p>Lock + Condition + await() + signal()</p>
+<p>线程池：</p>
+<p>线程池是一种标准的资源池模式</p>
+<p>什么是资源池：</p>
+<p>所谓资源池 是指在用户出现之前 提前预留活跃资源</p>
+<p>从而在用户出现的第一时间 直接满足用户对资源的需求</p>
+<p>并且将资源的创建和销毁都委托给资源池完成</p>
+<p>从而优化用户体验～</p>
+<p>IBM 的程序员曾经质疑官方对于线程的实现</p>
+<p>假如一个线程的完整执行时间为 T</p>
+<p>​    T = t1 + t2 + t3</p>
+<p>​    t1 : 在操作系统当中映射一个线程的时间</p>
+<p>​    t2 : 执行线程核心任务的时间  run ()</p>
+<p>​    t3 : 在操作系统当中销毁一个线程的时间</p>
+<p>假设 run () 当中代码非常简短 则 t2 所占 T 的比例就会很小</p>
+<p>我们就会感觉付出和回报不成比例 喧宾夺主 主次不分…</p>
+<p>从 JDK5.0 开始 由 DougLea 在 JUC 并发包当中提供的线程池的实现～</p>
+<p>*: 核心类库当中由官方提供的常用的线程池种类有哪些？</p>
+<p>1&gt; 修复后可重用的 (预留多少活跃线程)</p>
+<p>​    newFixedThreadPool(int)</p>
+<p>2&gt; 缓存机制的</p>
+<p>​    newCachedThreadPool()</p>
+<p>3&gt; 单一实例的</p>
+<p>​    newSingleThreadExecutor()</p>
+<p>*: 阿里不允许直接使用官方提供的线程池实现</p>
+<p>要求程序员自己创建线程池执行器</p>
+<p>那么自己创建线程池执行器 需要五个重要参数 它们是？</p>
+<p>​    1&gt; 线程池当中核心线程数量</p>
+<p>​    2&gt; 线程池最大线程数量</p>
+<p>​    3&gt; 保持活着的时间 KeepAliveTime</p>
+<p>​    4&gt; 时间单位 TimeUnit</p>
+<p>​    5&gt; 一个集合 一个队列 用于存放排队的线程任务</p>
+<p>*<strong> 注意 *</strong></p>
+<p>*<strong> 面试 *</strong></p>
+<p>》ArrayList &amp; Vector 哪个支持多线程并发操作～</p>
+<p>ArrayList</p>
+<p>​    底层可能会出现多个线程同时操作集合</p>
+<p>​    所以效率较高 但是可能出现并发错误</p>
+<p>​    *：正因为可能出现错误 我们说它不支持并发操作！</p>
+<p>Vector</p>
+<p>​    底层不会发生多个线程同时操作集合</p>
+<p>​    当真正有多个线程尝试一起操作的时候</p>
+<p>​    底层的加锁机制会让它一个一个来</p>
+<p>​    所以它不会出现并发错误</p>
+<p>​    *：所以我们说它支持并发操作</p>
+<p>》多线程高并发的场景下 应该选择哪种键值对集合 (Map)?</p>
+<p>HashMap     -&gt; 0 分</p>
+<p>Hashtable    -&gt; 60 分</p>
+<p>ConcurrentHashMap  -&gt; 100 分</p>
+<p>java.util.concurrent.ConcurrentHashMap</p>
+<p>​    不是 JDK1.2 就有的 它是 JDK1.5 才出现的</p>
+<p>​    作为并发包当中的一员提供的～其作者 Doug Lea</p>
+<p>​    import java.util.*;</p>
+<p>​    import java.util.concurrent.*;</p>
+<p>》多线程高并发的场景下 应该选择哪种 List 集合？</p>
+<p>ArrayList    -&gt; 0 分</p>
+<p>Vector     -&gt; 60 分</p>
+<p>CopyOnWriteArrayList  -&gt; 100 分</p>
+<p>java.util.concurrent.CopyOnWriteArrayList</p>
+<p>​    不是 JDK1.2 就有的 它是 JDK1.5 才出现的</p>
+<p>​    作为并发包当中的一员提供的～其作者 Doug Lea</p>
+<p>》多线程高并发的场景下 应该选择哪种 Set 集合？</p>
+<p>HashSet TreeSet   -&gt; 0 分</p>
+<p>…     -&gt; 60 分</p>
+<p>CopyOnWriteArraySet -&gt; 100 分</p>
+<p>java.util.concurrent.CopyOnWriteArraySet</p>
+<p>​    不是 JDK1.2 就有的 它是 JDK1.5 才出现的</p>
+<p>​    作为并发包当中的一员提供的～其作者 Doug Lea</p>
+<p>》Error 和 Exception 有什么区别？</p>
+<p>Error 通常是指由于底层硬件环境或者系统原因导致的</p>
+<p>​    程序员通过编码无法解决的</p>
+<p>​          相对较严重的问题</p>
+<p>Exception 就是程序运行过程当中出现的例外情况而已</p>
+<p>​          相对较轻</p>
+<p>》运行时异常和非运行时异常的区别？</p>
+<p>非运行时异常在编译的时候就要求程序员必须给出处理方案</p>
+<p>​    否则编译无法通过    【day23-TestException】</p>
+<p>​                【day23-TestPlus】</p>
+<p>​        它们都直接继承自 Exception</p>
+<p>运行时异常在编译的时候不要求给出处理方案 可以直接编译通过</p>
+<p>​    问题会在运行的时候直接体现出来～</p>
+<p>​        它们继承自 RuntimeException</p>
+<p>记录</p>
+<p>Desc 降序</p>
+<p>member 成员</p>
+<p>Modification 修改 [并发修改异常 CME 里]</p>
+
+      <div class="tags">
+          <a href="/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" rel="tag"><i class="ic i-tag"></i> 后端开发</a>
+          <a href="/tags/JavaSE/" rel="tag"><i class="ic i-tag"></i> JavaSE</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2026-01-15 17:13:15" itemprop="dateModified" datetime="2026-01-15T17:13:15+08:00">2026-01-15</time>
+  </span>
+  <span id="full-stack/back-end/back-note/week5/" class="item leancloud_visitors" data-flag-title="Week5周总结" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>libert-Aries <i class="ic i-at"><em>@</em></i>你来啦！
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://libert-aries.github.io/full-stack/back-end/back-note/week5/" title="Week5周总结">http://libert-aries.github.io/full-stack/back-end/back-note/week5/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/full-stack/back-end/back-note/week4/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;t.alcy.cc&#x2F;fj?364998" title="Week4周总结">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 后端</span>
+  <h3>Week4周总结</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/full-stack/back-end/back-note/week3/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;t.alcy.cc&#x2F;fj?850371" title="Week3周总结">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 后端</span>
+  <h3>Week3周总结</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#week5"><span class="toc-number">1.</span> <span class="toc-text"> Week5</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/full-stack/back-end/back-note/super,this,%E9%87%8D%E5%86%99/" rel="bookmark" title="super,this,重写">super,this,重写</a></li><li><a href="/full-stack/back-end/back-note/month1/" rel="bookmark" title="JavaSE">JavaSE</a></li><li><a href="/full-stack/back-end/back-note/week1/" rel="bookmark" title="Week1周总结">Week1周总结</a></li><li><a href="/full-stack/back-end/back-note/week2/" rel="bookmark" title="Week2周总结">Week2周总结</a></li><li><a href="/full-stack/back-end/back-note/month2/" rel="bookmark" title="IO流">IO流</a></li><li><a href="/full-stack/back-end/back-note/week4/" rel="bookmark" title="Week4周总结">Week4周总结</a></li><li class="active"><a href="/full-stack/back-end/back-note/week5/" rel="bookmark" title="Week5周总结">Week5周总结</a></li><li><a href="/full-stack/back-end/back-note/week3/" rel="bookmark" title="Week3周总结">Week3周总结</a></li><li><a href="/full-stack/back-end/back-note/month4/" rel="bookmark" title="SpringBoot">SpringBoot</a></li><li><a href="/full-stack/back-end/back-note/month5/" rel="bookmark" title="SpringBoot集成MyBatis">SpringBoot集成MyBatis</a></li><li><a href="/full-stack/back-end/back-note/%E6%8B%A6%E6%88%AA%E5%99%A8/" rel="bookmark" title="拦截器">拦截器</a></li><li><a href="/full-stack/back-end/back-note/MyBatisPlus/" rel="bookmark" title="Mybatisplus">Mybatisplus</a></li><li><a href="/full-stack/back-end/back-note/Exception/" rel="bookmark" title="异常处理">异常处理</a></li><li><a href="/full-stack/back-end/back-note/RabbitMQ/" rel="bookmark" title="RabbitMQ">RabbitMQ</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="libert-Aries"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">libert-Aries</p>
+  <div class="description" itemprop="description">热烈 自由</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">25</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">7</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">15</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xpYmVydC1Bcmllcw==" title="https:&#x2F;&#x2F;github.com&#x2F;libert-Aries"><i class="ic i-github"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjM5NTExMzExMEBxcS5jb20=" title="mailto:395113110@qq.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="/about/" rel="section"><i class="ic i-paper-plane"></i>关于</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/me/" rel="section"><i class="ic i-user"></i>关于我</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/wisper/" rel="section"><i class="ic i-pen"></i>碎碎念</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/full-stack/back-end/back-note/week4/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/full-stack/back-end/back-note/week3/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
+</div>
+
+    <span><a href="/full-stack/back-end/back-note/week1/" title="Week1周总结">Week1周总结</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
+</div>
+
+    <span><a href="/full-stack/back-end/back-note/month2/" title="IO流">IO流</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a>
+</div>
+
+    <span><a href="/theme-shoka-doc/special/" title="Step.4 主题特殊功能">Step.4 主题特殊功能</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a>
+</div>
+
+    <span><a href="/theme-shoka-doc/display/" title="Step.3 界面显示">Step.3 界面显示</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6Java%E8%AF%AD%E8%A8%80-%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%AD%A6-%E7%BF%81%E6%81%BA/" title="分类于 零基础学Java语言-浙江大学-翁恺">零基础学Java语言-浙江大学-翁恺</a>
+</div>
+
+    <span><a href="/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6java/week-1/" title="第1周 计算">第1周 计算</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
+</div>
+
+    <span><a href="/full-stack/back-end/back-note/MyBatisPlus/" title="Mybatisplus">Mybatisplus</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/front-end/" title="分类于 前端">前端</a>
+</div>
+
+    <span><a href="/full-stack/front-end/front-note/%E5%89%8D%E7%AB%AF%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F/" title="前端请求方式">前端请求方式</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
+</div>
+
+    <span><a href="/full-stack/back-end/back-note/week5/" title="Week5周总结">Week5周总结</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%A2%8E%E7%A2%8E%E7%89%87/" title="分类于 碎碎片">碎碎片</a>
+</div>
+
+    <span><a href="/Markdown%E4%BD%BF%E7%94%A8/Markdown/" title="Markdown使用">Markdown使用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
+</div>
+
+    <span><a href="/full-stack/back-end/back-note/month4/" title="SpringBoot">SpringBoot</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">libert-Aries @ libert-Aries's blog</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">237k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">3:35</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'full-stack/back-end/back-note/week5/',
+    favicon: {
+      show: "（●´3｀●）爱你呦",
+      hide: "(´Д｀)看这里だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: {"placeholder":"1. 提问前请先仔细阅读本文档⚡\n2. 页面显示问题💥，请提供控制台截图📸或者您的测试网址\n3. 其他任何报错💣，请提供详细描述和截图📸，祝食用愉快💪"},fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
