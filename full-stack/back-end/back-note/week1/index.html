@@ -102,12 +102,12 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://t.alcy.cc/fj?865585"></li>
-          <li class="item" data-background-image="https://t.alcy.cc/fj?840196"></li>
-          <li class="item" data-background-image="https://t.alcy.cc/fj?211429"></li>
-          <li class="item" data-background-image="https://t.alcy.cc/fj?555164"></li>
-          <li class="item" data-background-image="https://t.alcy.cc/fj?269877"></li>
-          <li class="item" data-background-image="https://t.alcy.cc/fj?646473"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?758367"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?946680"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?923158"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?334468"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?989619"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?973980"></li>
         </ul>
       </div>
     </header>
@@ -176,7 +176,7 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <p>翻译：解释执行器 Interpreter----- 把.java [源文件] 翻译为.class [字节码文件]</p>
 </li>
 </ul>
-<p>*—Java 应用系统跑在 JVM 虚拟机上而不是操作系统上</p>
+<p>-Java 应用系统跑在 JVM 虚拟机上而不是操作系统上</p>
 <p>而像 C<ins> 之类的应用程序是直接跑在操作系统上的（详见图），这也就造成 C</ins> 写的程序移植到其他操作系统可能不能运行</p>
 <p><img data-src="/images/week1/%E7%A8%8B%E5%BA%8F%E7%A7%BB%E6%A4%8D.jpg" alt="" width="3.65in" height="2.75in"></p>
 <p>ctrl+1：生成.class 文件</p>
@@ -260,9 +260,9 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <p>set JAVA_HOME=C:\Program Files (x86)\Java\jdk1.6.0_24</p>
 <p>set PATH=%JAVA_HOME%\bin</p>
 <p>退出 cmd 后失效</p>
-<p>*— 环境变量的名字尽量大写</p>
-<p>*— 当我们想要给一个环境变量设置多个值的时候 中间用；隔开</p>
-<p>*—%% 表示取中间环境变量的值，如上面的例子中最后一句表明的的 path 和 java_home 之间的关系</p>
+<p>环境变量的名字尽量大写</p>
+<p>当我们想要给一个环境变量设置多个值的时候 中间用；隔开</p>
+<p>%% 表示取中间环境变量的值，如上面的例子中最后一句表明的的 path 和 java_home 之间的关系</p>
 <p>一劳永逸的设置方式</p>
 <p>我的电脑 -&gt; 属性 -&gt; 高级系统设置 -&gt; 环境变量 -&gt; 新建…</p>
 <p>用户变量范围只作用于一个用户</p>
@@ -287,7 +287,7 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <p>标识符的命名规范？</p>
 <p>1: 不能使用 java 中的关键字 / 保留字 [goto const]</p>
 <p>2: 可以使用中文 英文 $ _开头，但是不能以数字开头</p>
-<p>*—String 是合法标识符</p>
+<p>String 是合法标识符</p>
 <p>程序员自己总结的一套命名规范：</p>
 <p>1：当我们给类起名字的时候</p>
 <p>通常首字母大写 以后的每个单词首字母大写</p>
@@ -301,7 +301,7 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <p>---------------------------------------------------------------------------</p>
 <h2 id="package打包和import导包"><a class="markdownIt-Anchor" href="#package打包和import导包">#</a> <em><strong>package 打包和 import 导包</strong></em></h2>
 <p>package 打包 [将所有的实体类装进指定文件夹里面]</p>
-<p>*—package 只能出现在文件的第一行</p>
+<p>package 只能出现在文件的第一行</p>
 <p>用 cmd 运行生成包 [需要在运行的文件开头写 package 包]</p>
 <p>javac -d . xxx.java</p>
 <p>-d 自动生成文件夹</p>
@@ -339,7 +339,7 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <p>-s -t 100 100 毫秒后关机</p>
 <p>---------------------------------------------------------------------------</p>
 <h2 id="字符类型只能含一个字符或者数字或者一个转义字符"><a class="markdownIt-Anchor" href="#字符类型只能含一个字符或者数字或者一个转义字符">#</a> <em><strong>字符类型</strong></em> [只能含一个字符或者数字，或者一个转义字符]</h2>
-<p>*—char 底层基于 Unicode 编码方式实现，不区分中英文，统一都是 2 个字节 16 位</p>
+<p>char 底层基于 Unicode 编码方式实现，不区分中英文，统一都是 2 个字节 16 位</p>
 <p>char 类型的赋值：</p>
 <p>char x1 = ‘a’; // 指定字面值的赋值方式</p>
 <p>char x2 = ‘中’; // 指定字面值的赋值方式</p>
@@ -352,8 +352,8 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <h2 id="整数类型默认为int类型"><a class="markdownIt-Anchor" href="#整数类型默认为int类型">#</a> <em><strong>整数类型</strong></em> [默认为 int 类型]</h2>
 <p>byte short int long</p>
 <p>位 8 16 32 64</p>
-<p>*—long 类型的结尾需要加上 L/l 尽量 L</p>
-<p>*— 当数值超出 int 类型最大边界的时候<br>
+<p>long 类型的结尾需要加上 L/l 尽量 L</p>
+<p>当数值超出 int 类型最大边界的时候<br>
 注意使用 long 类型整数类型的赋值方式：</p>
 <p>int num1 = 35;// 十进制赋值 *</p>
 <p>int num2 = 0 35;// 八进制赋值</p>
@@ -361,7 +361,7 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <p>int num4 = 0b 1100;// 二进制赋值</p>
 <p>十进制和二进制之间的转换：</p>
 <p>负数：正数的二进制取反 + 1</p>
-<p>*— 负数的二进制表示是补码形式</p>
+<p>负数的二进制表示是补码形式</p>
 <p>---------------------------------------------------------------------------</p>
 <h2 id="浮点类型"><a class="markdownIt-Anchor" href="#浮点类型">#</a> <em><strong>浮点类型</strong></em></h2>
 <p>float [单精度] F/f</p>
@@ -436,7 +436,7 @@ f=45.5f]</p>
 <p>+: 当 + 遇到 String 类型的时候 不再表示算数加法而是追加连接</p>
 <p>int num = 45;</p>
 <p>String str = “”+num;</p>
-<p>*— 当心数值超出 int 类型最大边界 注意使用 long 类型</p>
+<p>当心数值超出 int 类型最大边界 注意使用 long 类型</p>
 <p>一年的毫秒数：365L * 24 * 60 * 60 * 1000</p>
 <p>/: 整数 除以 整数 结果一定是整数</p>
 <p>整数 / 整数 = 整数</p>
@@ -460,7 +460,7 @@ f=45.5f]</p>
 <p><strong>++ --[自增自减运算符]</strong></p>
 <p>x++: 先取值 再运算 这行完了之后，下一行从内存里再取</p>
 <p>++x: 先运算 再取值</p>
-<p>*— 注意 a=a++ 没有意义，a 到最后还是原来的值</p>
+<p>注意 a=a++ 没有意义，a 到最后还是原来的值</p>
 <p>对于 +±- 都是对取值的值进行运算</p>
 <p>例：TestOperation7.java</p>
 <p><strong>&gt; &lt; &gt;= &lt;= ! = != ==</strong></p>
@@ -523,10 +523,10 @@ f=45.5f]</p>
 <p>&gt;&gt;&gt; 叫做无符号右移 移动之后空缺的高位直接补 0</p>
 <p>10000100 &gt;&gt;&gt; 2</p>
 <p>00100001</p>
-<p>*— 移位效率比 */[乘除] 高 [*/ 在底层是相加相减]</p>
-<p>*— 如果移位越界则自动转换成能装下的数据类型</p>
+<p>移位效率比 */[乘除] 高 [*/ 在底层是相加相减]</p>
+<p>如果移位越界则自动转换成能装下的数据类型</p>
 <p>如 byte127 左移 1 位为 254</p>
-<p>*— 可能会造成精度缺失</p>
+<p>可能会造成精度缺失</p>
 <p><strong>? : [三目运算符 三元运算符]</strong></p>
 <p>boolean ? 2 : 3 第一部分如果为 true 的话 那么执行第二部分<br>
 第一部分如果为 false 的话 那么执行第三部分</p>
@@ -544,9 +544,9 @@ f=45.5f]</p>
 <p><strong>局部变量</strong> [自动变量]：定义在方法体里面的变量</p>
 <p>从定义的那一行开始 一直到所在的方法体执行结束之前可以访问 一旦所在的<br>
 方法体执行结束 局部变量立即消亡 依赖于方法存在</p>
-<p>*— 局部变量没有默认值，在使用前必须先赋值</p>
-<p>*— 参数是局部变量</p>
-<p>*— 成员变量和局部变量可以重名</p>
+<p>局部变量没有默认值，在使用前必须先赋值</p>
+<p>参数是局部变量</p>
+<p>成员变量和局部变量可以重名</p>
 <p>当成员变量和局部变量重名的时候 直接访问这个变量默认是局部</p>
 <p>如果想要访问成员变量 需要在变量前面加上 this.</p>
 <p>例 TestArgs3.java</p>
@@ -714,66 +714,66 @@ f=45.5f]</p>
  的文件中声明 ------ 主类名和文件名不一样</p>
 <p>-------------------------------------------------------------------------</p>
 <h2 id="注意"><a class="markdownIt-Anchor" href="#注意">#</a> <em><strong>注意</strong></em></h2>
-<p>*** 2-TestDataType4.java</p>
-<p>*** 2-TestJoke2.java</p>
-<p>*—Java 没指针</p>
-<p>*—Java 回收内存自动回收</p>
-<p>*— 程序执行后，底层只找 main 方法，是程序的入口</p>
-<p>*— 面向对象需要有对象</p>
+<p>2-TestDataType4.java</p>
+<p>2-TestJoke2.java</p>
+<p>Java 没指针</p>
+<p>Java 回收内存自动回收</p>
+<p>程序执行后，底层只找 main 方法，是程序的入口</p>
+<p>面向对象需要有对象</p>
 <p>对象要用类创建</p>
-<p>*—java 分大小写和全半角</p>
-<p>*— 一个文件 (.java) 里最多只能有一个公共类，也可以一个都没有</p>
-<p>*— 打印里可以赋值：</p>
+<p>java 分大小写和全半角</p>
+<p>一个文件 (.java) 里最多只能有一个公共类，也可以一个都没有</p>
+<p>打印里可以赋值：</p>
 <p>System.out.println (a.shuxin=“abc”); 输出 abc</p>
-<p>*—ctrl+1 无法使用：</p>
+<p>ctrl+1 无法使用：</p>
 <p>配置 -&gt; 参数选择 -&gt; 工具 -&gt; 添加 jdk</p>
-<p>*— 在 cmd 中 -&gt;native2ascii-&gt; 回车 -&gt; 再输入可得到其 [再次输入的] ascii 码</p>
-<p>*— 随机生成 A-Z [65-90]</p>
+<p>在 cmd 中 -&gt;native2ascii-&gt; 回车 -&gt; 再输入可得到其 [再次输入的] ascii 码</p>
+<p>随机生成 A-Z [65-90]</p>
 <p>(char)(Math.random()*26+65)</p>
-<p>*— 所有 class 修饰的类都是引用数据类型</p>
-<p>*—&quot;+&quot; 只有遇到 String 才是追加连接，其他 [包括 char] 都是加法</p>
+<p>所有 class 修饰的类都是引用数据类型</p>
+<p>&quot;+&quot; 只有遇到 String 才是追加连接，其他 [包括 char] 都是加法</p>
 <p>1 + ‘1’ + “1” 结果是 501</p>
 <p>int char String</p>
 <p>前两个在计算时，后面的 char 强制转换为 int 型 [即 1 对应的 ASCII 码]，值为 49</p>
 <p>在和最后一个 String 类型相 + 时，为追加连接</p>
 <p>类似 System.out.println (45&gt; ‘a’);</p>
 <p>45 和’a’做比较时，char 类型转换为 ascII 码的 int 类型，再做比较</p>
-<p>*— 不同类访问属性、方法时需要用对象访问</p>
-<p>*—char 类型无法强制转换为 String 类型，但可以在 char 前面先写一个 &quot;&quot;</p>
+<p>不同类访问属性、方法时需要用对象访问</p>
+<p>char 类型无法强制转换为 String 类型，但可以在 char 前面先写一个 &quot;&quot;</p>
 <p>如：a [String]=&quot;&quot;+b [char]; 就可以将 b 转换成 String 再赋值给 a</p>
-<p>*— 整数除以整数结果还是整数，即整数 / 整数 = 整数</p>
-<p>*— 注意运算符：100/8*8 100 以内 8 的最大倍数</p>
+<p>整数除以整数结果还是整数，即整数 / 整数 = 整数</p>
+<p>注意运算符：100/8*8 100 以内 8 的最大倍数</p>
 <p>还可以 100-100%8</p>
-<p>*— 一个属性依赖于哪个对象，取决于谁调用 show ()</p>
+<p>一个属性依赖于哪个对象，取决于谁调用 show ()</p>
 <p>在同一个类里调用属性 x，相当于 this.x, 其中 this. 表示当前调用该方法的对象</p>
-<p>*— 所有运算符的最小处理单位是 int 类型，即所有运算结果都默认 int 类型</p>
+<p>所有运算符的最小处理单位是 int 类型，即所有运算结果都默认 int 类型</p>
 <p>byte a=1,b=2;</p>
 <p>byte c=a+b; 报错</p>
-<p>*— 小数不能使用 ^[异或]，因为小数不安全</p>
-<p>*— 语句高于运算符</p>
+<p>小数不能使用 ^[异或]，因为小数不安全</p>
+<p>语句高于运算符</p>
 <p>所以不能在运算符里用语句</p>
 <p>比如不能在三目运算符里写打印</p>
-<p>*— 负数的二进制表示是补码形式</p>
+<p>负数的二进制表示是补码形式</p>
 <p>如二进制 10011001 表示的不是 - 25，而是 - 103</p>
 <p>将二进制补码转换为原码时，可以将其和 - 1 [11111111] 的补码进行比较</p>
 <p>如果有和 - 1 补码不一样的位 [即 0 的位]，就用 - 1 减去对应位的正数值</p>
 <p>如 11100110</p>
 <p>11111111==&gt;-1-1-8-16=-26</p>
-<p>*— 方法不能嵌套</p>
-<p>*— 当我们写的方法和 main 方法在同一个类体的时候</p>
+<p>方法不能嵌套</p>
+<p>当我们写的方法和 main 方法在同一个类体的时候</p>
 <p>这个方法加 static</p>
 <p>当我们写的方法和 main 不在一个类体的时候</p>
 <p>不加 static</p>
-<p>*— 运算符优先级</p>
+<p>运算符优先级</p>
 <p>+ - * /</p>
-<p>+= -= *= /= %=…</p>
-<p>++ --[自增自减运算符]</p>
-<p>&gt; &lt; &gt;= &lt;= ! = != ==</p>
+<p>+=   -=  *=  /=   %= …</p>
+<p>++  --[自增自减运算符]</p>
+<p>&gt;   &lt;  &gt;=   &lt;=  ! =   !=  ==</p>
 <p>按位运算符 [&amp; | ^ ~]</p>
 <p>位移运算符 [&lt;&lt;&gt;&gt; &gt;&gt;&gt; &lt;&lt;&lt;]</p>
 <p>? : [三目运算符 三元运算符]</p>
-<p>*— 所有的 class 在编译后都会生成单独的.class 文件</p>
-<p>*— 编码不同会出现乱码，win10cmd 默认编码方式为 ANSII 码</p>
+<p>所有的 class 在编译后都会生成单独的.class 文件</p>
+<p>编码不同会出现乱码，win10cmd 默认编码方式为 ANSII 码</p>
 <p>文本文件可以在保存时选择编码方式</p>
 
       <div class="tags">
@@ -790,7 +790,7 @@ f=45.5f]</p>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2026-01-15 17:16:56" itemprop="dateModified" datetime="2026-01-15T17:16:56+08:00">2026-01-15</time>
+    <time title="修改时间：2026-01-16 11:12:22" itemprop="dateModified" datetime="2026-01-16T11:12:22+08:00">2026-01-16</time>
   </span>
   <span id="full-stack/back-end/back-note/week1/" class="item leancloud_visitors" data-flag-title="Week1周总结" title="阅读次数">
       <span class="icon">
@@ -830,7 +830,7 @@ f=45.5f]</p>
     <div class="item left">
       
 
-  <a href="/full-stack/back-end/back-note/month1/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;t.alcy.cc&#x2F;fj?952469" title="JavaSE">
+  <a href="/full-stack/back-end/back-note/month1/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;t.alcy.cc&#x2F;fj?905327" title="JavaSE">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 后端</span>
   <h3>JavaSE</h3>
@@ -840,7 +840,7 @@ f=45.5f]</p>
     <div class="item right">
       
 
-  <a href="/full-stack/back-end/back-note/week2/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;t.alcy.cc&#x2F;fj?311273" title="Week2周总结">
+  <a href="/full-stack/back-end/back-note/week2/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;t.alcy.cc&#x2F;fj?428804" title="Week2周总结">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> 后端</span>
   <h3>Week2周总结</h3>
@@ -988,76 +988,10 @@ f=45.5f]</p>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
-</div>
-
-    <span><a href="/full-stack/back-end/back-note/week3/" title="Week3周总结">Week3周总结</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%A2%8E%E7%A2%8E%E7%89%87/" title="分类于 碎碎片">碎碎片</a>
-</div>
-
-    <span><a href="/Markdown%E4%BD%BF%E7%94%A8/Markdown/" title="Markdown使用">Markdown使用</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6Java%E8%AF%AD%E8%A8%80-%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%AD%A6-%E7%BF%81%E6%81%BA/" title="分类于 零基础学Java语言-浙江大学-翁恺">零基础学Java语言-浙江大学-翁恺</a>
-</div>
-
-    <span><a href="/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6java/week-1/" title="第1周 计算">第1周 计算</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/categories/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a>
 </div>
 
-    <span><a href="/theme-shoka-doc/display/" title="Step.3 界面显示">Step.3 界面显示</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/full-stack/front-end/" title="分类于 前端">前端</a>
-</div>
-
-    <span><a href="/full-stack/front-end/front-note/month3/" title="前端与数据库">前端与数据库</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a>
-</div>
-
-    <span><a href="/theme-shoka-doc/dependents/" title="Step.1 依赖插件">Step.1 依赖插件</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
-</div>
-
-    <span><a href="/full-stack/back-end/back-note/month1/" title="JavaSE">JavaSE</a></span>
+    <span><a href="/theme-shoka-doc/config/" title="Step.2 基本配置">Step.2 基本配置</a></span>
   </li>
 
       
@@ -1079,7 +1013,7 @@ f=45.5f]</p>
 <a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
 </div>
 
-    <span><a href="/full-stack/back-end/back-note/MyBatisPlus/" title="Mybatisplus">Mybatisplus</a></span>
+    <span><a href="/full-stack/back-end/back-note/month4/" title="SpringBoot">SpringBoot</a></span>
   </li>
 
       
@@ -1091,7 +1025,75 @@ f=45.5f]</p>
 <a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
 </div>
 
-    <span><a href="/full-stack/back-end/back-note/super,this,%E9%87%8D%E5%86%99/" title="super,this,重写">super,this,重写</a></span>
+    <span><a href="/full-stack/back-end/back-note/week2/" title="Week2周总结">Week2周总结</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6Java%E8%AF%AD%E8%A8%80-%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%AD%A6-%E7%BF%81%E6%81%BA/" title="分类于 零基础学Java语言-浙江大学-翁恺">零基础学Java语言-浙江大学-翁恺</a>
+</div>
+
+    <span><a href="/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6java/week-2/" title="第2周 判断">第2周 判断</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/front-end/" title="分类于 前端">前端</a>
+</div>
+
+    <span><a href="/full-stack/front-end/front-note/%E5%89%8D%E7%AB%AF%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F/" title="前端请求方式">前端请求方式</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
+</div>
+
+    <span><a href="/full-stack/back-end/back-note/MyBatisPlus/" title="Mybatisplus">Mybatisplus</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a>
+</div>
+
+    <span><a href="/theme-shoka-doc/special/" title="Step.4 主题特殊功能">Step.4 主题特殊功能</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
+</div>
+
+    <span><a href="/full-stack/back-end/back-note/Exception/" title="异常处理">异常处理</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/front-end/" title="分类于 前端">前端</a>
+</div>
+
+    <span><a href="/full-stack/front-end/front-note/month3/" title="前端与数据库">前端与数据库</a></span>
   </li>
 
   </ul>

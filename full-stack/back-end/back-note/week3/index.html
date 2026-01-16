@@ -102,12 +102,12 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://t.alcy.cc/fj?163086"></li>
-          <li class="item" data-background-image="https://t.alcy.cc/fj?15717"></li>
-          <li class="item" data-background-image="https://t.alcy.cc/fj?215444"></li>
-          <li class="item" data-background-image="https://t.alcy.cc/fj?693012"></li>
-          <li class="item" data-background-image="https://t.alcy.cc/fj?744742"></li>
-          <li class="item" data-background-image="https://t.alcy.cc/fj?708962"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?816276"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?525571"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?820325"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?671634"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?210621"></li>
+          <li class="item" data-background-image="https://t.alcy.cc/fj?40360"></li>
         </ul>
       </div>
     </header>
@@ -158,9 +158,9 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 
     <p>学习 JavaSE 基础周总结与回顾</p>
 <span id="more"></span>
-<h1 id="第三周总结"><a class="markdownIt-Anchor" href="#第三周总结">#</a> *<strong> 第三周总结 *</strong></h1>
+<h1 id="第三周总结"><a class="markdownIt-Anchor" href="#第三周总结">#</a> <strong>第三周总结</strong></h1>
 <p>---------------------------------------------------------------------------</p>
-<h2 id="string类常见的区别"><a class="markdownIt-Anchor" href="#string类常见的区别">#</a> *<strong>String 类常见的区别 *</strong></h2>
+<h2 id="string类常见的区别"><a class="markdownIt-Anchor" href="#string类常见的区别">#</a> <strong>String 类常见的区别</strong></h2>
 <p>不 new 的方式涉及到常量池 [内存中] 查找机制</p>
 <p>new 是直接开辟一片空间</p>
 <p>StringBuffer 会多预留 16 块缓冲区，为了追加连接效率 [追加.append]</p>
@@ -168,8 +168,8 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <p>String 底层创建一个新的数组，再赋值再换</p>
 <p>StringBuffer 和 StringBuilder 以原本的空间大小加追加大小再整体乘二</p>
 <p>---------------------------------------------------------------------------</p>
-<h2 id="string-的20个方法"><a class="markdownIt-Anchor" href="#string-的20个方法">#</a> *<strong>String 的 20 个方法 *</strong></h2>
-<p>*—<strong>String 类里面的所有方法都不会直接处理原本的字符串，而是将符合条件的字符串返回，所以注意接收</strong></p>
+<h2 id="string-的20个方法"><a class="markdownIt-Anchor" href="#string-的20个方法">#</a> <strong>String 的 20 个方法</strong></h2>
+<p>–<strong>String 类里面的所有方法都不会直接处理原本的字符串，而是将符合条件的字符串返回，所以注意接收</strong></p>
 <p><strong>方法     返回值   作用</strong></p>
 <p>length ()      int   得到 String 里的字符个数</p>
 <p><strong>和切开有关的方法</strong> -----------------------------------------------------------</p>
@@ -204,7 +204,7 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <p>indexOf (String)  int   找到某个内容第一次出现的下标</p>
 <p>lastIndexOf (String)  int   找到某个内容最后一次出现的下标</p>
 <p>---------------------------------------------------------------------------</p>
-<h2 id="四种权限修饰符"><a class="markdownIt-Anchor" href="#四种权限修饰符">#</a> *<strong> 四种权限修饰符 *</strong></h2>
+<h2 id="四种权限修饰符"><a class="markdownIt-Anchor" href="#四种权限修饰符">#</a> <strong>四种权限修饰符</strong></h2>
 <p>public: 公共的 表示谁都可以使用的</p>
 <p>protected: 受保护的 只有本包 [文件夹] 内可以访问 + 包外有继承关系的子类【直系子类】中可以访问</p>
 <p>default: 默认的 只有本包内可以访问</p>
@@ -215,7 +215,7 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <p>default 类 成员 [属性 / 方法]</p>
 <p>private     成员 [属性 / 方法]</p>
 <p>---------------------------------------------------------------------------</p>
-<h2 id="static-修饰符"><a class="markdownIt-Anchor" href="#static-修饰符">#</a> *<strong>static 修饰符 *</strong></h2>
+<h2 id="static-修饰符"><a class="markdownIt-Anchor" href="#static-修饰符">#</a> <strong>static 修饰符</strong></h2>
 <p>属性：静态属性，表示整个类型共享一份的属性 不是每个对象都有一份的属性 需要拿着类名去调用</p>
 <p>​    比如：System.out [static] <span class="exturl" data-url="aHR0cDovL1N5c3RlbS5pbg==">System.in</span>[static]</p>
 <p>方法：静态方法 需要拿着类名对象去调用 <strong>静态方法里面只能直接的访问静态的成员</strong> 如果想要</p>
@@ -229,7 +229,7 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <p>【创建一个对象的时候会自动调用类里的普通代码块，而用类名的时候会自动调用类里的静态代码块且只调用一次】</p>
 <p>【代码块相当于方法体】</p>
 <p>---------------------------------------------------------------------------</p>
-<h2 id="final最终的-修饰符"><a class="markdownIt-Anchor" href="#final最终的-修饰符">#</a> *<strong>final 最终的 修饰符 *</strong></h2>
+<h2 id="final最终的-修饰符"><a class="markdownIt-Anchor" href="#final最终的-修饰符">#</a> <strong>final 最终的 修饰符</strong></h2>
 <p>final 能修饰哪些东西？</p>
 <p>类：最终类，不能有子类，但可以有父类</p>
 <p>​    【String 和 Math 类都是 final 修饰的】</p>
@@ -237,13 +237,13 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <p>变量 [属性 + 局部变量]：最终变量，常量，一旦赋值就不能修改</p>
 <p>​    【修饰引用数据类型保护的是地址而不是数值】</p>
 <p>---------------------------------------------------------------------------</p>
-<h2 id="abstract抽象类-修饰符"><a class="markdownIt-Anchor" href="#abstract抽象类-修饰符">#</a> *<strong>abstract 抽象类 修饰符 *</strong></h2>
+<h2 id="abstract抽象类-修饰符"><a class="markdownIt-Anchor" href="#abstract抽象类-修饰符">#</a> <strong>abstract 抽象类 修饰符</strong></h2>
 <p>类：抽象类 表示这个类型不形象不具体 不能创建对象</p>
 <p>方法：抽象方法 表示这个类型一定会这个方法，但现在不给出具体的实现，具体实现看子类</p>
 <p>*—Java 中的类只要存在抽象方法 那么这个类就一定要变成抽象类</p>
 <p>*— 抽象类里面既可以定义抽象方法 也可以定义普通方法</p>
 <p>---------------------------------------------------------------------------</p>
-<h2 id="单例模式"><a class="markdownIt-Anchor" href="#单例模式">#</a> *<strong> 单例模式 *</strong></h2>
+<h2 id="单例模式"><a class="markdownIt-Anchor" href="#单例模式">#</a> <strong>单例模式</strong></h2>
 <p>模式：java 中本没有模式的概念 用的程序员多了 于是有了模式</p>
 <p>控制一个类有且只有一个对象</p>
 <p>私有化构造方法，防止外界随意的创建对象</p>
@@ -268,7 +268,7 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <p>​    return only;</p>
 <p>​    }</p>
 <p>---------------------------------------------------------------------------</p>
-<h2 id="接口interface相当于工业生产中的规范接口不能造对象"><a class="markdownIt-Anchor" href="#接口interface相当于工业生产中的规范接口不能造对象">#</a> *<strong> 接口 *</strong>：interface 相当于工业生产中的规范【接口不能造对象】</h2>
+<h2 id="接口interface相当于工业生产中的规范接口不能造对象"><a class="markdownIt-Anchor" href="#接口interface相当于工业生产中的规范接口不能造对象">#</a> <strong>接口</strong>：interface 相当于工业生产中的规范【接口不能造对象】</h2>
 <p>四大类型【编译后都会生成对应的.class 文件】</p>
 <p>class    类</p>
 <p>interface  接口</p>
@@ -294,9 +294,9 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <p>方法覆盖的时候可以加上 @Override</p>
 <p>类和类之间的方法覆盖：since jdk5.0</p>
 <p>类和接口之间的方法： since jdk6.0</p>
-<p>*— 接口是一个规范 不能创建对象</p>
+<p>–接口是一个规范 不能创建对象</p>
 <p>---------------------------------------------------------------------------</p>
-<h2 id="object类"><a class="markdownIt-Anchor" href="#object类">#</a> *<strong>Object 类 *</strong></h2>
+<h2 id="object类"><a class="markdownIt-Anchor" href="#object类">#</a> <strong>Object 类</strong></h2>
 <p><strong>toString()</strong></p>
 <p>制定用引用数据类型打印出来的东西</p>
 <p>如果直接打印类名会打印 “类 @地址映射”</p>
@@ -318,7 +318,7 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <p>对象的 &quot;遗言&quot; 方法 当一个对象要被 gc 回收的时候 会主动执行的一个方法</p>
 <p>引用类型也可以强转【要在子父类之间转】</p>
 <p>---------------------------------------------------------------------------</p>
-<h2 id="集合"><a class="markdownIt-Anchor" href="#集合">#</a> *<strong> 集合 *</strong></h2>
+<h2 id="集合"><a class="markdownIt-Anchor" href="#集合">#</a> <strong>集合</strong></h2>
 <p>集合  容器 类型可以不同 没有个数限制</p>
 <p>数组  容器 类型相同 有个数限制</p>
 <p>JCF：Java 集合框架</p>
@@ -329,14 +329,14 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <p>键值对类型的集合：每次往集合里里面添加一对元素 key [主键]=value [值]</p>
 <p>[子接口] SortedMap 集合</p>
 <p>---------------------------------------------------------------------------</p>
-<h2 id="list接口全为抽象方法"><a class="markdownIt-Anchor" href="#list接口全为抽象方法">#</a> *<strong>List：接口【全为抽象方法】*</strong></h2>
+<h2 id="list接口全为抽象方法"><a class="markdownIt-Anchor" href="#list接口全为抽象方法">#</a> <strong>List：接口【全为抽象方法】</strong></h2>
 <p>实现类【即如 ArrayList implements List】：</p>
 <p>ArrayList  数组</p>
 <p>LinkedList 链表</p>
 <p>Vector   安全的数组【基本淘汰】</p>
 <p>Stack    栈</p>
 <p>---------------------------------------------------------------------------</p>
-<h2 id="arraylist底层是object数组"><a class="markdownIt-Anchor" href="#arraylist底层是object数组">#</a> *<strong>ArrayList【底层是 Object 数组】*</strong></h2>
+<h2 id="arraylist底层是object数组"><a class="markdownIt-Anchor" href="#arraylist底层是object数组">#</a> <strong>ArrayList【底层是 Object 数组】</strong></h2>
 <p>・特点：有序、不唯一</p>
 <p>・数据结构：数组</p>
 <p>包装类：boolean  char    byte short int  long float double</p>
@@ -344,7 +344,7 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <p>** 一、** 转包装类：将基本数据类型转换为引用数据类型【Integer 的 equals 比较的是内容】</p>
 <p>int x = 45; Integer y = x; <a target="_blank" rel="noopener" href="//5.xn--0-jl1bx3n">//5.0 开始</a> 自动打包 封箱</p>
 <p>Integer x = new Integer (45); int y = x;  // 自动解包 拆箱  可以直接打包 解包</p>
-<p>*—Integer 类会自动缓存 - 128 到 127 之间的数字</p>
+<p>–Integer 类会自动缓存 - 128 到 127 之间的数字</p>
 <p>** 二、** 包装类里面提供一个方法 可以将 <strong>字符串</strong> 转换成对应的基本数据类型</p>
 <p>String str = “1234”; int x = Integer.parseInt (str);  // 转成谁就用谁的包装类  配合 String 的方法</p>
 <p>String str = “45.5”;double x = Double.parseDouble(str);</p>
@@ -366,7 +366,7 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <p>list.remove (int 下标)</p>
 <p>list.remove (Object 元素)</p>
 <p>list.clear (): 清空集合对象</p>
-<p>*— 一个 remove () 方法只能删除一个对象（第一个）</p>
+<p>–一个 remove () 方法只能删除一个对象（第一个）</p>
 <p>ArrayList 类里面指定元素删除的方法 底层尊重 equals () 比较机制</p>
 <p>ArrayList 类里面 contains (元素) 底层尊重 equals () 比较机制</p>
 <p>即要删除 [搜索] 对象会调用自己的 equals () 方法和集合里的元素做比较，true 就删，false 就不删</p>
@@ -374,7 +374,7 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <p>否则触发 CME 异常 如果在遍历的时候 想要删除的话：car.remove ()</p>
 <p>CME 并发修改异常（ConcurrentModificationException）</p>
 <p>---------------------------------------------------------------------------</p>
-<h2 id="arraylist类里有两个常见的构造方法"><a class="markdownIt-Anchor" href="#arraylist类里有两个常见的构造方法">#</a> ***ArrayList****<strong> 类里有两个常见的构造方法 *</strong></h2>
+<h2 id="arraylist类里有两个常见的构造方法"><a class="markdownIt-Anchor" href="#arraylist类里有两个常见的构造方法">#</a> <strong>ArrayList 类里有两个常见的构造方法</strong></h2>
 <p>ArrayList list = new ArrayList (int 数组容量);</p>
 <p>​    容量 &lt; 0 抛出异常</p>
 <p>​    容量 &gt;= 0 写几开辟几块空间</p>
@@ -389,7 +389,7 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <p>回收老数组对象</p>
 <p>继续添加元素</p>
 <p>---------------------------------------------------------------------------</p>
-<h2 id="迭代器接口一次性"><a class="markdownIt-Anchor" href="#迭代器接口一次性">#</a> *<strong> 迭代器【接口】【一次性】*</strong></h2>
+<h2 id="迭代器接口一次性"><a class="markdownIt-Anchor" href="#迭代器接口一次性">#</a> <strong>迭代器【接口】【一次性】</strong></h2>
 <p>集合.iterator ();</p>
 <p>主要方法：</p>
 <p>hasNext (): 判断迭代器是否有下一个元素</p>
@@ -403,13 +403,13 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <p>Iterator &lt;泛型&gt; 迭代器 = 集合.iterator ();//iterator () 这是一个普通方法，所以不能加 &lt; 泛型 &gt;</p>
 <p>Iterator<Food> car=list.iterator ();  // 这里 car 是 Iterator<Food>类型的，car.next () 才是 Food 类型的</p>
 <p>---------------------------------------------------------------------------</p>
-<h2 id="可变参参数个数可以是0-无数个"><a class="markdownIt-Anchor" href="#可变参参数个数可以是0-无数个">#</a> *<strong> 可变参 *</strong>：参数个数可以是 0 - 无数个</h2>
+<h2 id="可变参参数个数可以是0-无数个"><a class="markdownIt-Anchor" href="#可变参参数个数可以是0-无数个">#</a> <strong>可变参</strong>：参数个数可以是 0 - 无数个</h2>
 <p>底层基于数组实现</p>
-<p>*— 一个方法里最多一个可变参</p>
-<p>*— 可变参只能放在参数的最后</p>
-<p>*— 不能在同一个类里重载可变参和数组参【系统认为他两一样】</p>
+<p>–一个方法里最多一个可变参</p>
+<p>–可变参只能放在参数的最后</p>
+<p>–不能在同一个类里重载可变参和数组参【系统认为他两一样】</p>
 <p>---------------------------------------------------------------------------</p>
-<h2 id="面试"><a class="markdownIt-Anchor" href="#面试">#</a> *<strong> 面试 *</strong></h2>
+<h2 id="面试"><a class="markdownIt-Anchor" href="#面试">#</a> <strong>面试</strong></h2>
 <p>》new 和不 new 之间的区别？/String 类创建对象的方式有几种？他们之间的区别？</p>
 <p>String x = “OK”;</p>
 <p>String y = new String(“OK”);</p>
@@ -501,37 +501,37 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <p><strong>缺点：遍历查找 随机访问效率低 永远从下标 0 开始找起</strong></p>
 <p><strong>在项目开发的时候 尽量避免使用 LinkedList 的 get (下标) 方法</strong></p>
 <p>---------------------------------------------------------------------------</p>
-<h2 id="注意"><a class="markdownIt-Anchor" href="#注意">#</a> *<strong> 注意 *</strong></h2>
-<p>*— 基本数据类型不会进堆内存</p>
+<h2 id="注意"><a class="markdownIt-Anchor" href="#注意">#</a> <strong>注意</strong></h2>
+<p>–基本数据类型不会进堆内存</p>
 <p>栈内存：引用    堆内存：对象</p>
-<p>*—foreach 相当于传参</p>
-<p>*—String 底层是以数组 char 类型存储的；存的是地址</p>
+<p>–foreach 相当于传参</p>
+<p>–String 底层是以数组 char 类型存储的；存的是地址</p>
 <p>单传 String 类型参数传的是地址，但很难改变其值</p>
-<p>*— 字节和字符的区别？</p>
+<p>–字节和字符的区别？</p>
 <p>数组.length 是字节个数 英文一个占一个字节，中文一个占两个字节</p>
 <p>【char 底层基于 Unicode 编码方式实现，不区分中英文，统一都是 2 个字节 16 位】</p>
 <p>【windos 自动转换为 ASCII 码了】</p>
 <p>String.length () 是字符个数 无论中英文都一个占一个字符</p>
-<p>*—&quot;&quot; 默认 String</p>
-<p>*—StringBuffer.append () 不能在小括号里加，不然又转换回 String 了</p>
-<p>*—StringBuffer.reverse (), 反转元素，注意，执行完后 StringBuffer 已经改变</p>
-<p>*—StringBuffer 的 equals 比较的是地址</p>
-<p>*—String 的 equals 比较的是元素</p>
-<p>*—static 不能修饰局部变量</p>
+<p>–&quot;&quot; 默认 String</p>
+<p>–StringBuffer.append () 不能在小括号里加，不然又转换回 String 了</p>
+<p>–StringBuffer.reverse (), 反转元素，注意，执行完后 StringBuffer 已经改变</p>
+<p>–StringBuffer 的 equals 比较的是地址</p>
+<p>–String 的 equals 比较的是元素</p>
+<p>–static 不能修饰局部变量</p>
 <p>不能从静态方法里调用非静态方法或属性</p>
-<p>*—instanceof 判断左边对象是否为右边类的对象</p>
-<p>*—String.valueOf (对象); 将对象转换为 String 类型</p>
-<p>*— 想调用父类的方法可以用 super. 方法名 ();</p>
-<p>*— 集合里自带一个属性：modCount：记录对集合的处理 [添加 / 删除…] 次数</p>
+<p>–instanceof 判断左边对象是否为右边类的对象</p>
+<p>–String.valueOf (对象); 将对象转换为 String 类型</p>
+<p>–想调用父类的方法可以用 super. 方法名 ();</p>
+<p>–集合里自带一个属性：modCount：记录对集合的处理 [添加 / 删除…] 次数</p>
 <p>迭代器会将 modCount 拷贝过来</p>
 <p>car.next () 会自动判断迭代器和集合的 modCount 的值【查看是否有其他线程对集合进行修改，从而引发 CME 异常】</p>
-<p>*— 直接用引用数据类型数组名的话，底层会自动调用 data [i].toString ();</p>
+<p>–直接用引用数据类型数组名的话，底层会自动调用 data [i].toString ();</p>
 <p>---------------------------------------------------------------------------</p>
-<h2 id="精简代码"><a class="markdownIt-Anchor" href="#精简代码">#</a> *<strong> 精简代码 *</strong></h2>
+<h2 id="精简代码"><a class="markdownIt-Anchor" href="#精简代码">#</a> <strong>精简代码</strong></h2>
 <p>&gt; 用字符串及其方法替代 switch</p>
 <p>&gt;boolean 可以转换为 String【可以用 (isShangShi+&quot;&quot;).hashCode ()】</p>
 <p>---------------------------------------------------------------------------</p>
-<h2 id="记录"><a class="markdownIt-Anchor" href="#记录">#</a> *<strong> 记录 *</strong></h2>
+<h2 id="记录"><a class="markdownIt-Anchor" href="#记录">#</a> <strong>记录</strong></h2>
 <p>sorted 排序</p>
 
       <div class="tags">
@@ -548,7 +548,7 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2026-01-15 17:13:25" itemprop="dateModified" datetime="2026-01-15T17:13:25+08:00">2026-01-15</time>
+    <time title="修改时间：2026-01-16 11:23:52" itemprop="dateModified" datetime="2026-01-16T11:23:52+08:00">2026-01-16</time>
   </span>
   <span id="full-stack/back-end/back-note/week3/" class="item leancloud_visitors" data-flag-title="Week3周总结" title="阅读次数">
       <span class="icon">
@@ -588,7 +588,7 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
     <div class="item left">
       
 
-  <a href="/full-stack/back-end/back-note/week5/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;t.alcy.cc&#x2F;fj?984988" title="Week5周总结">
+  <a href="/full-stack/back-end/back-note/week5/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;t.alcy.cc&#x2F;fj?627204" title="Week5周总结">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 后端</span>
   <h3>Week5周总结</h3>
@@ -598,7 +598,7 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
     <div class="item right">
       
 
-  <a href="/full-stack/front-end/front-note/month3/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;t.alcy.cc&#x2F;fj?746180" title="前端与数据库">
+  <a href="/full-stack/front-end/front-note/month3/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;t.alcy.cc&#x2F;fj?465627" title="前端与数据库">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> 前端</span>
   <h3>前端与数据库</h3>
@@ -620,7 +620,7 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%91%A8%E6%80%BB%E7%BB%93"><span class="toc-number">1.</span> <span class="toc-text"> * 第三周总结 *</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#string%E7%B1%BB%E5%B8%B8%E8%A7%81%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.1.</span> <span class="toc-text"> *String 类常见的区别 *</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#string-%E7%9A%8420%E4%B8%AA%E6%96%B9%E6%B3%95"><span class="toc-number">1.2.</span> <span class="toc-text"> *String 的 20 个方法 *</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E7%A7%8D%E6%9D%83%E9%99%90%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-number">1.3.</span> <span class="toc-text"> * 四种权限修饰符 *</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#static-%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-number">1.4.</span> <span class="toc-text"> *static 修饰符 *</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#final%E6%9C%80%E7%BB%88%E7%9A%84-%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-number">1.5.</span> <span class="toc-text"> *final 最终的 修饰符 *</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#abstract%E6%8A%BD%E8%B1%A1%E7%B1%BB-%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-number">1.6.</span> <span class="toc-text"> *abstract 抽象类 修饰符 *</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.7.</span> <span class="toc-text"> * 单例模式 *</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3interface%E7%9B%B8%E5%BD%93%E4%BA%8E%E5%B7%A5%E4%B8%9A%E7%94%9F%E4%BA%A7%E4%B8%AD%E7%9A%84%E8%A7%84%E8%8C%83%E6%8E%A5%E5%8F%A3%E4%B8%8D%E8%83%BD%E9%80%A0%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.8.</span> <span class="toc-text"> * 接口 *：interface 相当于工业生产中的规范【接口不能造对象】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#object%E7%B1%BB"><span class="toc-number">1.9.</span> <span class="toc-text"> *Object 类 *</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%86%E5%90%88"><span class="toc-number">1.10.</span> <span class="toc-text"> * 集合 *</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#list%E6%8E%A5%E5%8F%A3%E5%85%A8%E4%B8%BA%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="toc-number">1.11.</span> <span class="toc-text"> *List：接口【全为抽象方法】*</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#arraylist%E5%BA%95%E5%B1%82%E6%98%AFobject%E6%95%B0%E7%BB%84"><span class="toc-number">1.12.</span> <span class="toc-text"> *ArrayList【底层是 Object 数组】*</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#arraylist%E7%B1%BB%E9%87%8C%E6%9C%89%E4%B8%A4%E4%B8%AA%E5%B8%B8%E8%A7%81%E7%9A%84%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="toc-number">1.13.</span> <span class="toc-text"> ***ArrayList**** 类里有两个常见的构造方法 *</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%8E%A5%E5%8F%A3%E4%B8%80%E6%AC%A1%E6%80%A7"><span class="toc-number">1.14.</span> <span class="toc-text"> * 迭代器【接口】【一次性】*</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E5%8F%98%E5%8F%82%E5%8F%82%E6%95%B0%E4%B8%AA%E6%95%B0%E5%8F%AF%E4%BB%A5%E6%98%AF0-%E6%97%A0%E6%95%B0%E4%B8%AA"><span class="toc-number">1.15.</span> <span class="toc-text"> * 可变参 *：参数个数可以是 0 - 无数个</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95"><span class="toc-number">1.16.</span> <span class="toc-text"> * 面试 *</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F"><span class="toc-number">1.17.</span> <span class="toc-text"> * 注意 *</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B2%BE%E7%AE%80%E4%BB%A3%E7%A0%81"><span class="toc-number">1.18.</span> <span class="toc-text"> * 精简代码 *</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%B0%E5%BD%95"><span class="toc-number">1.19.</span> <span class="toc-text"> * 记录 *</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%91%A8%E6%80%BB%E7%BB%93"><span class="toc-number">1.</span> <span class="toc-text"> 第三周总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#string%E7%B1%BB%E5%B8%B8%E8%A7%81%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.1.</span> <span class="toc-text"> String 类常见的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#string-%E7%9A%8420%E4%B8%AA%E6%96%B9%E6%B3%95"><span class="toc-number">1.2.</span> <span class="toc-text"> String 的 20 个方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E7%A7%8D%E6%9D%83%E9%99%90%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-number">1.3.</span> <span class="toc-text"> 四种权限修饰符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#static-%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-number">1.4.</span> <span class="toc-text"> static 修饰符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#final%E6%9C%80%E7%BB%88%E7%9A%84-%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-number">1.5.</span> <span class="toc-text"> final 最终的 修饰符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#abstract%E6%8A%BD%E8%B1%A1%E7%B1%BB-%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-number">1.6.</span> <span class="toc-text"> abstract 抽象类 修饰符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.7.</span> <span class="toc-text"> 单例模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3interface%E7%9B%B8%E5%BD%93%E4%BA%8E%E5%B7%A5%E4%B8%9A%E7%94%9F%E4%BA%A7%E4%B8%AD%E7%9A%84%E8%A7%84%E8%8C%83%E6%8E%A5%E5%8F%A3%E4%B8%8D%E8%83%BD%E9%80%A0%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.8.</span> <span class="toc-text"> 接口：interface 相当于工业生产中的规范【接口不能造对象】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#object%E7%B1%BB"><span class="toc-number">1.9.</span> <span class="toc-text"> Object 类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%86%E5%90%88"><span class="toc-number">1.10.</span> <span class="toc-text"> 集合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#list%E6%8E%A5%E5%8F%A3%E5%85%A8%E4%B8%BA%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="toc-number">1.11.</span> <span class="toc-text"> List：接口【全为抽象方法】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#arraylist%E5%BA%95%E5%B1%82%E6%98%AFobject%E6%95%B0%E7%BB%84"><span class="toc-number">1.12.</span> <span class="toc-text"> ArrayList【底层是 Object 数组】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#arraylist%E7%B1%BB%E9%87%8C%E6%9C%89%E4%B8%A4%E4%B8%AA%E5%B8%B8%E8%A7%81%E7%9A%84%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="toc-number">1.13.</span> <span class="toc-text"> ArrayList 类里有两个常见的构造方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%8E%A5%E5%8F%A3%E4%B8%80%E6%AC%A1%E6%80%A7"><span class="toc-number">1.14.</span> <span class="toc-text"> 迭代器【接口】【一次性】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E5%8F%98%E5%8F%82%E5%8F%82%E6%95%B0%E4%B8%AA%E6%95%B0%E5%8F%AF%E4%BB%A5%E6%98%AF0-%E6%97%A0%E6%95%B0%E4%B8%AA"><span class="toc-number">1.15.</span> <span class="toc-text"> 可变参：参数个数可以是 0 - 无数个</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95"><span class="toc-number">1.16.</span> <span class="toc-text"> 面试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F"><span class="toc-number">1.17.</span> <span class="toc-text"> 注意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B2%BE%E7%AE%80%E4%BB%A3%E7%A0%81"><span class="toc-number">1.18.</span> <span class="toc-text"> 精简代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%B0%E5%BD%95"><span class="toc-number">1.19.</span> <span class="toc-text"> 记录</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -746,28 +746,6 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6Java%E8%AF%AD%E8%A8%80-%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%AD%A6-%E7%BF%81%E6%81%BA/" title="分类于 零基础学Java语言-浙江大学-翁恺">零基础学Java语言-浙江大学-翁恺</a>
-</div>
-
-    <span><a href="/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6java/week-2/" title="第2周 判断">第2周 判断</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
-</div>
-
-    <span><a href="/full-stack/back-end/back-note/month2/" title="IO流">IO流</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
 <i class="ic i-angle-right"></i>
 <a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
@@ -785,27 +763,7 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
 </div>
 
-    <span><a href="/full-stack/back-end/back-note/%E6%8B%A6%E6%88%AA%E5%99%A8/" title="拦截器">拦截器</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6Java%E8%AF%AD%E8%A8%80-%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%AD%A6-%E7%BF%81%E6%81%BA/" title="分类于 零基础学Java语言-浙江大学-翁恺">零基础学Java语言-浙江大学-翁恺</a>
-</div>
-
-    <span><a href="/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6java/week-1/" title="第1周 计算">第1周 计算</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a>
-</div>
-
-    <span><a href="/theme-shoka-doc/special/" title="Step.4 主题特殊功能">Step.4 主题特殊功能</a></span>
+    <span><a href="/full-stack/back-end/back-note/month5/" title="SpringBoot集成MyBatis">SpringBoot集成MyBatis</a></span>
   </li>
 
       
@@ -817,7 +775,7 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
 </div>
 
-    <span><a href="/full-stack/back-end/back-note/week4/" title="Week4周总结">Week4周总结</a></span>
+    <span><a href="/full-stack/back-end/back-note/week1/" title="Week1周总结">Week1周总结</a></span>
   </li>
 
       
@@ -839,7 +797,7 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
 </div>
 
-    <span><a href="/full-stack/back-end/back-note/MyBatisPlus/" title="Mybatisplus">Mybatisplus</a></span>
+    <span><a href="/full-stack/back-end/back-note/month4/" title="SpringBoot">SpringBoot</a></span>
   </li>
 
       
@@ -851,7 +809,53 @@ libert-Aries's blog = 你来啦！ = 人生如逆旅 我亦是行人</title>
 <a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
 </div>
 
-    <span><a href="/full-stack/back-end/back-note/week2/" title="Week2周总结">Week2周总结</a></span>
+    <span><a href="/full-stack/back-end/back-note/month1/" title="JavaSE">JavaSE</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/back-end/" title="分类于 后端">后端</a>
+</div>
+
+    <span><a href="/full-stack/back-end/back-note/%E6%8B%A6%E6%88%AA%E5%99%A8/" title="拦截器">拦截器</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/front-end/" title="分类于 前端">前端</a>
+</div>
+
+    <span><a href="/full-stack/front-end/front-note/Vue3/" title="Vue3">Vue3</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/full-stack/" title="分类于 全栈">全栈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/full-stack/front-end/" title="分类于 前端">前端</a>
+</div>
+
+    <span><a href="/full-stack/front-end/front-note/month3/" title="前端与数据库">前端与数据库</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%A2%8E%E7%A2%8E%E7%89%87/" title="分类于 碎碎片">碎碎片</a>
+</div>
+
+    <span><a href="/Markdown%E4%BD%BF%E7%94%A8/Markdown/" title="Markdown使用">Markdown使用</a></span>
   </li>
 
   </ul>
