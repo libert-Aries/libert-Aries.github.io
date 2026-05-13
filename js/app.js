@@ -2078,10 +2078,7 @@ const algoliaSearch = function(pjax) {
     indexName: CONFIG.search.indexName,
     searchClient  : algoliasearch(CONFIG.search.appID, CONFIG.search.apiKey),
     searchFunction: function(helper) {
-      var searchInput = $('.search-input');
-      if (searchInput.value) {
-        helper.search();
-      }
+      helper.search();
     }
   });
 
@@ -2174,6 +2171,12 @@ const algoliaSearch = function(pjax) {
   const onPopupClose = function() {
     document.body.style.overflow = '';
     transition(siteSearch, 0); // "transition.shrinkOut"
+    const searchInput = $('.search-input');
+    if (searchInput) {
+      searchInput.value = '';
+      search.helper.setQuery('').search(); // Clear search results and query
+      search.render(); // Explicitly render to update UI
+    }
   };
 
   siteSearch.addEventListener('click', function(event) {
